@@ -1,0 +1,19 @@
+@import url(../utils/variables.scss);
+
+.flexRow--main-header {
+  background-image: url("https://theminiforest.vteximg.com.br/arquivos/bg-topo.png");
+  background-size: 730px auto;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  .flexRowContent--main-header {
+    max-width: 1220px;
+    margin: 24px auto 0 auto;
+    background-color: transparent;
+  }
+}
+
+.flexRowContent--category-menu__container {
+  max-width: 1220px;
+  margin: 0 auto;
+}

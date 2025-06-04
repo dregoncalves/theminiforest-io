@@ -1,0 +1,110 @@
+{
+  "header": {
+    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+  },
+  "header.full": {
+    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+  },
+
+  // DESKTOP
+  "header-layout.desktop": {
+    "children": [
+      "flex-layout.row#desktop-header",
+      "flex-layout.row#category-menu"
+    ]
+  },
+  "flex-layout.row#desktop-header": {
+    "props": {
+      "blockClass": "main-header",
+      "horizontalAlign": "between",
+      "verticalAlign": "center",
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.col#left-desktop",
+      "flex-layout.col#center-desktop",
+      "flex-layout.row#right-desktop"
+    ]
+  },
+  "flex-layout.col#left-desktop": {
+    "children": ["search-bar"],
+    "props": {
+      "horizontalAlign": "left",
+      "verticalAlign": "top"
+    }
+  },
+
+  "search-bar": {
+    "props": {
+      "displayMode": "clear-button",
+      "placeholder": "Digite Aqui",
+      "disableBlurAndTouchEndHandler": true,
+      "maxWidth": 250
+    }
+  },
+
+  "flex-layout.col#center-desktop": {
+    "children": ["logo#desktop"],
+    "props": {
+      "horizontalAlign": "center",
+      "verticalAlign": "middle"
+    }
+  },
+  "flex-layout.row#right-desktop": {
+    "children": ["login", "minicart.v2"],
+    "props": {
+      "horizontalAlign": "right"
+    }
+  },
+  "logo#desktop": {
+    "props": {
+      "title": "Logo",
+      "href": "/",
+      "url": "https://theminiforest.vteximg.com.br/arquivos/TheMiniForest-logo.svg",
+      "height": 96
+    }
+  },
+  "flex-layout.row#category-menu": {
+    "children": ["vtex.menu@2.x:menu#category-menu"],
+    "props": {
+      "blockClass": "category-menu__container"
+    }
+  },
+
+  // MOBILE
+  "header-layout.mobile": {
+    "children": ["flex-layout.row#1-mobile"]
+  },
+  "flex-layout.row#1-mobile": {
+    "children": ["drawer", "logo#mobile", "login", "minicart.v2"],
+    "props": {
+      "blockClass": "main-header-mobile",
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true,
+      "verticalAlign": "center"
+    }
+  },
+  "drawer": {
+    "children": ["menu#drawer"]
+  },
+  "menu#drawer": {
+    "children": [
+      "menu-item#category-apparel",
+      "menu-item#category-home",
+      "menu-item#more"
+    ],
+    "props": {
+      "orientation": "vertical"
+    }
+  },
+  "logo#mobile": {
+    "props": {
+      "title": "Logo",
+      "href": "/",
+      "url": "https://storecomponents.vteximg.com.br/arquivos/store-theme-logo-mobile.png",
+      "width": "77.5",
+      "height": "27.5"
+    }
+  }
+}

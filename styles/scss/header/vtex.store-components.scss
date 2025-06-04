@@ -1,0 +1,27 @@
+/* Mantém global onde é necessário */
+:global(.vtex-login-2-x-container) {
+  width: fit-content !important;
+}
+
+/* Remove borda do grupo de input da search bar */
+:global(.vtex-store-components-3-x-searchBarContainer)
+  :global(.vtex-input-prefix__group) {
+  border: none;
+  border-bottom: 1px solid;
+  border-radius: 0;
+
+  .input {
+    padding-left: 0.4rem;
+  }
+}
+
+/* Customiza o ícone da SearchBar */
+.vtex-store-components-3-x-searchIcon--search::after {
+  content: "";
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiB2aWV3Qm94PSIwIDAgNDc3IDQ3NyI+CiAgPHBhdGggZmlsbD0iI2M3NmI2YiIgZD0iTTQ3OC4zMDgsNDIzLjkzOEwzNzQuNjg2LDMyMC4zMThjLTAuNTUxLS41NTEtMS4yLTAuOTM1LTEuNzcyLTEuNDQ4QTE5NS4xMzcsMTk1LjEzNywwLDAsMCw0MDUuMiwyMTEuMUM0MDUuMiwxMDIuOCwzMTcuNCwxNSwyMDkuMSwxNVMxMywxMDIuOCwxMywyMTEuMXM4Ny44LDE5Ni4xLDE5Ni4xLDE5Ni4xYTE5NS4xMzEsMTk1LjEzMSwwLDAsMCwxMDcuNzY2LTMyLjI4OWMwLjUxMywwLjU3NC45LDEuMjIsMS40NDcsMS43N0w0MjEuOTM2LDQ4MC4zMDhBMzkuODYsMzkuODYsMCwwLDAsNDc4LjMwOCw0MjMuOTM4Wk0yMDkuMSwzMzkuMjIxQTEyOC4xMiwxMjguMTIsMCwxLDEsMzM3LjIyMSwyMTEuMSwxMjguMTIsMTI4LjEyLDAsMCwxLDIwOS4xLDMzOS4yMjFaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTMgLTE1KSI+PC9wYXRoPgo8L3N2Zz4=");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
