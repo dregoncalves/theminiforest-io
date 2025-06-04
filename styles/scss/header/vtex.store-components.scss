@@ -21,6 +21,11 @@
   }
 }
 
+.searchBarContainer {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
 :global(.vtex-store-components-3-x-searchBarIcon) {
   background: transparent;
   border: none;

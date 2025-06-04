@@ -30,7 +30,9 @@
     "children": ["search-bar"],
     "props": {
       "horizontalAlign": "left",
-      "verticalAlign": "top"
+      "verticalAlign": "top",
+      "preventVerticalStretch": true,
+      "blockClass": "search-bar"
     }
   },
 
@@ -38,8 +40,9 @@
     "props": {
       "displayMode": "clear-button",
       "placeholder": "Digite Aqui",
-      "disableBlurAndTouchEndHandler": true,
-      "maxWidth": 250
+      "containerMode": "container",
+      "maxWidth": 250,
+      "blockClass": "search-bar"
     }
   },
 
