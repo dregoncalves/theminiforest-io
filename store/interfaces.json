@@ -1,5 +1,8 @@
 {
   "search-bar-custom": {
     "component": "SearchBarCustom"
+  },
+  "cluster-grid": {
+    "component": "ClusterGrid"
   }
 }
