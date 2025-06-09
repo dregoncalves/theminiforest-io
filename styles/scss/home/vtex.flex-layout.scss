@@ -1,0 +1,17 @@
+// Seção "Sobre a The Mini Forest"
+.flexRowContent--sobre {
+  max-width: 1260px;
+  margin: 0 auto;
+}
+
+.flexColChild--sobre__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flexCol--sobre__container {
+  margin: 0 124px 0 62px;
+  align-items: center;
+  justify-content: center;
+}
