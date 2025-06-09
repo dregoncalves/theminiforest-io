@@ -1,0 +1,15 @@
+.container {
+  height: fit-content !important;
+}
+
+.buttonLink {
+  padding: 0 !important;
+}
+
+.profile {
+  padding: 0;
+}
+
+.vtex-button__label {
+  padding: 0 !important;
+}

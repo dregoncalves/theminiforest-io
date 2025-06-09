@@ -1,0 +1,13 @@
+.footerLayout {
+  background-color: #f0efe9;
+}
+
+.socialNetworksContainer {
+  align-self: center !important;
+  justify-self: end;
+}
+
+.socialNetworkWrapper {
+  display: flex;
+  justify-content: flex-end;
+}

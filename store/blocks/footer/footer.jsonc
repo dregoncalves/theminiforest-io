@@ -4,24 +4,42 @@
   },
   "footer-layout.desktop": {
     "children": [
+      "flex-layout.row#newsletter-container",
       "flex-layout.row#footer-1-desktop",
       "flex-layout.row#footer-2-desktop",
       "flex-layout.row#footer-3-desktop"
     ]
   },
-  "flex-layout.row#footer-1-desktop": {
-    "children": [
-      "vtex.menu@2.x:menu#Products",
-      "vtex.menu@2.x:menu#footer-clothing",
-      "vtex.menu@2.x:menu#footer-decoration",
-      "vtex.menu@2.x:menu#footer-bags",
-      "footer-spacer",
-      "social-networks"
-    ],
+
+  "flex-layout.row#newsletter-container": {
     "props": {
-      "blockClass": "menu-row",
-      "paddingTop": 6,
-      "paddingBottom": 3
+      "blockClass": "newsletter-container"
+    },
+    "children": ["flex-layout.row#newsletter", "social-networks"]
+  },
+
+  "flex-layout.row#newsletter": {
+    "children": ["rich-text#newsletter-label", "newsletter"],
+    "props": {
+      "fullWidth": false,
+      "colSizing": "auto",
+      "horizontalAlign": "left"
+    }
+  },
+
+  "rich-text#newsletter-label": {
+    "props": {
+      "text": "ASSINE NOSSA \n **NEWSLETTER**",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": "newslatter-label"
+    }
+  },
+
+  "newsletter": {
+    "props": {
+      "hideLabel": true,
+      "blockClass": "newsletter"
     }
   },
 
@@ -35,16 +53,55 @@
         {
           "name": "Instagram",
           "url": "https://www.instagram.com/vtextruecloud/"
-        },
-        {
-          "name": "Twitter",
-          "url": "https://twitter.com/vtexonline"
-        },
-        {
-          "name": "Youtube",
-          "url": "https://www.youtube.com/user/VTEXTV"
         }
       ]
+    }
+  },
+
+  "flex-layout.row#footer-1-desktop": {
+    "children": [
+      "flex-layout.col#footer-informacoes",
+      "flex-layout.col#footer-institucional",
+      "footer-spacer"
+    ],
+    "props": {
+      "blockClass": "menu-row",
+      "paddingTop": 6,
+      "paddingBottom": 3
+    }
+  },
+
+  "flex-layout.col#footer-informacoes": {
+    "props": {
+      "blockClass": ["footer-title__container"]
+    },
+    "children": [
+      "rich-text#informacoes-title",
+      "vtex.menu@2.x:menu#footer-informacoes"
+    ]
+  },
+
+  "rich-text#informacoes-title": {
+    "props": {
+      "text": "INFORMAÇÕES",
+      "blockClass": ["footer-title"]
+    }
+  },
+
+  "flex-layout.col#footer-institucional": {
+    "props": {
+      "blockClass": ["footer-title__container"]
+    },
+    "children": [
+      "rich-text#institucional-title",
+      "vtex.menu@2.x:menu#footer-institucional"
+    ]
+  },
+
+  "rich-text#institucional-title": {
+    "props": {
+      "text": "INSTITUCIONAL",
+      "blockClass": ["footer-title"]
     }
   },
 
@@ -104,8 +161,8 @@
     "props": {
       "paddingTop": 4,
       "paddingBottom": 4
-    },
-    "children": ["vtex.menu@2.x:menu#footer-mobile"]
+    }
+    // "children": ["vtex.menu@2.x:menu#footer-mobile"]
   },
   "rich-text#footer-mobile": {
     "props": {

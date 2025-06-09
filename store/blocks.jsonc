@@ -25,9 +25,10 @@
 
   "login-content#default": {
     "props": {
-      "isInitialScreenOptionOnly": false,
+      "isInitialScreenOptionOnly": true,
       "defaultOption": 1,
-      "showPasswordVerificationIntoTooltip": true
+      "showPasswordVerificationIntoTooltip": true,
+      "emailPlaceholder": "123123"
     }
   },
 

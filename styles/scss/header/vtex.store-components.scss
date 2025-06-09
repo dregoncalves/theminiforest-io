@@ -14,6 +14,7 @@
 
   .input {
     padding-left: 0.4rem;
+    font-size: 12px;
   }
 
   :global(.vtex-input__suffix) {
@@ -52,4 +53,9 @@
   display: block;
   width: 14px;
   height: 14px;
+}
+
+// Login
+:global(.vtex-login-2-x-container) {
+  height: fit-content !important;
 }

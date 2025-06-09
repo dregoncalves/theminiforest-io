@@ -1,0 +1,7 @@
+@use "../utils/variables";
+
+.openIconContainer {
+  height: fit-content;
+  padding: 0;
+  color: variables.$primary-color;
+}

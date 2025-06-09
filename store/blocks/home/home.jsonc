@@ -1,32 +1,39 @@
 {
   "store.home": {
     "blocks": [
-      "list-context.image-list#demo",
-      /* You can make references to blocks defined in other files.
-       * For example, `flex-layout.row#deals` is defined in the `deals.json` file. */
-      "flex-layout.row#deals",
-      "__fold__",
+      "list-context.image-list#banner-homepage",
+      // "flex-layout.row#deals",
+      // "__fold__",
       "rich-text#shelf-title",
-      "flex-layout.row#shelf",
-      "info-card#home",
-      "rich-text#question",
-      "rich-text#link",
-      "newsletter"
+      "cluster-grid",
+      "flex-layout.row#shelf"
+      // "info-card#home",
+      // "rich-text#question",
+      // "rich-text#link",
     ]
   },
 
-  "list-context.image-list#demo": {
+  "list-context.image-list#banner-homepage": {
     "children": ["slider-layout#demo-images"],
     "props": {
-      "height": 570,
+      "width": 1905,
+      "height": 820,
       "preload": true,
       "images": [
         {
-          "image": "https://storecomponents.vteximg.com.br/arquivos/Class&Style-desktop.png",
+          "image": "https://theminiforest.vtexassets.com/assets/vtex.file-manager-graphql/images/29a44638-b5a4-4c9c-936a-33c79ba6cc46___fb45ec8e778b722b64f236e6ef48c6ae.png",
           "mobileImage": "https://storecomponents.vteximg.com.br/arquivos/Class&Style-mobile.png"
         },
         {
-          "image": "https://storecomponents.vteximg.com.br/arquivos/banner-decoration.png",
+          "image": "https://theminiforest.vtexassets.com/assets/vtex.file-manager-graphql/images/29e12035-eb41-4287-ab8e-e935d5554f6d___cdb5e10200f378ad04d8567343f95d62.gif",
+          "mobileImage": "https://storecomponents.vteximg.com.br/arquivos/banner-decoration-mobile.png"
+        },
+        {
+          "image": "https://theminiforest.vtexassets.com/assets/vtex.file-manager-graphql/images/15b439a6-8d36-4d76-8a54-97fb10bed769___3d9f6212aae4fed4ae60a318d5053115.png",
+          "mobileImage": "https://storecomponents.vteximg.com.br/arquivos/banner-decoration-mobile.png"
+        },
+        {
+          "image": "https://theminiforest.vtexassets.com/assets/vtex.file-manager-graphql/images/254b5e21-885e-43b6-9eae-4d942e9d105f___7213068a04310fe9a33f60d3cbdf591a.gif",
           "mobileImage": "https://storecomponents.vteximg.com.br/arquivos/banner-decoration-mobile.png"
         }
       ]
@@ -41,16 +48,20 @@
       },
       "infinite": true,
       "showNavigationArrows": "desktopOnly",
-      "blockClass": "carousel"
+      "blockClass": "carousel",
+      "autoplay": { "timeout": 4000 },
+      "showPaginationDots": "never"
     }
   },
 
   "rich-text#shelf-title": {
     "props": {
-      "text": "## Summer",
-      "blockClass": "shelfTitle"
+      "text": "## Destaques",
+      "blockClass": "shelfTitle",
+      "textPosition": "CENTER"
     }
   },
+
   "flex-layout.row#shelf": {
     "children": ["list-context.product-list#demo1"]
   },
@@ -71,6 +82,29 @@
       "infinite": true,
       "fullWidth": false,
       "blockClass": "shelf"
+    }
+  },
+
+  "cluster-grid": {
+    "props": {
+      "clusterId": "140",
+      "maxItems": 12,
+      "title": "Destaques"
+    }
+  },
+  "flex-layout.row#shelf-": {
+    "children": ["shelf#vitrine-cluster-140"]
+  },
+  "shelf#vitrine-cluster-140": {
+    "blocks": ["product-summary.shelf"],
+    "props": {
+      "title": "Destaques",
+      "maxItems": 12,
+      "orderBy": "OrderByTopSaleDESC",
+      "clusterId": "140",
+      "showListPrice": true,
+      "showInstallments": true,
+      "showUnavailableItems": false
     }
   },
 

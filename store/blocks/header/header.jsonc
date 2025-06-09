@@ -46,17 +46,12 @@
     }
   },
 
+  // Container com a logo da The Mini Forest
   "flex-layout.col#center-desktop": {
     "children": ["logo#desktop"],
     "props": {
       "horizontalAlign": "center",
       "verticalAlign": "middle"
-    }
-  },
-  "flex-layout.row#right-desktop": {
-    "children": ["login", "minicart.v2"],
-    "props": {
-      "horizontalAlign": "right"
     }
   },
   "logo#desktop": {
@@ -67,10 +62,29 @@
       "height": 96
     }
   },
+
+  // Container com login, minicart e wishlist
+  "flex-layout.row#right-desktop": {
+    "children": ["login", "minicart.v2"],
+    "props": {
+      "horizontalAlign": "right",
+      "preventHorizontalStretch": true
+    }
+  },
+
+  "login": {
+    "props": {
+      "emailAndPasswordTitle": "Entrar com e-mail",
+      "optionsTitle": "teste",
+      "identifierPlaceholder": "teste"
+    }
+  },
+
   "flex-layout.row#category-menu": {
     "children": ["vtex.menu@2.x:menu#category-menu"],
     "props": {
-      "blockClass": "category-menu__container"
+      "blockClass": "category-menu__container",
+      "horizontalAlign": "between"
     }
   },
 
@@ -79,7 +93,7 @@
     "children": ["flex-layout.row#1-mobile"]
   },
   "flex-layout.row#1-mobile": {
-    "children": ["drawer", "logo#mobile", "login", "minicart.v2"],
+    "children": ["logo#mobile", "login", "minicart.v2"],
     "props": {
       "blockClass": "main-header-mobile",
       "preventHorizontalStretch": true,
@@ -88,19 +102,19 @@
       "verticalAlign": "center"
     }
   },
-  "drawer": {
-    "children": ["menu#drawer"]
-  },
-  "menu#drawer": {
-    "children": [
-      "menu-item#category-apparel",
-      "menu-item#category-home",
-      "menu-item#more"
-    ],
-    "props": {
-      "orientation": "vertical"
-    }
-  },
+  // "drawer": {
+  //   "children": ["menu#drawer"]
+  // },
+  // "menu#drawer": {
+  //   "children": [
+  //     "menu-item#category-apparel",
+  //     "menu-item#category-home",
+  //     "menu-item#more"
+  //   ],
+  //   "props": {
+  //     "orientation": "vertical"
+  //   }
+  // },
   "logo#mobile": {
     "props": {
       "title": "Logo",

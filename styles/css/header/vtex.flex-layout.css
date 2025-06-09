@@ -2,7 +2,7 @@
   background-image: url("https://theminiforest.vtexassets.com/assets/vtex.file-manager-graphql/images/97afb782-b062-4194-a7ff-cdc68d5127f1___19efda4e55a10505cb51a2e980b0ba78.png");
   background-size: 730px auto;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center 11px;
 }
 .flexRow--main-header .flexRowContent--main-header {
   max-width: 1220px;
@@ -13,4 +13,8 @@
 .flexRowContent--category-menu__container {
   max-width: 1220px;
   margin: 0 auto;
+}
+
+.flexRow--submenu-produtos {
+  width: 100%;
 }

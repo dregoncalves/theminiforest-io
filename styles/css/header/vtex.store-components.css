@@ -14,9 +14,15 @@
 }
 :global(.vtex-store-components-3-x-searchBarContainer) :global(.vtex-input-prefix__group) .input {
   padding-left: 0.4rem;
+  font-size: 12px;
 }
 :global(.vtex-store-components-3-x-searchBarContainer) :global(.vtex-input-prefix__group) :global(.vtex-input__suffix) {
   padding: 0;
+}
+
+.searchBarContainer {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 :global(.vtex-store-components-3-x-searchBarIcon) {
@@ -44,4 +50,8 @@
   display: block;
   width: 14px;
   height: 14px;
+}
+
+:global(.vtex-login-2-x-container) {
+  height: fit-content !important;
 }
