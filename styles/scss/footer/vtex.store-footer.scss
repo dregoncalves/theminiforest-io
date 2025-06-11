@@ -1,5 +1,9 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
 .footerLayout {
   background-color: #f0efe9;
+  margin-top: 1.25rem;
 }
 
 .socialNetworksContainer {

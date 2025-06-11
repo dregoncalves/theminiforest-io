@@ -1,7 +1,22 @@
-@use "../utils/variables";
+@import "../utils/variables";
+@import "../utils/mixins";
 
 .openIconContainer {
-  height: fit-content;
-  padding: 0;
-  color: variables.$primary-color;
+  position: relative;
+  width: auto !important;
+  height: auto !important;
+  padding: 12px 0 12px 24px;
+}
+
+.openIconContainer::before {
+  content: "Minha Sacola";
+  width: fit-content;
+  font-size: 12px;
+  font-weight: 500;
+  display: block;
+  color: $text-green;
+}
+
+.openIconContainer .cartIcon {
+  display: none !important;
 }

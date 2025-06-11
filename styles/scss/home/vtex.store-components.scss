@@ -1,0 +1,13 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+// Seção "Sobre a The Mini Forest"
+.imageElement--sobre__banner {
+  max-width: 496px;
+
+  @include tablet {
+    .imageElement--sobre__banner {
+      width: 100%;
+    }
+  }
+}

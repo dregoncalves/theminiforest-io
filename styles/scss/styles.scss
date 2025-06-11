@@ -1,0 +1,32 @@
+/**
+ * ARQUIVO SCSS PRINCIPAL
+ * Este arquivo importa todas as partes do tema.
+ */
+
+// 1. Utilitários e Configurações Globais (Mais importante, carregar primeiro!)
+// Estes arquivos contêm suas variáveis e mixins para media queries.
+@import "utils/variables";
+@import "utils/mixins"; // Se você criou um arquivo separado para os mixins
+
+// 2. Estilos do Header
+@import "header/vtex.flex-layout";
+@import "header/vtex.login";
+@import "header/vtex.menu";
+@import "header/vtex.minicart";
+@import "header/vtex.rich-text";
+@import "header/vtex.store-components";
+
+// 3. Estilos da Home
+@import "home/vtex.flex-layout";
+@import "home/vtex.product-summary";
+@import "home/vtex.rich-text";
+@import "home/vtex.slider-layout";
+@import "home/vtex.store-components";
+@import "home/vtex.store-link";
+
+// 4. Estilos do Footer
+@import "footer/vtex.flex-layout";
+@import "footer/vtex.menu";
+@import "footer/vtex.rich-text";
+@import "footer/vtex.store-components";
+@import "footer/vtex.store-footer";

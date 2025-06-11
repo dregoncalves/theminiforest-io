@@ -2,6 +2,12 @@
   max-width: 1260px;
   margin: 0 auto;
 }
+@media (max-width: 1024px) {
+  .flexRowContent--sobre {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
 
 .flexColChild--sobre__container {
   display: flex;
@@ -10,7 +16,23 @@
 }
 
 .flexCol--sobre__container {
-  margin: 0 124px 0 62px;
+  margin: 0 124px 0 124px;
   align-items: center;
   justify-content: center;
+}
+@media (max-width: 1024px) {
+  .flexCol--sobre__container {
+    margin: 10px;
+  }
+}
+
+.flexColChild--colImagem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 640px) {
+  .flexColChild--colImagem {
+    padding: 12px;
+  }
 }

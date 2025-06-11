@@ -23,7 +23,7 @@
     "children": [
       "flex-layout.col#left-desktop",
       "flex-layout.col#center-desktop",
-      "flex-layout.row#right-desktop"
+      "flex-layout.row#right-desktop" // O container que vamos alterar
     ]
   },
   "flex-layout.col#left-desktop": {
@@ -46,7 +46,6 @@
     }
   },
 
-  // Container com a logo da The Mini Forest
   "flex-layout.col#center-desktop": {
     "children": ["logo#desktop"],
     "props": {
@@ -59,24 +58,39 @@
       "title": "Logo",
       "href": "/",
       "url": "https://theminiforest.vteximg.com.br/arquivos/TheMiniForest-logo.svg",
-      "height": 96
+      "height": 96,
+      "width": 130
     }
   },
 
-  // Container com login, minicart e wishlist
   "flex-layout.row#right-desktop": {
-    "children": ["login", "minicart.v2"],
+    "children": ["login", "rich-text#meus-favoritos", "minicart.v2"],
     "props": {
       "horizontalAlign": "right",
-      "preventHorizontalStretch": true
+      "preventHorizontalStretch": true,
+      "verticalAlign": "center",
+      "colSizing": "equal"
+    }
+  },
+
+  "rich-text#meus-favoritos": {
+    "props": {
+      "text": "[Meus Favoritos](/meus-favoritos)",
+      "blockClass": "meus-favoritos-link"
     }
   },
 
   "login": {
     "props": {
       "emailAndPasswordTitle": "Entrar com e-mail",
-      "optionsTitle": "teste",
-      "identifierPlaceholder": "teste"
+      "identifierPlaceholder": "teste",
+      "iconLabel": "Minha Conta"
+    }
+  },
+
+  "minicart.v2": {
+    "props": {
+      "openOnHover": true
     }
   },
 
@@ -89,32 +103,38 @@
   },
 
   // MOBILE
-  "header-layout.mobile": {
-    "children": ["flex-layout.row#1-mobile"]
-  },
   "flex-layout.row#1-mobile": {
-    "children": ["logo#mobile", "login", "minicart.v2"],
+    "children": [
+      "drawer",
+      "logo#mobile",
+      "flex-layout.col#spacer",
+      "login",
+      "minicart.v2"
+    ],
     "props": {
       "blockClass": "main-header-mobile",
       "preventHorizontalStretch": true,
       "preserveLayoutOnMobile": true,
-      "fullWidth": true,
-      "verticalAlign": "center"
+      "fullWidth": true
     }
   },
-  // "drawer": {
-  //   "children": ["menu#drawer"]
-  // },
-  // "menu#drawer": {
-  //   "children": [
-  //     "menu-item#category-apparel",
-  //     "menu-item#category-home",
-  //     "menu-item#more"
-  //   ],
-  //   "props": {
-  //     "orientation": "vertical"
-  //   }
-  // },
+  "drawer": {
+    "children": ["menu#drawer"]
+  },
+
+  "flex-layout.col#spacer": {
+    "props": {
+      "width": "grow"
+    }
+  },
+
+  "menu#drawer": {
+    "children": [],
+    "props": {
+      "orientation": "vertical"
+    }
+  },
+
   "logo#mobile": {
     "props": {
       "title": "Logo",

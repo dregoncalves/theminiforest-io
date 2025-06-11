@@ -1,3 +1,6 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
 .heading--shelfTitle {
   font-size: 16px;
   text-transform: uppercase;
@@ -8,10 +11,17 @@
 }
 
 // Seção "Sobre a The Mini Forest"
+.headingLevel3--sobre__title {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
 .paragraph--sobre__text {
-  font-size: 11px;
-  letter-spacing: 0.2rem;
-  line-height: 2rem;
+  font-size: 12px;
+  letter-spacing: 3px;
+  line-height: 30px;
   margin-bottom: 1.1rem;
   text-transform: uppercase;
   text-align: justify;

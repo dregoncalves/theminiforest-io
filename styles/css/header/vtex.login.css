@@ -13,3 +13,9 @@
 .vtex-button__label {
   padding: 0 !important;
 }
+
+.label {
+  text-transform: capitalize;
+  color: #71817f;
+  font-size: 12px;
+}

@@ -125,7 +125,9 @@
   },
   "rich-text#footer": {
     "props": {
-      "text": "All stock and product photos are from photos.icons8.com",
+      "text": "The Mini Forest \nwww.theminiforest.com | Rua Guaçuí, 102 - CEP 03178-180 | São Paulo - SP | CNPJ 47.794.270/0001-85 | suporte@theminiforest.com | 11 2308-0041",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
       "blockClass": "footer"
     }
   },
@@ -166,7 +168,7 @@
   },
   "rich-text#footer-mobile": {
     "props": {
-      "text": "All stock and product photos are from photos.icons8.com",
+      "text": "The Mini Forest \n- www.theminiforest.com | Rua Guaçuí, 102 - CEP 03178-180 | São Paulo - SP | CNPJ 47.794.270/0001-85 | suporte@theminiforest.com | 11 2308-0041",
       "blockClass": "footer"
     }
   }

@@ -1,3 +1,6 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
 .flexRow--main-header {
   background-image: url("https://theminiforest.vtexassets.com/assets/vtex.file-manager-graphql/images/97afb782-b062-4194-a7ff-cdc68d5127f1___19efda4e55a10505cb51a2e980b0ba78.png");
   background-size: 730px auto;
@@ -16,6 +19,44 @@
   margin: 0 auto;
 }
 
+// Mega-menu produtos
 .flexRow--submenu-produtos {
   width: 100%;
+}
+
+.flexRowContent--submenu-produtos {
+  .stretchChildrenWidth {
+    max-height: 295px;
+
+    .flexCol {
+      padding-left: 1.5rem;
+      border-right: 1px solid #f1dfd5;
+      gap: 1rem;
+    }
+  }
+}
+
+.flexCol--coluna-primeiros-meses {
+  border-right: none !important;
+}
+
+.flexCol--coluna-por-idade {
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+
+.flexRowContent--por-idade-itens {
+  max-height: 240px;
+  flex-direction: column;
+  gap: 1rem;
+  flex-wrap: wrap;
+
+  .stretchChildrenWidth {
+    width: 40% !important;
+  }
+}
+
+// Submenus Casa e Decor/Higiene
+.flexCol--submenu-coluna {
+  gap: 1rem;
 }

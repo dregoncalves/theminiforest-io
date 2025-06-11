@@ -1,9 +1,44 @@
 .paragraph--newslatter-label {
+  display: inline-block;
+  font-size: 16px;
+  height: 36px;
+  letter-spacing: 3px;
+  line-height: 18px;
+  margin: 0 10px 0 0;
+  text-align: justify;
+  text-transform: uppercase;
+  vertical-align: middle;
+  color: #71817f;
+}
+
+.strong--newslatter-label {
+  display: inline-block;
   font-size: 23px;
-  line-height: normal;
-  font-family: "Montserrat, sans-serif";
+  height: 36px;
+  letter-spacing: normal;
+  line-height: 18px;
+  margin: 0 10px 0 0;
+  text-align: justify;
+  text-transform: uppercase;
+  vertical-align: middle;
+  font-weight: 400;
+  color: #71817f;
 }
 
 .paragraph--footer-title {
   margin: 0;
+}
+
+.paragraph--footer {
+  color: #7b7b7b;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: normal;
+  padding: 17px 10px;
+  text-align: center;
+  text-decoration: none;
+}
+.paragraph--footer .link--footer {
+  text-decoration: none;
+  color: #7b7b7b;
 }

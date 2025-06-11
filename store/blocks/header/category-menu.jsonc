@@ -78,8 +78,24 @@
   },
   // Coluna: POR IDADE
   "flex-layout.col#coluna-por-idade": {
+    "props": {
+      "blockClass": "coluna-por-idade",
+      "preventVerticalStretch": true,
+      "width": "20%"
+    },
     "children": [
-      "rich-text#titulo-por-idade",
+      "flex-layout.row#por-idade-titulo",
+      "flex-layout.row#por-idade-itens"
+    ]
+  },
+  "flex-layout.row#por-idade-titulo": {
+    "children": ["rich-text#titulo-por-idade"]
+  },
+  "flex-layout.row#por-idade-itens": {
+    "props": {
+      "blockClass": "por-idade-itens"
+    },
+    "children": [
       "menu-item#por-idade-rn",
       "menu-item#por-idade-1-3",
       "menu-item#por-idade-3-6",
@@ -97,8 +113,12 @@
       "menu-item#por-idade-9-10"
     ]
   },
+
   // Coluna: POR TIPO DE PEÇA
   "flex-layout.col#coluna-por-tipo": {
+    "props": {
+      "preventVerticalStretch": true
+    },
     "children": [
       "rich-text#titulo-por-tipo",
       "menu-item#peca-blusas",
@@ -112,6 +132,9 @@
   },
   // Coluna: LISOS
   "flex-layout.col#coluna-lisos": {
+    "props": {
+      "preventVerticalStretch": true
+    },
     "children": [
       "rich-text#titulo-lisos",
       "menu-item#lisos-blusas",
@@ -123,6 +146,9 @@
   },
   // Coluna: ACESSÓRIOS
   "flex-layout.col#coluna-acessorios": {
+    "props": {
+      "preventVerticalStretch": true
+    },
     "children": [
       "rich-text#titulo-acessorios",
       "menu-item#acessorios-babadores",
@@ -137,6 +163,9 @@
   },
   // Coluna: PARA AS MAMÃES
   "flex-layout.col#coluna-mamaes": {
+    "props": {
+      "preventVerticalStretch": true
+    },
     "children": [
       "rich-text#titulo-mamaes",
       "menu-item#maes-acessorios",
@@ -145,6 +174,9 @@
   },
   // Coluna: PARA PRESENTE
   "flex-layout.col#coluna-presente": {
+    "props": {
+      "preventVerticalStretch": true
+    },
     "children": [
       "rich-text#titulo-presente",
       "menu-item#presente-cartoes",
@@ -154,6 +186,10 @@
   },
   // Coluna: PRIMEIROS MESES
   "flex-layout.col#coluna-primeiros-meses": {
+    "props": {
+      "blockClass": "coluna-primeiros-meses",
+      "preventVerticalStretch": true
+    },
     "children": [
       "rich-text#titulo-primeiros-meses",
       "menu-item#primeiros-meses"
@@ -219,6 +255,7 @@
   // POR IDADE
   "menu-item#por-idade-rn": {
     "props": {
+      "blockClass": ["menu-item-small"],
       "itemProps": {
         "href": "/produtos/rn",
         "text": "RN"
@@ -227,6 +264,7 @@
   },
   "menu-item#por-idade-1-3": {
     "props": {
+      "blockClass": ["menu-item-small"],
       "itemProps": {
         "href": "/produtos/1-3-meses",
         "text": "1 - 3 meses"
@@ -235,6 +273,7 @@
   },
   "menu-item#por-idade-3-6": {
     "props": {
+      "blockClass": ["menu-item-small"],
       "itemProps": {
         "href": "/produtos/3-6-meses",
         "text": "3 - 6 meses"
@@ -243,6 +282,7 @@
   },
   "menu-item#por-idade-6-9": {
     "props": {
+      "blockClass": ["menu-item-small"],
       "itemProps": {
         "href": "/produtos/6-9-meses",
         "text": "6 - 9 meses"
@@ -251,6 +291,7 @@
   },
   "menu-item#por-idade-9-12": {
     "props": {
+      "blockClass": ["menu-item-small"],
       "itemProps": {
         "href": "/produtos/9-12-meses",
         "text": "9 - 12 meses"
@@ -259,6 +300,7 @@
   },
   "menu-item#por-idade-12-18": {
     "props": {
+      "blockClass": ["menu-item-small"],
       "itemProps": {
         "href": "/produtos/12-18-meses",
         "text": "12 - 18 meses"
@@ -267,6 +309,7 @@
   },
   "menu-item#por-idade-18-24": {
     "props": {
+      "blockClass": ["menu-item-small"],
       "itemProps": {
         "href": "/produtos/18-24-meses",
         "text": "18 - 24 meses"
@@ -275,6 +318,7 @@
   },
   "menu-item#por-idade-2-3": {
     "props": {
+      "blockClass": ["menu-item-small"],
       "itemProps": {
         "href": "/produtos/2-3-anos",
         "text": "2 - 3 anos"
@@ -283,6 +327,7 @@
   },
   "menu-item#por-idade-3-4": {
     "props": {
+      "blockClass": ["menu-item-small"],
       "itemProps": {
         "href": "/produtos/3-4-anos",
         "text": "3 - 4 anos"
@@ -291,6 +336,7 @@
   },
   "menu-item#por-idade-4-5": {
     "props": {
+      "blockClass": ["menu-item-small"],
       "itemProps": {
         "href": "/produtos/4-5-anos",
         "text": "4 - 5 anos"
@@ -299,6 +345,7 @@
   },
   "menu-item#por-idade-5-6": {
     "props": {
+      "blockClass": ["menu-item-small"],
       "itemProps": {
         "href": "/produtos/5-6-anos",
         "text": "5 - 6 anos"
@@ -307,6 +354,7 @@
   },
   "menu-item#por-idade-6-7": {
     "props": {
+      "blockClass": ["menu-item-small"],
       "itemProps": {
         "href": "/produtos/6-7-anos",
         "text": "6 - 7 anos"
@@ -315,6 +363,7 @@
   },
   "menu-item#por-idade-7-8": {
     "props": {
+      "blockClass": ["menu-item-small"],
       "itemProps": {
         "href": "/produtos/7-8-anos",
         "text": "7 - 8 anos"
@@ -323,6 +372,7 @@
   },
   "menu-item#por-idade-8-9": {
     "props": {
+      "blockClass": ["menu-item-small"],
       "itemProps": {
         "href": "/produtos/8-9-anos",
         "text": "8 - 9 anos"
@@ -331,6 +381,7 @@
   },
   "menu-item#por-idade-9-10": {
     "props": {
+      "blockClass": ["menu-item-small"],
       "itemProps": {
         "href": "/produtos/9-10-anos",
         "text": "9 - 10 anos"
@@ -341,6 +392,7 @@
   // POR TIPO DE PEÇA
   "menu-item#peca-blusas": {
     "props": {
+      "blockClass": ["menu-item-small"],
       "itemProps": {
         "href": "/produtos/blusas-e-camisetas",
         "text": "Blusas e Camisetas"
@@ -349,6 +401,7 @@
   },
   "menu-item#peca-bodies": {
     "props": {
+      "blockClass": ["menu-item-small"],
       "itemProps": {
         "href": "/produtos/bodies",
         "text": "Bodies"
@@ -357,6 +410,7 @@
   },
   "menu-item#peca-calcas": {
     "props": {
+      "blockClass": ["menu-item-small"],
       "itemProps": {
         "href": "/produtos/calcas-e-shorts",
         "text": "Calças e Shorts"
@@ -365,6 +419,7 @@
   },
   "menu-item#peca-macacoes": {
     "props": {
+      "blockClass": ["menu-item-small"],
       "itemProps": {
         "href": "/produtos/macacoes",
         "text": "Macacões"
@@ -373,6 +428,7 @@
   },
   "menu-item#peca-pijamas": {
     "props": {
+      "blockClass": ["menu-item-small"],
       "itemProps": {
         "href": "/produtos/pijamas",
         "text": "Pijamas"
@@ -381,6 +437,7 @@
   },
   "menu-item#peca-vestidos": {
     "props": {
+      "blockClass": ["menu-item-small"],
       "itemProps": {
         "href": "/produtos/vestidos-e-saias",
         "text": "Vestidos e Saias"
@@ -389,6 +446,7 @@
   },
   "menu-item#peca-praia": {
     "props": {
+      "blockClass": ["menu-item-small"],
       "itemProps": {
         "href": "/produtos/praia",
         "text": "Praia"
@@ -399,6 +457,7 @@
   // LISOS
   "menu-item#lisos-blusas": {
     "props": {
+      "blockClass": ["menu-item-small"],
       "itemProps": {
         "href": "/produtos/lisos/blusas-e-camisetas",
         "text": "Blusas e Camisetas"
@@ -407,6 +466,7 @@
   },
   "menu-item#lisos-bodies": {
     "props": {
+      "blockClass": ["menu-item-small"],
       "itemProps": {
         "href": "/produtos/lisos/bodies",
         "text": "Bodies"
@@ -415,6 +475,7 @@
   },
   "menu-item#lisos-calcas": {
     "props": {
+      "blockClass": ["menu-item-small"],
       "itemProps": {
         "href": "/produtos/lisos/calcas-e-shorts",
         "text": "Calças e Shorts"
@@ -423,6 +484,7 @@
   },
   "menu-item#lisos-macacoes": {
     "props": {
+      "blockClass": ["menu-item-small"],
       "itemProps": {
         "href": "/produtos/lisos/macacoes",
         "text": "Macacões"
@@ -431,6 +493,7 @@
   },
   "menu-item#lisos-vestidos": {
     "props": {
+      "blockClass": ["menu-item-small"],
       "itemProps": {
         "href": "/produtos/lisos/vestidos-e-saias",
         "text": "Vestidos e Saias"
@@ -441,6 +504,7 @@
   // ACESSÓRIOS
   "menu-item#acessorios-babadores": {
     "props": {
+      "blockClass": ["menu-item-small"],
       "itemProps": {
         "href": "/produtos/acessorios/babadores",
         "text": "Babadores"
@@ -449,6 +513,7 @@
   },
   "menu-item#acessorios-bolsas": {
     "props": {
+      "blockClass": ["menu-item-small"],
       "itemProps": {
         "href": "/produtos/acessorios/bolsas",
         "text": "Bolsas"
@@ -457,6 +522,7 @@
   },
   "menu-item#acessorios-calcinha": {
     "props": {
+      "blockClass": ["menu-item-small"],
       "itemProps": {
         "href": "/produtos/acessorios/calcinhas",
         "text": "Calcinhas"
@@ -465,6 +531,7 @@
   },
   "menu-item#acessorios-mantas": {
     "props": {
+      "blockClass": ["menu-item-small"],
       "itemProps": {
         "href": "/produtos/acessorios/mantas",
         "text": "Mantas"
@@ -473,6 +540,7 @@
   },
   "menu-item#acessorios-meias": {
     "props": {
+      "blockClass": ["menu-item-small"],
       "itemProps": {
         "href": "/produtos/acessorios/meias",
         "text": "Meias"
@@ -481,6 +549,7 @@
   },
   "menu-item#acessorios-paninhos": {
     "props": {
+      "blockClass": ["menu-item-small"],
       "itemProps": {
         "href": "/produtos/acessorios/paninhos-de-boca",
         "text": "Paninhos de Boca"
@@ -489,6 +558,7 @@
   },
   "menu-item#acessorios-tattoo": {
     "props": {
+      "blockClass": ["menu-item-small"],
       "itemProps": {
         "href": "/produtos/acessorios/tattoo",
         "text": "Tattoo"
@@ -497,6 +567,7 @@
   },
   "menu-item#acessorios-jogos": {
     "props": {
+      "blockClass": ["menu-item-small"],
       "itemProps": {
         "href": "/produtos/acessorios/jogos",
         "text": "Jogos"
@@ -507,6 +578,7 @@
   // PARA AS MAMÃES
   "menu-item#maes-acessorios": {
     "props": {
+      "blockClass": ["menu-item-small"],
       "itemProps": {
         "href": "/produtos/para-as-mamaes/acessorios",
         "text": "Acessórios"
@@ -515,6 +587,7 @@
   },
   "menu-item#maes-roupas": {
     "props": {
+      "blockClass": ["menu-item-small"],
       "itemProps": {
         "href": "/produtos/para-as-mamaes/roupas",
         "text": "Roupas"
@@ -525,6 +598,7 @@
   // PARA PRESENTE
   "menu-item#presente-cartoes": {
     "props": {
+      "blockClass": ["menu-item-small"],
       "itemProps": {
         "href": "/produtos/presente/cartoes",
         "text": "Cartões"
@@ -533,6 +607,7 @@
   },
   "menu-item#presente-sacolinhas": {
     "props": {
+      "blockClass": ["menu-item-small"],
       "itemProps": {
         "href": "/produtos/presente/sacolinhas",
         "text": "Sacolinhas"
@@ -541,6 +616,7 @@
   },
   "menu-item#presente-kits": {
     "props": {
+      "blockClass": ["menu-item-small"],
       "itemProps": {
         "href": "/produtos/presente/kits",
         "text": "Kits"
@@ -551,6 +627,7 @@
   // PRIMEIROS MESES
   "menu-item#primeiros-meses": {
     "props": {
+      "blockClass": ["menu-item-small"],
       "itemProps": {
         "href": "/produtos/primeiros-meses",
         "text": "Primeiros Meses"
@@ -566,14 +643,79 @@
       "blockClass": ["header-menu-item"],
       "id": "menu-item-casa-e-decor",
       "type": "custom",
-      "iconId": null,
       "highlight": false,
       "itemProps": {
         "type": "internal",
-        "href": "/casa-e-decor?O=OrderByReleaseDateDESC",
+        "href": "/casa-e-decor",
         "noFollow": false,
         "tagTitle": "Casa e Decor",
         "text": "CASA E DECOR"
+      }
+    },
+    "blocks": ["vtex.menu@2.x:submenu#casa-e-decor"]
+  },
+  "vtex.menu@2.x:submenu#casa-e-decor": {
+    "props": {
+      "blockClass": "submenu-casa-e-decor"
+    },
+    "children": ["flex-layout.col#submenu-casa-e-decor"]
+  },
+  "flex-layout.col#submenu-casa-e-decor": {
+    "props": {
+      "blockClass": "submenu-coluna",
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "menu-item#casa-alimentacao",
+      "menu-item#casa-edredons",
+      "menu-item#casa-painel",
+      "menu-item#casa-quadros",
+      "menu-item#casa-tapetes"
+    ]
+  },
+
+  "menu-item#casa-alimentacao": {
+    "props": {
+      "blockClass": ["menu-item-small"],
+      "itemProps": {
+        "href": "/casa-e-decor/alimentacao",
+        "text": "Alimentação"
+      }
+    }
+  },
+  "menu-item#casa-edredons": {
+    "props": {
+      "blockClass": ["menu-item-small"],
+      "itemProps": {
+        "href": "/casa-e-decor/edredons-e-mantas",
+        "text": "Edredons e Mantas"
+      }
+    }
+  },
+  "menu-item#casa-painel": {
+    "props": {
+      "blockClass": ["menu-item-small"],
+      "itemProps": {
+        "href": "/casa-e-decor/painel-de-parede",
+        "text": "Painel de Parede"
+      }
+    }
+  },
+  "menu-item#casa-quadros": {
+    "props": {
+      "blockClass": ["menu-item-small"],
+      "itemProps": {
+        "href": "/casa-e-decor/quadros",
+        "text": "Quadros"
+      }
+    }
+  },
+  "menu-item#casa-tapetes": {
+    "props": {
+      "blockClass": ["menu-item-small"],
+      "itemProps": {
+        "href": "/casa-e-decor/tapetes",
+        "text": "Tapetes"
       }
     }
   },
@@ -586,14 +728,80 @@
       "blockClass": ["header-menu-item"],
       "id": "menu-item-higiene",
       "type": "custom",
-      "iconId": null,
       "highlight": false,
       "itemProps": {
         "type": "internal",
-        "href": "/higiene?O=OrderByReleaseDateDESC",
+        "href": "/higiene",
         "noFollow": false,
         "tagTitle": "Higiene",
         "text": "HIGIENE"
+      }
+    },
+    "blocks": ["vtex.menu@2.x:submenu#higiene"]
+  },
+  "vtex.menu@2.x:submenu#higiene": {
+    "props": {
+      "blockClass": "submenu-higiene"
+    },
+    "children": ["flex-layout.col#submenu-higiene"]
+  },
+  "flex-layout.col#submenu-higiene": {
+    "props": {
+      "blockClass": "submenu-coluna",
+      "preventVerticalStretch": true,
+      "width": "20%"
+    },
+    "children": [
+      "menu-item#higiene-cremes",
+      "menu-item#higiene-dentinhos",
+      "menu-item#higiene-locao",
+      "menu-item#higiene-sabonetes",
+      "menu-item#higiene-shampoo"
+    ]
+  },
+
+  "menu-item#higiene-cremes": {
+    "props": {
+      "blockClass": ["menu-item-small"],
+      "itemProps": {
+        "href": "/higiene/cremes",
+        "text": "Cremes"
+      }
+    }
+  },
+  "menu-item#higiene-dentinhos": {
+    "props": {
+      "blockClass": ["menu-item-small"],
+      "itemProps": {
+        "href": "/higiene/dentinhos",
+        "text": "Dentinhos"
+      }
+    }
+  },
+  "menu-item#higiene-locao": {
+    "props": {
+      "blockClass": ["menu-item-small"],
+      "itemProps": {
+        "href": "/higiene/locao",
+        "text": "Loção"
+      }
+    }
+  },
+  "menu-item#higiene-sabonetes": {
+    "props": {
+      "blockClass": ["menu-item-small"],
+      "itemProps": {
+        "href": "/higiene/sabonetes",
+        "text": "Sabonetes"
+      }
+    }
+  },
+  "menu-item#higiene-shampoo": {
+    "props": {
+      "blockClass": ["menu-item-small"],
+      "itemProps": {
+        "href": "/higiene/shampoo-e-condicionador",
+        "text": "Shampoo e Condicionador"
       }
     }
   },
@@ -606,7 +814,6 @@
       "blockClass": ["header-menu-item"],
       "id": "menu-item-estampas",
       "type": "custom",
-      "iconId": null,
       "highlight": false,
       "itemProps": {
         "type": "internal",
@@ -626,7 +833,6 @@
       "blockClass": ["header-menu-item"],
       "id": "menu-item-sale",
       "type": "custom",
-      "iconId": null,
       "highlight": false,
       "itemProps": {
         "type": "internal",

@@ -1,3 +1,6 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
 .newsletter {
   display: flex;
 
@@ -36,13 +39,26 @@
 }
 
 // Input e botão da Newsletter
-.inputGroup :global(.vtex-styleguide-9-x-hideDecorators) {
+.inputGroup--newsletter :global(.vtex-styleguide-9-x-hideDecorators) {
   background-color: #d5d7cd;
   color: #7a7475;
+  min-width: 310px;
+  border-radius: 0;
+}
+
+.inputGroup--newsletter :global(.vtex-input-prefix__group) {
+  border: none;
+  border-radius: 0;
 }
 
 .inputGroup :global(.vtex-button) {
   background-color: #6c9893;
   color: #fff;
   border: none;
+  border-radius: 0;
+  transition: 0.2s all ease-in-out;
+
+  &:hover {
+    background-color: #5c817d;
+  }
 }

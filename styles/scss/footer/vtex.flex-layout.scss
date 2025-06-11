@@ -1,4 +1,11 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
 .flexColChild--footer-title__container {
   height: auto !important;
   margin-bottom: 0.8rem;
+}
+
+.flexRow--credits {
+  background-color: white;
 }

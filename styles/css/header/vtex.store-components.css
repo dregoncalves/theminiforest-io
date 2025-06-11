@@ -1,4 +1,3 @@
-@charset "UTF-8";
 :global(.vtex-login-2-x-container) {
   width: fit-content !important;
 }
@@ -25,19 +24,27 @@
   padding-bottom: 0 !important;
 }
 
+:global(.vtex-styleguide-9-x-input) {
+  font-size: 11px;
+}
+
+:global(.vtex-styleguide-9-x-input)::placeholder {
+  font-size: 11px;
+  color: #949c97;
+  line-height: 28px;
+}
+
 :global(.vtex-store-components-3-x-searchBarIcon) {
   background: transparent;
   border: none;
   padding: 0;
   width: 20px;
-  /* Esconde o SVG e outros conteúdos internos */
   color: transparent;
   font-size: 0;
   overflow: hidden;
   position: relative;
 }
 
-/* Customiza o ícone da SearchBar */
 :global(.vtex-store-components-3-x-searchBarIcon--search)::before {
   content: "";
   position: absolute;

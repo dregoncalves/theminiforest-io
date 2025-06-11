@@ -1,0 +1,30 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+// Vitrine de produtos
+.sliderLayoutContainer--home-shelf {
+  max-width: 1260px;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.sliderTrack--home-shelf {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.slide--home-shelf {
+  width: 100% !important;
+}
+
+@media screen and (max-width: 1024px) {
+  .sliderTrack--home-shelf {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+// @media screen and (max-width: 640px) {
+//   .sliderTrack--home-shelf {
+//     grid-template-columns: 1fr;
+//   }

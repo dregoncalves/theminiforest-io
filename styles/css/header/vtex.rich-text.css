@@ -1,0 +1,18 @@
+.paragraph--submenu-titulo {
+  margin: 0;
+  font-size: 12px;
+  line-height: 23px;
+  padding: 5px 0;
+}
+
+.paragraph--meus-favoritos-link {
+  margin: 0;
+  padding-top: 10px;
+  line-height: 1;
+  font-weight: 500;
+}
+.paragraph--meus-favoritos-link .link--meus-favoritos-link {
+  color: #71817f;
+  text-decoration: none;
+  font-size: 12px;
+}

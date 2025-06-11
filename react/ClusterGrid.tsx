@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Spinner } from "vtex.styleguide";
 
 const ClusterGrid = () => {
   const [products, setProducts] = useState<any[]>([]);
@@ -27,7 +26,7 @@ const ClusterGrid = () => {
   if (loading)
     return (
       <div style={{ textAlign: "center", padding: 40 }}>
-        <Spinner size={50} color="#D3966A" />
+        <p>teste</p>
       </div>
     );
   if (!products.length)

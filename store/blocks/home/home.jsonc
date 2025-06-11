@@ -50,6 +50,7 @@
     }
   },
 
+  // Vitrine de produtos da Homepage
   "rich-text#shelf-title": {
     "props": {
       "text": "## Destaques",
@@ -63,37 +64,65 @@
   },
 
   "list-context.product-list#demo1": {
-    "blocks": ["product-summary.shelf"],
+    "blocks": ["product-summary.shelf#home-shelf"],
     "children": ["slider-layout#demo-products"],
     "props": {
-      "orderBy": "OrderByTopSaleDESC"
+      "orderBy": "OrderByTopSaleDESC",
+      "maxItems": 12,
+      "collection": "140",
+      "blockClass": "home-shelf"
     }
   },
 
   "slider-layout#demo-products": {
     "props": {
       "itemsPerPage": {
-        "desktop": 4,
-        "tablet": 3,
-        "phone": 1
+        "desktop": 12,
+        "tablet": 12,
+        "phone": 12
       },
-      "infinite": true,
+      "infinite": false,
       "fullWidth": false,
-      "blockClass": "shelf"
+      "blockClass": "home-shelf",
+      "showPaginationDots": "never",
+      "showNavigationArrows": "never"
     }
   },
+
+  "product-summary.shelf#home-shelf": {
+    "props": {
+      "blockClass": "home-shelf"
+    },
+    "children": [
+      "product-summary-image",
+      "product-summary-name",
+      "product-summary-price"
+    ]
+  },
+  "product-summary-image": {
+    "props": {
+      "hoverImage": {
+        "criteria": "index",
+        "index": 1
+      }
+    }
+  },
+
+  // Seção "Sobre a The Mini Forest"
 
   "flex-layout.row#sobre-the-mini-forest": {
     "children": ["flex-layout.col#imagem", "flex-layout.col#texto"],
     "props": {
-      "blockClass": "sobre"
+      "blockClass": "sobre",
+      "colSizing": "auto"
     }
   },
 
   "flex-layout.col#imagem": {
     "children": ["image#the-mini-forest"],
     "props": {
-      "blockClass": "colImagem"
+      "blockClass": "colImagem",
+      "horizontalAlign": "left"
     }
   },
 
@@ -101,8 +130,8 @@
     "props": {
       "src": "https://theminiforest.vtexassets.com/assets/vtex.file-manager-graphql/images/bd2c5c54-9434-421e-90de-3aef3bf093fb___df68883831f8c768f599674b24ffffdf.png",
       "alt": "Junte-se a nós! A jornada já começou",
-      "maxWidth": "100%",
-      "blockClass": "banner"
+      "maxWidth": "496px",
+      "blockClass": "sobre__banner"
     }
   },
 

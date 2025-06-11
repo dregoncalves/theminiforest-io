@@ -1,3 +1,6 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
 .container {
   height: fit-content !important;
 }
@@ -12,4 +15,10 @@
 
 .vtex-button__label {
   padding: 0 !important;
+}
+
+.label {
+  text-transform: capitalize;
+  color: $text-green;
+  font-size: 12px;
 }

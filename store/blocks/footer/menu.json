@@ -15,7 +15,6 @@
     "props": {
       "id": "menu-item-como-comprar",
       "type": "custom",
-      "iconId": null,
       "highlight": false,
       "itemProps": {
         "type": "internal",
@@ -30,7 +29,6 @@
     "props": {
       "id": "menu-item-trocas-devolucoes",
       "type": "custom",
-      "iconId": null,
       "highlight": false,
       "itemProps": {
         "type": "internal",
@@ -45,7 +43,6 @@
     "props": {
       "id": "menu-item-frete",
       "type": "custom",
-      "iconId": null,
       "highlight": false,
       "itemProps": {
         "type": "internal",
@@ -60,7 +57,6 @@
     "props": {
       "id": "menu-item-duvidas",
       "type": "custom",
-      "iconId": null,
       "highlight": false,
       "itemProps": {
         "type": "internal",
@@ -75,7 +71,6 @@
     "props": {
       "id": "menu-item-cdc",
       "type": "custom",
-      "iconId": null,
       "highlight": false,
       "itemProps": {
         "type": "internal",
@@ -104,7 +99,6 @@
     "props": {
       "id": "menu-item-sale",
       "type": "custom",
-      "iconId": null,
       "highlight": false,
       "itemProps": {
         "type": "internal",
@@ -119,7 +113,6 @@
     "props": {
       "id": "menu-item-the-mini-forest",
       "type": "custom",
-      "iconId": null,
       "highlight": false,
       "itemProps": {
         "type": "internal",
@@ -134,7 +127,6 @@
     "props": {
       "id": "menu-item-propriedade-industrial",
       "type": "custom",
-      "iconId": null,
       "highlight": false,
       "itemProps": {
         "type": "internal",
@@ -149,7 +141,6 @@
     "props": {
       "id": "menu-item-mapa-do-site",
       "type": "custom",
-      "iconId": null,
       "highlight": false,
       "itemProps": {
         "type": "internal",
@@ -164,7 +155,6 @@
     "props": {
       "id": "menu-item-blog",
       "type": "custom",
-      "iconId": null,
       "highlight": false,
       "itemProps": {
         "type": "internal",
@@ -179,7 +169,6 @@
     "props": {
       "id": "menu-item-dia-das-maes",
       "type": "custom",
-      "iconId": null,
       "highlight": false,
       "itemProps": {
         "type": "internal",
