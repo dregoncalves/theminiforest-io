@@ -103,6 +103,10 @@
   },
 
   // MOBILE
+  "header-layout.mobile": {
+    "children": ["flex-layout.row#1-mobile"]
+  },
+
   "flex-layout.row#1-mobile": {
     "children": [
       "drawer",
@@ -139,7 +143,7 @@
     "props": {
       "title": "Logo",
       "href": "/",
-      "url": "https://storecomponents.vteximg.com.br/arquivos/store-theme-logo-mobile.png",
+      "url": "https://theminiforest.vteximg.com.br/arquivos/TheMiniForest-logo.svg",
       "width": "77.5",
       "height": "27.5"
     }

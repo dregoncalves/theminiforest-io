@@ -11,7 +11,7 @@
 }
 
 .newsletter .container {
-  padding: 60px 10px;
+  padding: 35px 10px 25px 10px;
 }
 
 .footerLayout {
@@ -44,6 +44,7 @@
   border: none;
   border-radius: 0;
   transition: 0.2s all ease-in-out;
+  font-size: 11px;
 }
 .inputGroup :global(.vtex-button):hover {
   background-color: #5c817d;

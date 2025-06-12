@@ -1,19 +1,19 @@
-.openIconContainer {
-  position: relative;
-  width: auto !important;
-  height: auto !important;
-  padding: 12px 0 12px 24px;
-}
-
-.openIconContainer::before {
-  content: "Minha Sacola";
-  width: fit-content;
-  font-size: 12px;
-  font-weight: 500;
-  display: block;
-  color: #71817f;
-}
-
-.openIconContainer .cartIcon {
-  display: none !important;
+@media (min-width: 1025px) {
+  .openIconContainer {
+    position: relative;
+    width: auto !important;
+    height: auto !important;
+    padding: 12px 0 12px 24px;
+  }
+  .openIconContainer::before {
+    content: "Minha Sacola";
+    width: fit-content;
+    font-size: 12px;
+    font-weight: 500;
+    display: block;
+    color: #71817f;
+  }
+  .openIconContainer .cartIcon {
+    display: none !important;
+  }
 }

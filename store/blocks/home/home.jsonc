@@ -94,6 +94,7 @@
       "blockClass": "home-shelf"
     },
     "children": [
+      "add-to-list-btn",
       "product-summary-image",
       "product-summary-name",
       "product-summary-price"

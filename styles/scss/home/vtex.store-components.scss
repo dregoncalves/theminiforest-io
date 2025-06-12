@@ -6,8 +6,6 @@
   max-width: 496px;
 
   @include tablet {
-    .imageElement--sobre__banner {
-      width: 100%;
-    }
+    width: 100%;
   }
 }

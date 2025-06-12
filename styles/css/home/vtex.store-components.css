@@ -2,7 +2,7 @@
   max-width: 496px;
 }
 @media (max-width: 1024px) {
-  .imageElement--sobre__banner .imageElement--sobre__banner {
+  .imageElement--sobre__banner {
     width: 100%;
   }
 }

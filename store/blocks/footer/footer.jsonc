@@ -6,8 +6,7 @@
     "children": [
       "flex-layout.row#newsletter-container",
       "flex-layout.row#footer-1-desktop",
-      "flex-layout.row#footer-2-desktop",
-      "flex-layout.row#footer-3-desktop"
+      "flex-layout.row#copyright-row"
     ]
   },
 
@@ -105,19 +104,8 @@
     }
   },
 
-  "flex-layout.row#footer-2-desktop": {
-    "children": ["accepted-payment-methods"],
-    "props": {
-      "blockClass": "payment-methods"
-    }
-  },
-  "accepted-payment-methods": {
-    "props": {
-      "paymentMethods": ["MasterCard", "Visa", "Diners Club"]
-    }
-  },
-
-  "flex-layout.row#footer-3-desktop": {
+  // Copyright section
+  "flex-layout.row#copyright-row": {
     "children": ["rich-text#footer"],
     "props": {
       "blockClass": "credits"
