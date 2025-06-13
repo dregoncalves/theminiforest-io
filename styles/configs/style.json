@@ -59,7 +59,7 @@
     "background": {
       "base": "#fffcf6",
       "base--inverted": "#03044e",
-      "action-primary": "#0F3E99",
+      "action-primary": "#cd5c5c",
       "action-secondary": "#eef3f7",
       "emphasis": "#f71963",
       "disabled": "#f2f4f5",
@@ -92,7 +92,7 @@
       "muted-5": "#f2f4f5"
     },
     "active-background": {
-      "action-primary": "#0c389f",
+      "action-primary": "#cd5c5c",
       "action-secondary": "#d2defc",
       "emphasis": "#dd1659",
       "success": "#8bc34a",
@@ -108,9 +108,9 @@
       "muted-5": "#f2f4f5"
     },
     "text": {
-      "action-primary": "#0F3E99",
+      "action-primary": "#cd5c5c",
       "action-secondary": "#eef3f7",
-      "link": "#0F3E99",
+      "link": "#cd5c5c",
       "emphasis": "#f71963",
       "disabled": "#979899",
       "success": "#8bc34a",
@@ -126,12 +126,12 @@
       "muted-5": "#f2f4f5"
     },
     "visited-text": {
-      "link": "#0c389f"
+      "link": "#cd5c5c"
     },
     "hover-text": {
-      "action-primary": "#072c75",
+      "action-primary": "#cd5c5c",
       "action-secondary": "#dbe9fd",
-      "link": "#0c389f",
+      "link": "#cd5c5c",
       "emphasis": "#dd1659",
       "success": "#8bc34a",
       "success--faded": "#eafce3",
@@ -141,7 +141,7 @@
       "warning--faded": "#fff6e0"
     },
     "active-text": {
-      "link": "#0c389f",
+      "link": "#cd5c5c",
       "emphasis": "#dd1659",
       "success": "#8bc34a",
       "success--faded": "#eafce3",
@@ -151,7 +151,7 @@
       "warning--faded": "#fff6e0"
     },
     "border": {
-      "action-primary": "#0F3E99",
+      "action-primary": "#cd5c5c",
       "action-secondary": "#eef3f7",
       "emphasis": "#f71963",
       "disabled": "#e3e4e6",
@@ -168,7 +168,7 @@
       "muted-5": "#f2f4f5"
     },
     "hover-border": {
-      "action-primary": "#072c75",
+      "action-primary": "#cd5c5c",
       "action-secondary": "#dbe9fd",
       "emphasis": "#dd1659",
       "success": "#8bc34a",
@@ -184,7 +184,7 @@
       "muted-5": "#f2f4f5"
     },
     "active-border": {
-      "action-primary": "#0c389f",
+      "action-primary": "#cd5c5c",
       "action-secondary": "#d2defc",
       "emphasis": "#dd1659",
       "success": "#8bc34a",
@@ -200,10 +200,10 @@
       "muted-5": "#f2f4f5"
     },
     "on": {
-      "base": "#7a7475",
+      "base": "#cd5c5c",
       "base--inverted": "#ffffff",
       "action-primary": "#ffffff",
-      "action-secondary": "#0F3E99",
+      "action-secondary": "#cd5c5c",
       "emphasis": "#ffffff",
       "disabled": "#979899",
       "success": "#ffffff",
@@ -220,7 +220,7 @@
     },
     "hover-on": {
       "action-primary": "#ffffff",
-      "action-secondary": "#0F3E99",
+      "action-secondary": "#cd5c5c",
       "emphasis": "#ffffff",
       "success": "#ffffff",
       "success--faded": "#3f3f40",
@@ -231,7 +231,7 @@
     },
     "active-on": {
       "action-primary": "#ffffff",
-      "action-secondary": "#0F3E99",
+      "action-secondary": "#cd5c5c",
       "emphasis": "#ffffff",
       "success": "#ffffff",
       "success--faded": "#3f3f40",
@@ -260,21 +260,21 @@
       "heading-1": {
         "fontFamily": "Montserrat, sans-serif",
         "fontWeight": "700",
-        "fontSize": "3rem",
+        "fontSize": "2rem",
         "textTransform": "initial",
         "letterSpacing": "0"
       },
       "heading-2": {
         "fontFamily": "Montserrat, sans-serif",
         "fontWeight": "700",
-        "fontSize": "2.25rem",
+        "fontSize": "1.5rem",
         "textTransform": "initial",
         "letterSpacing": "0"
       },
       "heading-3": {
         "fontFamily": "Montserrat, sans-serif",
-        "fontWeight": "700",
-        "fontSize": "1.75rem",
+        "fontWeight": "600",
+        "fontSize": "1.2rem",
         "textTransform": "initial",
         "letterSpacing": "0"
       },
@@ -302,7 +302,7 @@
       "body": {
         "fontFamily": "Montserrat, sans-serif",
         "fontWeight": "normal",
-        "fontSize": "1rem",
+        "fontSize": "0.875rem",
         "textTransform": "initial",
         "letterSpacing": "0"
       },
