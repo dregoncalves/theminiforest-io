@@ -4,5 +4,8 @@
   },
   "cluster-grid": {
     "component": "ClusterGrid"
+  },
+  "como-comprar-page": {
+    "component": "ComoComprarPage"
   }
 }

@@ -7,8 +7,7 @@
 
 .paragraph--meus-favoritos-link {
   margin: 0;
-  padding-top: 10px;
-  line-height: 1;
+  line-height: revert;
   font-weight: 500;
 }
 .paragraph--meus-favoritos-link .link--meus-favoritos-link {

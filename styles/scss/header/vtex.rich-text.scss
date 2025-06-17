@@ -10,10 +10,8 @@
 
 .paragraph--meus-favoritos-link {
   margin: 0;
-  padding-top: 10px;
-  line-height: 1;
+  line-height: revert;
   font-weight: 500;
-  // padding-bottom: 0.32em;
 
   .link--meus-favoritos-link {
     color: #71817f;

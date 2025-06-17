@@ -1,0 +1,11 @@
+{
+  "store.custom#como-comprar": {
+    "path": "/institucional/como-comprar"
+  },
+  "store.custom#trocas-e-devolucoes": {
+    "path": "/institucional/trocas-e-devolucoes"
+  },
+  "store.custom#frete": {
+    "path": "/institucional/frete"
+  }
+}

@@ -200,7 +200,7 @@
       "muted-5": "#f2f4f5"
     },
     "on": {
-      "base": "#cd5c5c",
+      "base": "#696969",
       "base--inverted": "#ffffff",
       "action-primary": "#ffffff",
       "action-secondary": "#cd5c5c",
@@ -259,14 +259,14 @@
     "styles": {
       "heading-1": {
         "fontFamily": "Montserrat, sans-serif",
-        "fontWeight": "700",
+        "fontWeight": "600",
         "fontSize": "2rem",
         "textTransform": "initial",
         "letterSpacing": "0"
       },
       "heading-2": {
         "fontFamily": "Montserrat, sans-serif",
-        "fontWeight": "700",
+        "fontWeight": "600",
         "fontSize": "1.5rem",
         "textTransform": "initial",
         "letterSpacing": "0"

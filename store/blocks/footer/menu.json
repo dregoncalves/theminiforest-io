@@ -18,11 +18,12 @@
       "highlight": false,
       "itemProps": {
         "type": "internal",
-        "href": "/como-comprar",
+        "href": "/institucional/como-comprar",
         "noFollow": false,
         "tagTitle": "Como Comprar",
         "text": "Como Comprar"
-      }
+      },
+      "blockClass": "footer-link"
     }
   },
   "menu-item#trocas-devolucoes": {
@@ -32,11 +33,12 @@
       "highlight": false,
       "itemProps": {
         "type": "internal",
-        "href": "/trocas-e-devolucoes",
+        "href": "/institucional/trocas-e-devolucoes",
         "noFollow": false,
         "tagTitle": "Trocas e Devoluções",
         "text": "Trocas e Devoluções"
-      }
+      },
+      "blockClass": "footer-link"
     }
   },
   "menu-item#frete": {
@@ -46,11 +48,12 @@
       "highlight": false,
       "itemProps": {
         "type": "internal",
-        "href": "/frete",
+        "href": "/institucional/frete",
         "noFollow": false,
         "tagTitle": "Frete",
         "text": "Frete"
-      }
+      },
+      "blockClass": "footer-link"
     }
   },
   "menu-item#duvidas": {
@@ -60,11 +63,12 @@
       "highlight": false,
       "itemProps": {
         "type": "internal",
-        "href": "/duvidas",
+        "href": "/institucional/duvidas",
         "noFollow": false,
         "tagTitle": "Dúvidas",
         "text": "Dúvidas"
-      }
+      },
+      "blockClass": "footer-link"
     }
   },
   "menu-item#cdc": {
@@ -74,11 +78,12 @@
       "highlight": false,
       "itemProps": {
         "type": "internal",
-        "href": "/cdc",
+        "href": "https://idec.org.br/consultas/codigo-de-defesa-do-consumidor/capitulo-vi",
         "noFollow": false,
         "tagTitle": "CDC",
         "text": "CDC"
-      }
+      },
+      "blockClass": "footer-link"
     }
   },
 
@@ -106,7 +111,8 @@
         "noFollow": false,
         "tagTitle": "Sale",
         "text": "Sale"
-      }
+      },
+      "blockClass": "footer-link"
     }
   },
   "menu-item#the-mini-forest": {
@@ -120,7 +126,8 @@
         "noFollow": false,
         "tagTitle": "The Mini Forest",
         "text": "The Mini Forest"
-      }
+      },
+      "blockClass": "footer-link"
     }
   },
   "menu-item#propriedade-industrial": {
@@ -134,7 +141,8 @@
         "noFollow": false,
         "tagTitle": "Propriedade Industrial",
         "text": "Propriedade Industrial"
-      }
+      },
+      "blockClass": "footer-link"
     }
   },
   "menu-item#mapa-do-site": {
@@ -148,7 +156,8 @@
         "noFollow": false,
         "tagTitle": "Mapa do Site",
         "text": "Mapa do Site"
-      }
+      },
+      "blockClass": "footer-link"
     }
   },
   "menu-item#blog": {
@@ -162,7 +171,8 @@
         "noFollow": false,
         "tagTitle": "Blog",
         "text": "Blog"
-      }
+      },
+      "blockClass": "footer-link"
     }
   },
   "menu-item#dia-das-maes": {
@@ -176,7 +186,8 @@
         "noFollow": false,
         "tagTitle": "Dia das Mães",
         "text": "Dia das Mães"
-      }
+      },
+      "blockClass": "footer-link"
     }
   }
 }

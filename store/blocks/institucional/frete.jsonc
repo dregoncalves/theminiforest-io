@@ -1,0 +1,101 @@
+{
+  "store.custom#frete": {
+    "blocks": ["flex-layout.row#frete-row"],
+    "props": {
+      "blockClass": "frete__content"
+    }
+  },
+
+  "flex-layout.row#frete-row": {
+    "children": ["flex-layout.col#frete-content-col"],
+    "props": {
+      "blockClass": ["frete__content"]
+    }
+  },
+
+  "flex-layout.col#frete-content-col": {
+    "children": [
+      "rich-text#frete-title",
+      "rich-text#frete-info-correios-text",
+      "flex-layout.col#frete-info-correios-box",
+      "rich-text#frete-info",
+      "rich-text#frete-prazos-servicos-text",
+      "flex-layout.col#frete-prazos-servicos-list",
+      "rich-text#frete-prazos-servicos-extra",
+      "rich-text#frete-contato"
+    ],
+    "props": {
+      "blockClass": ["frete__all"]
+    }
+  },
+
+  "rich-text#frete-title": {
+    "props": {
+      "text": "# Frete",
+      "blockClass": ["frete__heading-primary", "frete__heading-striped"]
+    }
+  },
+
+  "rich-text#frete-info-correios-text": {
+    "props": {
+      "text": "## Informação dos Correios",
+      "blockClass": ["frete__all"]
+    }
+  },
+
+  "flex-layout.col#frete-info-correios-box": {
+    "children": ["rich-text#frete-info-correios-box-text"],
+    "props": {
+      "blockClass": ["frete__box", "frete__box--warning"]
+    }
+  },
+
+  "rich-text#frete-info-correios-box-text": {
+    "props": {
+      "text": "**ATENÇÃO**\n\nPara saber se sua localidade está com restrição de entrega ou prazo diferenciados de entrega, acesse o link e simule a entrega. Será necessário preencher o campo serviço (PAC, Sedex, etc), colocar o nosso CEP (03178-180) e o CEP de destino (CEP de entrega).\n\nAcesse o link: [www2.correios.com.br/sistemas/precosPrazos/](http://www2.correios.com.br/sistemas/precosPrazos/)",
+      "blockClass": ["frete__box-text"]
+    }
+  },
+
+  "rich-text#frete-info": {
+    "props": {
+      "text": "## Frete\n\nEm todas as compras realizadas The Mini Forest serão disponibilizados os serviços de entrega oferecidos pelo Correio, com exceção do SEDEX 10, SEDEX 12 e SEDEX hoje.\n\nNão trabalhamos com gratuidade de entregas, portanto valor final do frete será calculado após o Login, já na parte de pagamento. Pedimos que revise os dados de entrega antes da finalização da compra.\n\nCaso a compra ultrapasse as dimensões ou peso da encomenda não haverá disponibilidade de entrega. Neste caso, é necessário a realização de diferentes compras, com envios separados.\n\nA dimensão máxima do pacote não poderá ultrapassar o limite pré-estabelecido pelos Correios, portanto, encomendas de grandes volumes precisarão ser feitas em pedidos diferentes, com fretes calculados separadamente.",
+      "blockClass": ["frete__all"]
+    }
+  },
+
+  "rich-text#frete-prazos-servicos-text": {
+    "props": {
+      "text": "## Prazos e Serviços\n\nExistem alguns fatores que podem tornar sua entrega mais rápida ou não. A escolha do serviço de entrega é o principal fator, porém a agilidade está relacionada à distância e ao valor pago no frete.",
+      "blockClass": ["frete__all"]
+    }
+  },
+
+  "flex-layout.col#frete-prazos-servicos-list": {
+    "children": ["rich-text#frete-prazos-servicos-list-items"],
+    "props": {
+      "blockClass": ["frete__list-wrapper"]
+    }
+  },
+
+  "rich-text#frete-prazos-servicos-list-items": {
+    "props": {
+      "text": "- **PAC** - Serviço de encomenda da linha econômica para o envio exclusivo de mercadoria. Esse serviço atende todo o Brasil, com baixo custo e um prazo de até 21 dias úteis.\n- **SEDEX** - Serviço de encomenda expressa de documentos ou mercadoria. O Sedex possui entrega domiciliar, em dias úteis, de segunda a sexta, em todos os municípios do Brasil. Por ter um custo maior, o prazo de entrega são até 8 dias úteis.\n",
+      "blockClass": ["frete__list"]
+    }
+  },
+
+  "rich-text#frete-prazos-servicos-extra": {
+    "props": {
+      "text": "Em casos de atraso na entrega, inconformidades na entrega etc., será necessário o período de apuração da encomenda solicitada pelos Correios, de iniciais 5 dias úteis.\n\nReclamações referentes à atrasos poderão ser registradas apenas após o prazo estar excedido.",
+      "blockClass": ["frete__all"]
+    }
+  },
+
+  "rich-text#frete-contato": {
+    "props": {
+      "text": "Se houver alguma dúvida sobre entregas, entre em contato conosco através dos nossos canais:\n\nE-mail - [suporte@theminiforest.com](mailto:suporte@theminiforest.com)\n\nTelefone - (11) 2301-0041",
+      "blockClass": ["frete__all"]
+    }
+  }
+}

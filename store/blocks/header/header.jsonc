@@ -69,7 +69,8 @@
       "horizontalAlign": "right",
       "preventHorizontalStretch": true,
       "verticalAlign": "center",
-      "colSizing": "equal"
+      "colSizing": "equal",
+      "blockClass": "right-desktop"
     }
   },
 
@@ -81,16 +82,13 @@
   },
 
   "login": {
-    "props": {
-      "emailAndPasswordTitle": "Entrar com e-mail",
-      "identifierPlaceholder": "teste",
-      "iconLabel": "Minha Conta"
-    }
+    "props": {}
   },
 
   "minicart.v2": {
     "props": {
-      "openOnHover": true
+      "openOnHover": true,
+      "quantityDisplay": "always"
     }
   },
 
@@ -112,7 +110,6 @@
       "drawer",
       "logo#mobile",
       "flex-layout.col#spacer",
-      "login",
       "minicart.v2"
     ],
     "props": {

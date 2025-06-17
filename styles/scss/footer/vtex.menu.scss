@@ -9,3 +9,11 @@
 .menuItem {
   width: fit-content;
 }
+
+.styledLinkContent--footer-link {
+  font-weight: 300;
+  line-height: 30px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-size: 12px;
+}

@@ -1,0 +1,92 @@
+.wrapper--como-comprar__titulo,
+.wrapper--trocas-e-devolucoes__heading-striped,
+.wrapper--frete__heading-striped {
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.headingLevel1--como-comprar__titulo,
+.headingLevel1--trocas-e-devolucoes__heading-primary,
+.headingLevel1--frete__heading-primary {
+  background-color: #fffcf6;
+  display: inline-block;
+  padding: 0 10px;
+  position: relative;
+  vertical-align: middle;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.wrapper--como-comprar__titulo::before,
+.wrapper--trocas-e-devolucoes__heading-primary::before,
+.wrapper--frete__heading-primary::before {
+  background-color: #7a7475;
+  content: "";
+  height: 1px;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+
+.list--como-comprar__passos {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 30px;
+  list-style: decimal;
+  color: indianred;
+}
+.list--como-comprar__passos .link--como-comprar__passos {
+  color: indianred;
+  text-decoration: none;
+}
+
+.container--como-comprar__passos {
+  border-bottom: 1px solid #71817f;
+  padding: 10px 0;
+}
+
+.headingLevel2--como-comprar__passo {
+  color: indianred;
+}
+
+.headingLevel2--trocas-e-devolucoes__all,
+.headingLevel2--frete__all {
+  text-align: center;
+  color: indianred;
+}
+
+.list--trocas-e-devolucoes__all,
+.list--frete__list {
+  color: indianred;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 30px;
+  margin: 0 0 0 40px;
+  list-style: circle;
+}
+
+.link--trocas-e-devolucoes__all {
+  color: indianred;
+}
+
+.container--frete__box-text {
+  background-color: #ffffff;
+  border: 1px solid indianred;
+  padding: 10px;
+  color: #696969;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.link--frete__box-text {
+  text-decoration: underline;
+  color: indianred;
+  font-weight: 600;
+}

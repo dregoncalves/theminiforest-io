@@ -61,12 +61,15 @@
     "children": [
       "flex-layout.col#footer-informacoes",
       "flex-layout.col#footer-institucional",
-      "footer-spacer"
+      "flex-layout.col#footer-pagamentos",
+      "flex-layout.col#footer-segurança"
     ],
     "props": {
       "blockClass": "menu-row",
       "paddingTop": 6,
-      "paddingBottom": 3
+      "paddingBottom": 3,
+      "preventHorizontalStretch": true,
+      "horizontalAlign": "between"
     }
   },
 
@@ -101,6 +104,85 @@
     "props": {
       "text": "INSTITUCIONAL",
       "blockClass": ["footer-title"]
+    }
+  },
+
+  "flex-layout.col#footer-pagamentos": {
+    "props": {
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "rich-text#pagamentos-title",
+      "flex-layout.row#payment-icons__footer"
+    ]
+  },
+
+  "rich-text#pagamentos-title": {
+    "props": {
+      "text": "PAGAMENTO",
+      "blockClass": "footer-title"
+    }
+  },
+
+  "flex-layout.row#payment-icons__footer": {
+    "props": {
+      "blockClass": "footer_pagamentos-icons",
+      "colSizing": "equal",
+      "preventHorizontalStretch": true
+    },
+    "children": ["rich-text#cartao-icon", "rich-text#boleto-icon"]
+  },
+
+  "rich-text#cartao-icon": {
+    "props": {
+      "text": "![Cartao](assets/icons/cartao-icon.svg)",
+      "blockClass": "footer_pagamentos-icon"
+    }
+  },
+
+  "rich-text#boleto-icon": {
+    "props": {
+      "text": "![Boleto](assets/icons/boleto-icon.svg)",
+      "blockClass": "footer_pagamentos-icon"
+    }
+  },
+
+  "flex-layout.col#footer-segurança": {
+    "props": {
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "rich-text#footer__seguranca-title",
+      "rich-text#icons-seguranca",
+      "rich-text#endybrasil-icon",
+      "rich-text#upnext-icon"
+    ]
+  },
+
+  "rich-text#footer__seguranca-title": {
+    "props": {
+      "text": "SEGURANÇA",
+      "blockClass": "footer-title"
+    }
+  },
+
+  "rich-text#icons-seguranca": {
+    "props": {
+      "text": "![Google icon](assets/icons/google-icon.svg) ![Let's Encrypt icon](assets/icons/lets-encrypt-icon.svg)"
+    }
+  },
+
+  "rich-text#endybrasil-icon": {
+    "props": {
+      "text": "![Endybrasil icon](assets/icons/endybrasil-icon.svg)",
+      "blockClass": "icon-footer"
+    }
+  },
+
+  "rich-text#upnext-icon": {
+    "props": {
+      "text": "![Upnext icon](assets/icons/upnext-icon.svg)",
+      "blockClass": "icon-footer"
     }
   },
 
