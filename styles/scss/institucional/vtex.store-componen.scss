@@ -1,0 +1,8 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+@include tablet {
+  .imageElement--historia__story-img {
+    max-width: 100%;
+  }
+}

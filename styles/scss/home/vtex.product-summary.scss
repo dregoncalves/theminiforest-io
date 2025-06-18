@@ -40,6 +40,8 @@
 
 // Item da vitrine (imagem, nome, preço etc.)
 .element--home-shelf {
+  position: relative;
+
   .nameContainer {
     padding-top: 0.875rem;
     padding-bottom: 0;

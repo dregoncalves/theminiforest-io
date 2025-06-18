@@ -1,0 +1,97 @@
+{
+  "store.custom#historia": {
+    "blocks": ["flex-layout.row#historia-row"],
+    "props": {
+      "blockClass": "historia__content"
+    }
+  },
+
+  "flex-layout.row#historia-row": {
+    "children": ["flex-layout.col#historia-content-col"],
+    "props": {
+      "blockClass": ["historia__content"],
+      "colGap": 6
+    }
+  },
+
+  "flex-layout.col#historia-content-col": {
+    "children": ["rich-text#historia-title", "flex-layout.row#historia-story"],
+    "props": {
+      "blockClass": ["historia__all"]
+    }
+  },
+
+  "rich-text#historia-title": {
+    "props": {
+      "text": "# The Mini Forest",
+      "blockClass": ["historia__heading-primary", "historia__heading-striped"]
+    }
+  },
+
+  "flex-layout.row#historia-story": {
+    "children": [
+      "flex-layout.col#historia-image-col",
+      "flex-layout.col#historia-text-content"
+    ],
+    "props": {
+      "blockClass": "historia__story-row"
+    }
+  },
+
+  "flex-layout.col#historia-image-col": {
+    "children": ["image#historia-main-img"],
+    "props": {
+      "blockClass": "historia__story-img-col"
+    }
+  },
+
+  "image#historia-main-img": {
+    "props": {
+      "src": "assets/images/the-mini-forest-historia.webp",
+      "alt": "The mini Forest História",
+      "title": "The mini Forest História",
+      "blockClass": "historia__story-img"
+    }
+  },
+
+  "flex-layout.col#historia-text-content": {
+    "children": [
+      "rich-text#historia-paragraph-1",
+      "rich-text#historia-paragraph-2",
+      "rich-text#historia-paragraph-3",
+      "rich-text#historia-final-title"
+    ],
+    "props": {
+      "blockClass": "historia__story-content",
+      "preventVerticalStretch": true
+    }
+  },
+
+  "rich-text#historia-paragraph-1": {
+    "props": {
+      "text": "Conta a história que, quando a Terra entrou em colapso e os recursos naturais ficaram escassos, a humanidade decidiu que era hora de se mudar para um outro planeta. Telescópios e sondas super avançadas já haviam encontrado um local habitável em uma constelação próxima e os preparativos para uma viagem a outro sistema solar foi iniciada. E então, poucos meses depois, nave após nave, nações inteiras embarcaram e decolaram deixando para trás seus companheiros mais antigos: nós - os animais. A gente simplesmente não aguentaria tal viagem.",
+      "blockClass": ["historia__paragraph"]
+    }
+  },
+
+  "rich-text#historia-paragraph-2": {
+    "props": {
+      "text": "Sendo assim, ficamos sozinhos em um mundo praticamente esgotado, climaticamente descontrolado e poluído. Por outro lado, sem a ação humana, a Terra teria uma chance. Incumbidos da tarefa de “consertar” o planeta, eu - a raposa - e outros animais, cada um com seus conhecimentos e habilidades, nos agrupamos na **The Mini Forest**, uma floresta que resistiu à devastação humana e que se tornou nosso novo lar.",
+      "blockClass": ["historia__paragraph"]
+    }
+  },
+
+  "rich-text#historia-paragraph-3": {
+    "props": {
+      "text": "Na **The Mini Forest** iniciamos nossa aventura de transformar uma terra triste e sem vida em algo alegre, novo e inocente. Ela é o ponto de partida desta jornada, onde velhos hábitos e tradições devem permanecer no passado para renascerem evoluídos no futuro. Um local em que não existe apenas o azul para meninos ou cor-de-rosa para meninas e cujos pais, preocupados com o futuro de seus pequenos - cada da vez mais cidadãos do mundo, devem cuidar, educar e vestir seus filhos com o mesmo cuidado com que o fazem para si.",
+      "blockClass": ["historia__paragraph"]
+    }
+  },
+
+  "rich-text#historia-final-title": {
+    "props": {
+      "text": "## Junte-se a nós e siga-nos pela floresta! Há um longo caminho pela frente…",
+      "blockClass": ["historia__all"]
+    }
+  }
+}

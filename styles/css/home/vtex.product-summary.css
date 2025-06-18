@@ -35,6 +35,9 @@
   opacity: 0;
 }
 
+.element--home-shelf {
+  position: relative;
+}
 .element--home-shelf .nameContainer {
   padding-top: 0.875rem;
   padding-bottom: 0;

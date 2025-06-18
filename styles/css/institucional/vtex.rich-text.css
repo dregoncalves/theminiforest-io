@@ -1,6 +1,9 @@
 .wrapper--como-comprar__titulo,
-.wrapper--trocas-e-devolucoes__heading-striped,
-.wrapper--frete__heading-striped {
+.wrapper--trocas-e-devolucoes__heading-primary,
+.wrapper--frete__heading-primary,
+.wrapper--sale__heading-primary,
+.wrapper--historia__heading-primary,
+.wrapper--propriedade-industrial__heading-primary {
   justify-content: center;
   width: 100%;
   text-align: center;
@@ -9,7 +12,10 @@
 
 .headingLevel1--como-comprar__titulo,
 .headingLevel1--trocas-e-devolucoes__heading-primary,
-.headingLevel1--frete__heading-primary {
+.headingLevel1--frete__heading-primary,
+.headingLevel1--sale__heading-primary,
+.headingLevel1--historia__heading-primary,
+.headingLevel1--propriedade-industrial__heading-primary {
   background-color: #fffcf6;
   display: inline-block;
   padding: 0 10px;
@@ -24,7 +30,10 @@
 
 .wrapper--como-comprar__titulo::before,
 .wrapper--trocas-e-devolucoes__heading-primary::before,
-.wrapper--frete__heading-primary::before {
+.wrapper--frete__heading-primary::before,
+.wrapper--sale__heading-primary::before,
+.wrapper--historia__heading-primary::before,
+.wrapper--propriedade-industrial__heading-primary::before {
   background-color: #7a7475;
   content: "";
   height: 1px;
@@ -44,6 +53,38 @@
 .list--como-comprar__passos .link--como-comprar__passos {
   color: indianred;
   text-decoration: none;
+}
+
+.paragraph--sale__all {
+  color: #71817f;
+}
+
+.wrapper--sale__all {
+  width: 100%;
+  color: #71817f;
+}
+.wrapper--sale__all .headingLevel2--sale__all {
+  text-align: center;
+  font-size: 15px;
+}
+
+.list--sale__list {
+  text-align: left;
+}
+.list--sale__list .listItem--sale__list {
+  font-size: 14px;
+  line-height: 20px;
+  margin: 10px 0;
+  padding-left: 10px;
+  display: list-item;
+  color: #71817f;
+  list-style: circle;
+}
+
+.link--sale__list,
+.link--sale__all {
+  text-decoration: none;
+  color: #71817f;
 }
 
 .container--como-comprar__passos {
@@ -89,4 +130,30 @@
   text-decoration: underline;
   color: indianred;
   font-weight: 600;
+}
+
+.paragraph--historia__paragraph {
+  margin: 10px 0;
+  color: #71817f;
+}
+
+.wrapper--historia__all {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.headingLevel2--historia__all {
+  color: #71817f;
+  text-align: center;
+  font-size: 15px;
+  width: 80%;
+}
+
+.paragraph--propriedade-industrial__paragraph {
+  font-size: 14px;
+  line-height: 20px;
+  margin: 10px 0;
+  text-align: justify;
+  color: #71817f;
 }

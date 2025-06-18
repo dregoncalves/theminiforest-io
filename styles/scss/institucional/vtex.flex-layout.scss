@@ -1,10 +1,12 @@
 @import "../utils/variables";
 @import "../utils/mixins";
 
-// Página "Como Comprar"
 .flexCol--como-comprar__col,
 .flexCol--trocas-e-devolucoes__all,
-.flexCol--frete__all {
+.flexCol--frete__all,
+.flexCol--sale__all,
+.flexCol--historia__all,
+.flexCol--propriedade-industrial__all {
   max-width: 1260px;
   margin: 0 auto;
   scroll-behavior: smooth;
