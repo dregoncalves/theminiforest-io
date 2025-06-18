@@ -7,7 +7,8 @@
 .wrapper--frete__heading-primary,
 .wrapper--sale__heading-primary,
 .wrapper--historia__heading-primary,
-.wrapper--propriedade-industrial__heading-primary {
+.wrapper--propriedade-industrial__heading-primary,
+.wrapper--dia-das-maes__heading-primary {
   justify-content: center;
   width: 100%;
   text-align: center;
@@ -19,7 +20,8 @@
 .headingLevel1--frete__heading-primary,
 .headingLevel1--sale__heading-primary,
 .headingLevel1--historia__heading-primary,
-.headingLevel1--propriedade-industrial__heading-primary {
+.headingLevel1--propriedade-industrial__heading-primary,
+.headingLevel1--dia-das-maes__heading-primary {
   background-color: #fffcf6;
   display: inline-block;
   padding: 0 10px;
@@ -37,7 +39,8 @@
 .wrapper--frete__heading-primary::before,
 .wrapper--sale__heading-primary::before,
 .wrapper--historia__heading-primary::before,
-.wrapper--propriedade-industrial__heading-primary::before {
+.wrapper--propriedade-industrial__heading-primary::before,
+.wrapper--dia-das-maes__heading-primary::before {
   background-color: #7a7475;
   content: "";
   height: 1px;
@@ -104,7 +107,8 @@
 }
 
 .headingLevel2--trocas-e-devolucoes__all,
-.headingLevel2--frete__all {
+.headingLevel2--frete__all,
+.headingLevel2--dia-das-maes__all {
   text-align: center;
   color: indianred;
 }
@@ -119,8 +123,10 @@
   list-style: circle;
 }
 
-.link--trocas-e-devolucoes__all {
+.link--trocas-e-devolucoes__all,
+.link--dia-das-maes__paragraph {
   color: indianred;
+  font-weight: 600;
 }
 
 .container--frete__box-text {

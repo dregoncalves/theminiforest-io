@@ -18,6 +18,10 @@
 
 .newsletter .container {
   padding: 35px 10px 25px 10px;
+
+  @include mobile {
+    padding: 0;
+  }
 }
 
 .footerLayout {
@@ -58,6 +62,9 @@
   border-radius: 0;
   transition: 0.2s all ease-in-out;
   font-size: 11px;
+  @include mobile {
+    width: 100%;
+  }
 
   &:hover {
     background-color: #5c817d;

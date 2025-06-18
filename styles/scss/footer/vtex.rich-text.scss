@@ -12,6 +12,17 @@
   text-transform: uppercase;
   vertical-align: middle;
   color: $text-green;
+
+  @include mobile {
+    font-size: 13px;
+    height: auto;
+    letter-spacing: 2px;
+    line-height: 18px;
+    margin: 0;
+    padding: 6px 0;
+    text-align: center;
+    width: 100%;
+  }
 }
 
 .strong--newslatter-label {
@@ -41,6 +52,10 @@
   text-align: center;
   text-decoration: none;
 
+  @include mobile {
+    padding: 0;
+  }
+
   .link--footer {
     text-decoration: none;
     color: #7b7b7b;
@@ -54,4 +69,18 @@
 
 .container--icon-footer {
   justify-content: flex-end;
+}
+
+.list--footer {
+  padding: 0;
+
+  .listItem--footer {
+    text-align: center;
+    list-style: none;
+
+    .link--footer {
+      text-decoration: none;
+      color: #7b7b7b;
+    }
+  }
 }

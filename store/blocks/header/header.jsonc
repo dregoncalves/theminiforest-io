@@ -106,17 +106,41 @@
   },
 
   "flex-layout.row#1-mobile": {
-    "children": [
-      "drawer",
-      "logo#mobile",
-      "flex-layout.col#spacer",
-      "minicart.v2"
-    ],
+    "children": ["drawer", "logo#mobile", "flex-layout.row#desktop-triggers"],
     "props": {
       "blockClass": "main-header-mobile",
       "preventHorizontalStretch": true,
       "preserveLayoutOnMobile": true,
       "fullWidth": true
+    }
+  },
+
+  "flex-layout.row#desktop-triggers": {
+    "props": {
+      "blockClass": "desktop-triggers"
+    },
+    "children": ["overlay-trigger#search", "minicart.v2"]
+  },
+
+  "overlay-trigger#search": {
+    "props": {
+      "trigger": "click",
+      "blockClass": "search-mobile"
+    },
+    "children": ["icon-search", "overlay-layout"]
+  },
+  "overlay-layout": {
+    "props": {
+      "placement": "bottom",
+      "scrollBehavior": "close-on-scroll",
+      "blockClass": "search-mobile"
+    },
+    "children": ["search-bar#mobile"]
+  },
+  "search-bar#mobile": {
+    "props": {
+      "containerMode": "container",
+      "autoFocus": true
     }
   },
   "drawer": {
@@ -141,8 +165,8 @@
       "title": "Logo",
       "href": "/",
       "url": "https://theminiforest.vteximg.com.br/arquivos/TheMiniForest-logo.svg",
-      "width": "77.5",
-      "height": "27.5"
+      "width": "110",
+      "height": "70"
     }
   }
 }

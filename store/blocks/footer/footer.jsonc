@@ -218,23 +218,36 @@
   },
   "flex-layout.col#footer-1-mobile": {
     "children": [
-      "accepted-payment-methods",
+      "flex-layout.row#newsletter__mobile",
       "social-networks",
       "rich-text#footer-mobile"
     ],
     "props": {
-      "blockClass": "payment-methods",
-      "paddingTop": 4,
-      "paddingBottom": 4,
-      "rowGap": 4
+      "blockClass": "payment-methods"
     }
   },
   "flex-layout.row#1-footer-mobile": {
     "props": {
-      "paddingTop": 4,
-      "paddingBottom": 4
+      "paddingTop": 0,
+      "paddingBottom": 0
     }
-    // "children": ["vtex.menu@2.x:menu#footer-mobile"]
+  },
+  "flex-layout.row#newsletter__mobile": {
+    "children": ["rich-text#newsletter-label__mobile", "newsletter"],
+    "props": {
+      "fullWidth": false,
+      "colSizing": "auto",
+      "horizontalAlign": "left"
+    }
+  },
+
+  "rich-text#newsletter-label__mobile": {
+    "props": {
+      "text": "ASSINE NOSSA NEWSLETTER",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": "newslatter-label"
+    }
   },
   "rich-text#footer-mobile": {
     "props": {

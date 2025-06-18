@@ -16,5 +16,8 @@
   },
   "store.custom#propriedade-industrial": {
     "path": "/institucional/propriedade-industrial"
+  },
+  "store.custom#dia-das-maes": {
+    "path": "/institucional/dia-das-maes"
   }
 }

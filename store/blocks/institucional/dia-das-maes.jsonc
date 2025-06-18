@@ -1,0 +1,74 @@
+{
+  "store.custom#dia-das-maes": {
+    "blocks": ["flex-layout.row#dia-das-maes-row"],
+    "props": {
+      "blockClass": "dia-das-maes__content"
+    }
+  },
+
+  "flex-layout.row#dia-das-maes-row": {
+    "children": ["flex-layout.col#dia-das-maes-content-col"],
+    "props": {
+      "blockClass": ["dia-das-maes__content"]
+    }
+  },
+
+  "flex-layout.col#dia-das-maes-content-col": {
+    "children": [
+      "rich-text#dia-das-maes-title",
+      "rich-text#dia-das-maes-heading",
+      "rich-text#dia-das-maes-paragraph-1",
+      "rich-text#dia-das-maes-paragraph-2",
+      "rich-text#dia-das-maes-rules-list",
+      "rich-text#dia-das-maes-contact"
+    ],
+    "props": {
+      "blockClass": ["dia-das-maes__all"]
+    }
+  },
+
+  "rich-text#dia-das-maes-title": {
+    "props": {
+      "text": "# Promoção Pingente The Mini Forest!",
+      "blockClass": [
+        "dia-das-maes__heading-primary",
+        "dia-das-maes__heading-striped"
+      ]
+    }
+  },
+
+  "rich-text#dia-das-maes-heading": {
+    "props": {
+      "text": "## **Quer ganhar um pingente que é a cara The Mini Forest?** Se atente às condições e corre garantir o seu!!",
+      "blockClass": ["dia-das-maes__all"]
+    }
+  },
+
+  "rich-text#dia-das-maes-paragraph-1": {
+    "props": {
+      "text": "Para encantar ainda mais o visual das mamães e aproximar a dona raposa da vida dos pequeninos, a The Mini Forest vai disponibilizar uma quantidade limitada de pingentes para as compras acima de R$ 799,00 (setecentos e noventa e nove reais).",
+      "blockClass": ["dia-das-maes__paragraph"]
+    }
+  },
+
+  "rich-text#dia-das-maes-paragraph-2": {
+    "props": {
+      "text": "Seguem abaixo as regras para usufruir desta promoção:\n<small>R$799,00 e não é cumulativo com nenhuma outra campanha de descontos;</small>",
+      "blockClass": ["dia-das-maes__paragraph"]
+    }
+  },
+
+  "rich-text#dia-das-maes-rules-list": {
+    "props": {
+      "text": "O valor de R$ 799,00 não considera o frete do pedido, ou seja, a compra precisa atingir R$ 799,00 em PRODUTOS comprados em nosso site. Então apenas compras de R$ 799,00 valor do frete estarão elegíveis (exemplo: total de produtos de R$ 798,99 frete de R$ 0,01 NÃO é contemplado com o BRINDE, pois não atingiu o valor mínimo gasto em peças)\n\n• Será enviado apenas 1 BRINDE POR PEDIDO, ou seja, se o seu pedido somar mais de R$ 1.598,00 em peças, seguirá sendo enviada apenas 1 unidade do brinde. Caso deseje mais de 1 unidade, deverá realizar mais de uma compra, todas seguindo as demais condições pré-estabelecidas.\n\n• Não será realizada nenhuma troca de pingente, os itens de brinde não têm direito à troca (anterior ou posterior ao recebimento do pedido).\n\n• Em casos de devolução, caso a compra (já retirado o valor do frete) não atinja R$ 799,00 o brinde deverá ser devolvido, pois isso torna o pedido inelegível para o ganho do pingente;\n\n• Em caso de devolução, mas opção pelo VALE (ficar com o crédito na loja para comprar novo produto), o cliente poderá permanecer com o BRINDE.\n\n• Não é feito nenhum tipo de reserva de peças (seja para compras, trocas ou carrinho);\n\n• Verifique os dados cadastrados, como e-mail e telefone de contato. Muitas vezes é necessário o contato com o cliente e, caso não seja possível, o pedido é cancelado. \n\n• O carrinho NÃO reserva a peça, portanto a compra só estará garantida após finalizada, com o pagamento aprovado (em caso de pagamentos negados, o pedido será cancelado e as peças disponibilizadas novamente no site), então o brinde somente estará vinculado ao pedido após o pagamento aprovado;\n\n• Os boletos não poderão ser adiados para pagamentos posteriores, então após vencido o pedido estará inválido;\n\n• Nenhum dado da compra poderá ser alterado, portanto verifique se as informações (endereço, forma de pagamento, tipo de frete, tamanho da peça, nome do destinatário, quantidade de peças, sacolas de presente etc.) estão corretas antes de gerar o seu pedido. Caso seja necessária qualquer alteração, será feito o cancelamento da compra e estorno;\n\n• Se, porventura, o pagamento tiver alguma divergência ou ficar retido na análise de risco, o pedido será cancelado sem aviso prévio.\n\n• A campanha dura APENAS enquanto durarem os estoques;\n\n• Em caso de esgotamento de estoque, a campanha será cancelada SEM aviso prévio;",
+      "blockClass": ["dia-das-maes__list"]
+    }
+  },
+
+  "rich-text#dia-das-maes-contact": {
+    "props": {
+      "text": "Ficou com alguma dúvida sobre a campanha? Entre em contato conosco, através do e-mail: [suporte@theminiforest.com](mailto:suporte@theminiforest.com)",
+      "blockClass": ["dia-das-maes__paragraph"]
+    }
+  }
+}

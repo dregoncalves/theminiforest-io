@@ -54,3 +54,14 @@
 .flexCol--submenu-coluna {
   gap: 1rem;
 }
+
+.flexRowContent--main-header-mobile {
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0.625rem;
+}
+
+.flexRowContent--desktop-triggers {
+  display: flex;
+  align-items: center;
+}

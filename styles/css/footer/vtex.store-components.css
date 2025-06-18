@@ -13,6 +13,11 @@
 .newsletter .container {
   padding: 35px 10px 25px 10px;
 }
+@media (max-width: 640px) {
+  .newsletter .container {
+    padding: 0;
+  }
+}
 
 .footerLayout {
   background-color: #f0efe9;
@@ -45,6 +50,11 @@
   border-radius: 0;
   transition: 0.2s all ease-in-out;
   font-size: 11px;
+}
+@media (max-width: 640px) {
+  .inputGroup :global(.vtex-button) {
+    width: 100%;
+  }
 }
 .inputGroup :global(.vtex-button):hover {
   background-color: #5c817d;

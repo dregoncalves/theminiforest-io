@@ -10,6 +10,18 @@
   vertical-align: middle;
   color: #71817f;
 }
+@media (max-width: 640px) {
+  .paragraph--newslatter-label {
+    font-size: 13px;
+    height: auto;
+    letter-spacing: 2px;
+    line-height: 18px;
+    margin: 0;
+    padding: 6px 0;
+    text-align: center;
+    width: 100%;
+  }
+}
 
 .strong--newslatter-label {
   display: inline-block;
@@ -38,6 +50,11 @@
   text-align: center;
   text-decoration: none;
 }
+@media (max-width: 640px) {
+  .paragraph--footer {
+    padding: 0;
+  }
+}
 .paragraph--footer .link--footer {
   text-decoration: none;
   color: #7b7b7b;
@@ -50,4 +67,16 @@
 
 .container--icon-footer {
   justify-content: flex-end;
+}
+
+.list--footer {
+  padding: 0;
+}
+.list--footer .listItem--footer {
+  text-align: center;
+  list-style: none;
+}
+.list--footer .listItem--footer .link--footer {
+  text-decoration: none;
+  color: #7b7b7b;
 }
