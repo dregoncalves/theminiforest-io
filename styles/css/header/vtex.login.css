@@ -15,11 +15,12 @@
     text-transform: capitalize;
     color: #71817f;
     font-size: 12px;
+    padding: 0;
   }
-  .buttonLink :global(.vtex-button) {
+  :global(.vtex-login-2-x-container) :global(.vtex-button) {
     min-height: fit-content !important;
   }
-  .buttonLink :global(.vtex-button) :global(.vtex-button__label) {
+  :global(.vtex-login-2-x-container) :global(.vtex-button) :global(.vtex-button__label) {
     padding: 0;
     padding-bottom: 0 !important;
     padding-top: 0 !important;

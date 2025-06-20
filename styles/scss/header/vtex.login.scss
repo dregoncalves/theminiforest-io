@@ -22,9 +22,10 @@
     text-transform: capitalize;
     color: $text-green;
     font-size: 12px;
+    padding: 0;
   }
 
-  .buttonLink {
+  :global(.vtex-login-2-x-container) {
     :global(.vtex-button) {
       min-height: fit-content !important;
 

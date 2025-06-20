@@ -100,6 +100,11 @@
       "product-summary-price"
     ]
   },
+  "add-to-list-btn": {
+    "props": {
+      "blockClass": "wishlist-button"
+    }
+  },
   "product-summary-image": {
     "props": {
       "hoverImage": {
@@ -170,7 +175,7 @@
 
   "link#sobre-button": {
     "props": {
-      "href": "/sobre",
+      "href": "/institucional/the-mini-forest",
       "label": "SAIBA MAIS",
       "blockClass": "sobre__button"
     }

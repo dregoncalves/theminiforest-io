@@ -68,9 +68,19 @@
     "props": {
       "horizontalAlign": "right",
       "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
       "verticalAlign": "center",
-      "colSizing": "equal",
       "blockClass": "right-desktop"
+    }
+  },
+
+  "login": {
+    "props": {
+      "emailAndPasswordTitle": "Entrar com e-mail",
+      "identifierPlaceholder": "teste",
+      "iconLabel": "Minha Conta",
+      "blockClass": "login",
+      "labelClasses": ["login"]
     }
   },
 
@@ -79,10 +89,6 @@
       "text": "[Meus Favoritos](/meus-favoritos)",
       "blockClass": "meus-favoritos-link"
     }
-  },
-
-  "login": {
-    "props": {}
   },
 
   "minicart.v2": {
@@ -147,14 +153,8 @@
     "children": ["menu#drawer"]
   },
 
-  "flex-layout.col#spacer": {
-    "props": {
-      "width": "grow"
-    }
-  },
-
   "menu#drawer": {
-    "children": [],
+    "children": ["vtex.menu@2.x:menu#category-menu"],
     "props": {
       "orientation": "vertical"
     }
