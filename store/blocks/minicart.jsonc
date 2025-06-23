@@ -6,14 +6,15 @@
     }
   },
 
-  // "minicart.v2": {
-  //   "props": {
-  //     "customPixelEventId": "add-to-cart-button",
-  //     "quantityDisplay": "always",
-
-  //   },
-  //   "children": ["minicart-base-content"]
-  // },
+  "minicart.v2": {
+    "props": {
+      "customPixelEventId": "add-to-cart-button",
+      "quantityDisplay": "always",
+      "openOnHover": true,
+      "variation": "popup"
+    },
+    "children": ["minicart-base-content"]
+  },
   "minicart-base-content": {
     "blocks": ["minicart-empty-state"],
     "children": ["minicart-product-list", "flex-layout.row#minicart-footer"]

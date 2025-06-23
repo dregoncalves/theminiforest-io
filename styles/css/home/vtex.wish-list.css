@@ -8,3 +8,6 @@
   right: 15px;
   top: 10px;
 }
+:global(.vtex-wish-list-1-x-wishlistIconContainer--wishlist-button) .vtex-button .vtex-button__label {
+  padding: 0;
+}

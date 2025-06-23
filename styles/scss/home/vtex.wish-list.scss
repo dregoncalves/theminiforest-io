@@ -10,4 +10,10 @@
 :global(.vtex-wish-list-1-x-wishlistIconContainer--wishlist-button) {
   right: 15px;
   top: 10px;
+
+  .vtex-button {
+    .vtex-button__label {
+      padding: 0;
+    }
+  }
 }
