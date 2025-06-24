@@ -25,6 +25,7 @@
 
 :global(.vtex-store-footer-2-x-footerLayout) :global(.vtex-flex-layout-0-x-flexRow) :global(.vtex-store-components-3-x-container) {
   max-width: 1240px;
+  padding: 0;
 }
 
 :global(.vtex-store-components-3-x-inputGroup) .vtex-buton {
@@ -58,4 +59,8 @@
 }
 .inputGroup :global(.vtex-button):hover {
   background-color: #5c817d;
+}
+
+.form--newsletter {
+  padding: 0;
 }

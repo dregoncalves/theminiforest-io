@@ -137,24 +137,21 @@
   },
   "overlay-layout": {
     "props": {
-      "placement": "bottom",
+      "placement": "top",
       "scrollBehavior": "close-on-scroll",
       "blockClass": "search-mobile"
     },
     "children": ["search-bar#mobile"]
   },
   "search-bar#mobile": {
-    "props": {
-      "containerMode": "container",
-      "autoFocus": true
-    }
+    "props": {}
   },
   "drawer": {
     "children": ["menu#drawer"]
   },
 
   "menu#drawer": {
-    "children": ["vtex.menu@2.x:menu#category-menu"],
+    "children": [],
     "props": {
       "orientation": "vertical"
     }

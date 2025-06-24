@@ -32,6 +32,7 @@
   :global(.vtex-flex-layout-0-x-flexRow) {
     :global(.vtex-store-components-3-x-container) {
       max-width: 1240px;
+      padding: 0;
     }
   }
 }
@@ -69,4 +70,8 @@
   &:hover {
     background-color: #5c817d;
   }
+}
+
+.form--newsletter {
+  padding: 0;
 }

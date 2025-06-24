@@ -13,3 +13,9 @@
 .flexRowContent--newsletter-container {
   border-bottom: 1px solid #d5d7cd;
 }
+
+@include mobile {
+  .flexRowContent--payment-methods {
+    padding-bottom: 0;
+  }
+}

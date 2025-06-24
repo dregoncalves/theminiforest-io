@@ -1,0 +1,11 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.sellingPrice,
+.installments {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 300;
+  color: #7a7475;
+  text-align: left;
+}

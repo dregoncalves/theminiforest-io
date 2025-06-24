@@ -1,4 +1,18 @@
 .trigger--search-mobile {
   width: 27px;
   height: 27px;
+  z-index: 0 !important;
 }
+
+// .popper--search-mobile {
+//   transform: none !important;
+//   inset: 0px;
+//   position: absolute !important;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+
+//   .container--search-mobile {
+//     padding: 0;
+//   }
+// }

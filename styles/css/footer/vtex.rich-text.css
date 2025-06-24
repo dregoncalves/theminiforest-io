@@ -80,3 +80,8 @@
   text-decoration: none;
   color: #7b7b7b;
 }
+
+.container--footer {
+  background-color: #fff;
+  padding: 10px;
+}

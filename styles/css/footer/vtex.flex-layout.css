@@ -10,3 +10,9 @@
 .flexRowContent--newsletter-container {
   border-bottom: 1px solid #d5d7cd;
 }
+
+@media (max-width: 640px) {
+  .flexRowContent--payment-methods {
+    padding-bottom: 0;
+  }
+}
