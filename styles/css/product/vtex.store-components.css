@@ -57,3 +57,12 @@
   text-transform: uppercase;
   cursor: pointer;
 }
+
+.wishlistIconContainer--wishlist-button__product {
+  border: 1px solid indianred;
+  width: fit-content;
+}
+
+.fadeBottom {
+  background-image: linear-gradient(transparent, #fffcf6);
+}

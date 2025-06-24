@@ -89,7 +89,8 @@
 
   "vtex.menu@2.x:menu#footer-institucional": {
     "props": {
-      "orientation": "vertical"
+      "orientation": "vertical",
+      "blockClass": ["menu-footer"]
     },
     "children": [
       "menu-item#sale",

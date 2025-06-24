@@ -12,10 +12,24 @@
 
 .flexRowContent--newsletter-container {
   border-bottom: 1px solid #d5d7cd;
+
+  @include desktop {
+    padding: 35px 0 25px 0;
+  }
 }
 
 @include mobile {
   .flexRowContent--payment-methods {
     padding-bottom: 0;
+  }
+
+  .flexCol--footer-title__container {
+    align-items: center;
+
+    :global(.vtex-menu-2-x-menuContainerNav) {
+      :global(.vtex-menu-2-x-menuContainer) {
+        flex-direction: row;
+      }
+    }
   }
 }

@@ -202,6 +202,8 @@
     }
   },
 
+  // Mobile
+
   "footer-layout.mobile": {
     "children": [
       "flex-layout.row#1-footer-mobile",
@@ -220,6 +222,8 @@
     "children": [
       "flex-layout.row#newsletter__mobile",
       "social-networks",
+      "flex-layout.col#footer-informacoes",
+      "flex-layout.col#footer-institucional",
       "rich-text#footer-mobile"
     ],
     "props": {
