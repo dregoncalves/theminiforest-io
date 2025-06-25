@@ -91,13 +91,6 @@
     }
   },
 
-  "minicart.v2": {
-    "props": {
-      "openOnHover": true,
-      "quantityDisplay": "always"
-    }
-  },
-
   "flex-layout.row#category-menu": {
     "children": ["vtex.menu@2.x:menu#category-menu"],
     "props": {

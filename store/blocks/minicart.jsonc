@@ -9,8 +9,7 @@
   "minicart.v2": {
     "props": {
       "customPixelEventId": "add-to-cart-button",
-      "quantityDisplay": "always",
-      "openOnHover": true,
+      "quantityDisplay": "never",
       "variation": "popup"
     },
     "children": ["minicart-base-content"]
@@ -32,6 +31,11 @@
     "blocks": ["product-list#minicart"],
     "props": {
       "splitItem": false
+    }
+  },
+  "rich-text#minicart-text": {
+    "props": {
+      "text": "Meu carrinho"
     }
   }
 }
