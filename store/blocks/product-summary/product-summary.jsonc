@@ -19,16 +19,16 @@
   "stack-layout#prodsum": {
     "children": [
       "product-summary-image#shelf"
-      // "vtex.product-highlights@2.x:product-highlights#collection"
+      // "vtex.product-highlights@2.x:product-highlights#collection",
       // "modal-trigger#quickview"
     ]
   },
 
   "product-summary-image#shelf": {
     "props": {
-      "showBadge": false,
-      "aspectRatio": "1:1",
-      "maxHeight": "500"
+      "showBadge": false
+      // "aspectRatio": "1:1",
+      // "maxHeight": "500"
     }
   },
 

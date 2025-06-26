@@ -118,7 +118,18 @@
     "props": {
       "blockClass": "desktop-triggers"
     },
-    "children": ["overlay-trigger#search", "minicart.v2"]
+    "children": [
+      "rich-text#favoritos-link",
+      "overlay-trigger#search",
+      "minicart.v2"
+    ]
+  },
+
+  "rich-text#favoritos-link": {
+    "props": {
+      "text": "![Favoritos](assets/icons/heart-filled.svg)",
+      "blockClass": "header__favoritos-link"
+    }
   },
 
   "overlay-trigger#search": {

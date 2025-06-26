@@ -1,4 +1,3 @@
-// react/src/StampGrid.tsx
 import React from "react";
 import DefaultStamps from "./utils/DefaultStamps";
 import styles from "./styles/stamp-grid.css";

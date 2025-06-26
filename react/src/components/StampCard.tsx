@@ -1,4 +1,3 @@
-// react/src/components/StampCard.tsx
 import React from "react";
 import styles from "../styles/stamp-card.css";
 import { IStampSchema } from "../../typings/IStampSchema";

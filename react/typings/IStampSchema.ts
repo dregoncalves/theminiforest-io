@@ -1,4 +1,3 @@
-// react/src/typings/IStampSchema.ts
 export interface IStampSchema {
   nome: string;
   imagem: string;

@@ -1,4 +1,3 @@
-// react/src/utils/DefaultStamps.ts
 const DefaultStamps = [
   {
     nome: "Bonjour",
