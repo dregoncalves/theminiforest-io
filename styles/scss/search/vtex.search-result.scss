@@ -2,3 +2,24 @@
   max-width: 1240px;
   margin: 0 auto;
 }
+
+.filter__container--title {
+  display: none;
+}
+
+.filtersWrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.filterTitle {
+  justify-content: flex-start;
+}
+
+.filter__container {
+  border: none;
+}
+
+.filter {
+  padding: 1.5rem 0;
+}

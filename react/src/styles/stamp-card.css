@@ -1,0 +1,55 @@
+/* react/src/styles/stamp-card.css */
+.stamp-card {
+  position: relative;
+  display: block;
+  /* border-radius: 8px; */
+  overflow: hidden;
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+.stamp-card:hover {
+  /* transform: translateY(-4px) scale(1.02); */
+}
+
+.stamp-image {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.92);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: opacity 0.1s;
+}
+.stamp-card:hover .overlay {
+  opacity: 1;
+}
+
+.stamp-name {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #5d5d5d;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+.sold-out-badge {
+  margin-top: 16px;
+  background: #e57373;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 6px 18px;
+  border-radius: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}

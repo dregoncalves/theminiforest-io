@@ -19,5 +19,8 @@
   },
   "store.custom#dia-das-maes": {
     "path": "/institucional/dia-das-maes"
+  },
+  "store.custom#estampas": {
+    "path": "/estampas"
   }
 }
