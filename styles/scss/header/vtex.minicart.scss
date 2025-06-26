@@ -9,11 +9,10 @@
     padding: 0;
 
     :global(.vtex-button) {
-      // visibility: hidden;
       position: absolute;
       top: 0;
       width: 100%;
-      height: 20px;
+      min-height: 20px;
     }
   }
 
@@ -26,9 +25,9 @@
     color: $text-green;
   }
 
-  // .minicartContainer .cartIcon {
-  //   display: none !important;
-  // }
+  .minicartContainer .cartIcon {
+    display: none !important;
+  }
 }
 
 @include mobile {

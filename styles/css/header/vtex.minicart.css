@@ -9,7 +9,7 @@
     position: absolute;
     top: 0;
     width: 100%;
-    height: 20px;
+    min-height: 20px;
   }
   .minicartContainer::before {
     content: "Minha Sacola";
@@ -18,6 +18,9 @@
     font-weight: 500;
     display: block;
     color: #71817f;
+  }
+  .minicartContainer .cartIcon {
+    display: none !important;
   }
 }
 @media (max-width: 640px) {
