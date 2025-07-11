@@ -1,0 +1,110 @@
+/* react/src/styles/drawer-custom.css */
+.drawerContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-height: 100vh;
+}
+
+.drawerHeader {
+  flex-shrink: 0;
+  padding: 1rem 1rem 1rem 0.4rem;
+  box-sizing: border-box;
+  z-index: 20;
+}
+
+.userInfo span:first-child {
+  font-weight: bold;
+}
+
+.drawerContent {
+  flex-grow: 1;
+  position: relative;
+  overflow: hidden;
+  height: 95vh;
+}
+
+.mainMenuPanel {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 1rem 0;
+  overflow-y: auto;
+}
+
+.submenuOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fffcf6;
+  box-sizing: border-box;
+  transform: translateX(100%);
+  transition: transform 0.4s ease;
+  z-index: 10;
+  overflow-y: auto;
+}
+
+.menuItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 17px 10px;
+  color: #75807e;
+  border-bottom: 1px solid #71817f50;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 3px;
+  position: relative;
+  text-decoration: none;
+}
+
+.menuItem:last-child {
+  border-bottom: none;
+}
+
+.menuItem.hasArrow::after {
+  border-right: 2px solid #c76b6b;
+  border-top: 2px solid #c76b6b;
+  content: "";
+  display: inline-block;
+  height: 8px;
+  position: absolute;
+  right: 12px;
+  top: 20px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 8px;
+}
+
+.backButton {
+  padding: 17px 10px;
+  font-weight: 300;
+  letter-spacing: 3px;
+  line-height: 15px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  margin-bottom: 10px;
+  background-color: #cdd6d2;
+  color: #75807e;
+  display: flex;
+  align-items: center;
+}
+
+.backButton::before {
+  border-right: 2px solid #75807e;
+  border-top: 2px solid #75807e;
+  content: "";
+  display: inline-block;
+  height: 8px;
+  -webkit-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+  width: 8px;
+  margin-right: 0.5rem;
+}

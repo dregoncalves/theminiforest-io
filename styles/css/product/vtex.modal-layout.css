@@ -1,0 +1,16 @@
+.headerContainer {
+  border: none;
+}
+
+.paper--guia-tamanhos-modal {
+  max-width: 830px;
+}
+
+@media (max-width: 640px) {
+  .contentContainer--guia-tamanhos {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+  }
+}

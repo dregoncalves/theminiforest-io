@@ -1,0 +1,19 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.sellingPrice,
+.installments {
+  color: #7a7475;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 400;
+  color: #7a7475;
+  text-align: center;
+}
+
+.listPriceValue--summary {
+  color: rgb(249, 134, 160);
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 300;
+}

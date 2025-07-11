@@ -1,0 +1,19 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.headerContainer {
+  border: none;
+}
+
+.paper--guia-tamanhos-modal {
+  max-width: 830px;
+}
+
+@include mobile {
+  .contentContainer--guia-tamanhos {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+  }
+}

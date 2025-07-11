@@ -1,0 +1,13 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+@include tablet {
+  .imageElement--historia__story-img {
+    max-width: 100%;
+  }
+}
+
+:global(.vtex-render__container-id-my-account) {
+  max-width: 1240px;
+  margin: 0 auto;
+}

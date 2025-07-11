@@ -1,0 +1,53 @@
+/* react/src/styles/stamp-grid.css */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  justify-content: center;
+  max-width: 1240px;
+  margin: 32px auto;
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+  }
+}
+
+.show-more {
+  display: block;
+  margin: 32px auto 0 auto;
+  padding: 12px 32px;
+  border-radius: 8px;
+  border: none;
+  background: #6c9893;
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-family: "Montserrat", sans-serif;
+}
+.show-more:hover {
+  background: #6c989398;
+}
+
+.spinner {
+  border: 4px solid #eee;
+  border-top: 4px solid #cd5c5c;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

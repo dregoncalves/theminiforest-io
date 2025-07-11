@@ -1,0 +1,82 @@
+{
+  "store.custom#propriedade-industrial": {
+    "blocks": ["flex-layout.row#propriedade-industrial-row"],
+    "props": {
+      "blockClass": "propriedade-industrial__content"
+    }
+  },
+
+  "flex-layout.row#propriedade-industrial-row": {
+    "children": ["flex-layout.col#propriedade-industrial-content-col"],
+    "props": {
+      "blockClass": ["propriedade-industrial__content"]
+    }
+  },
+
+  "flex-layout.col#propriedade-industrial-content-col": {
+    "children": [
+      "rich-text#propriedade-industrial-title",
+      "rich-text#propriedade-industrial-paragraph-1",
+      "rich-text#propriedade-industrial-paragraph-2",
+      "rich-text#propriedade-industrial-paragraph-3",
+      "rich-text#propriedade-industrial-paragraph-4",
+      "rich-text#propriedade-industrial-paragraph-5",
+      "rich-text#propriedade-industrial-paragraph-6"
+    ],
+    "props": {
+      "blockClass": ["propriedade-industrial__all"]
+    }
+  },
+
+  "rich-text#propriedade-industrial-title": {
+    "props": {
+      "text": "# Propriedade Industrial",
+      "blockClass": [
+        "propriedade-industrial__heading-primary",
+        "propriedade-industrial__heading-striped"
+      ]
+    }
+  },
+
+  "rich-text#propriedade-industrial-paragraph-1": {
+    "props": {
+      "text": "A The Mini Forest® é uma empresa de marca registrada e protegida pela Lei de Propriedade Industrial – (Lei nº. 9.279, de 14 de maio de 1996). A referida lei regula direitos e deveres para o titular da marca. Dentre estes, o principal direito concedido pelo legislador ao titular da marca, foi a exclusividade de uso em todo território nacional (artigo 129 da LPI).",
+      "blockClass": ["propriedade-industrial__paragraph"]
+    }
+  },
+
+  "rich-text#propriedade-industrial-paragraph-2": {
+    "props": {
+      "text": "Informamos que marca é um conjunto de sinais distintivos apostos a produtos fabricados, a mercadorias comercializadas, ou a serviços prestados, para a identificação do objeto no mercado em face a seus concorrentes, vinculando-o a uma determinada origem.",
+      "blockClass": ["propriedade-industrial__paragraph"]
+    }
+  },
+
+  "rich-text#propriedade-industrial-paragraph-3": {
+    "props": {
+      "text": "Disso decorre que ao visualizar o produto da marca The Mini Forest®, o consumidor distinguirá a origem do produto ou serviço assinalado daqueles de fonte diversa, ou seja, por meio da marca, o consumidor poderá identificar a origem dos produtos ou serviços, podendo promover uma distinção entre produtos similares.",
+      "blockClass": ["propriedade-industrial__paragraph"]
+    }
+  },
+
+  "rich-text#propriedade-industrial-paragraph-4": {
+    "props": {
+      "text": "A The Mini Forest® possui diversas formas de apresentação, não se resumindo apenas em nomes ou sinais gráficos, todas elas registradas perante o INPI (Instituto Nacional de Propriedade Industrial). Portanto, a cópia da marca pode ser considerada como toda e qualquer reprodução no todo ou em parte de seus sinais distintivos, objetivando a indução do consumidor final em erro, gerando confusão entre os produtos ou serviços oferecidos.",
+      "blockClass": ["propriedade-industrial__paragraph"]
+    }
+  },
+
+  "rich-text#propriedade-industrial-paragraph-5": {
+    "props": {
+      "text": "Caso a The Mini Forest® constate que sua marca foi utilizada indevidamente ou sem sua autorização, em primeiro plano, notificará extrajudicialmente o contrafator (aquele que imita, copia, falsifica fraudulentamente a marca, causando prejuízo), requerendo que o mesmo se abstenha de usá-la. Caso tal medida não surta o efeito esperado, a The Mini Forest ajuizará uma ação de abstenção de uso de marca, podendo ainda, requerer a busca e apreensão de produtos que contenham a marca copiada, bem como pedir a condenação do contrafator por crime de concorrência desleal somado à perdas e danos.",
+      "blockClass": ["propriedade-industrial__paragraph"]
+    }
+  },
+
+  "rich-text#propriedade-industrial-paragraph-6": {
+    "props": {
+      "text": "Neste sentido deve-se dizer que dentre as punições previstas para quem se apropria ou faz uso indevido da marca alheia está o dever de indenizar o titular da marca pelos prejuízos por ele suportados ante a conduta ilegal praticada, a busca e apreensão de produtos que contenham a marca copiada (artigo 209 da Lei de Propriedade Industrial), procedimentos criminais pelo uso indevido da marca (artigo 189 da Lei de Propriedade Industrial) e pela prática de atos/crimes de concorrência desleal (artigo 195 da Lei de Propriedade Industrial).",
+      "blockClass": ["propriedade-industrial__paragraph"]
+    }
+  }
+}

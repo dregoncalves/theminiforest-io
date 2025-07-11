@@ -1,0 +1,93 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+:global(.vtex-login-2-x-container) {
+  width: fit-content !important;
+}
+
+/* Remove borda do grupo de input da search bar */
+:global(.vtex-store-components-3-x-searchBarContainer)
+  :global(.vtex-input-prefix__group) {
+  border: none;
+  border-bottom: 1px solid #d4d7cd;
+  border-radius: 0;
+  height: 28px;
+  font-size: 1.1rem;
+  color: #949c97;
+
+  @include mobile {
+    color: #75807e;
+    font-size: 12px;
+    height: 34px;
+    line-height: 32px;
+    flex-direction: row-reverse;
+    margin: 10px;
+  }
+
+  .input {
+    padding-left: 0.4rem;
+    font-size: 12px;
+  }
+
+  :global(.vtex-input__suffix) {
+    padding: 0;
+    @include mobile {
+      background-color: #e6e5dd;
+      border-radius: 0;
+    }
+  }
+}
+
+.searchBarContainer {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+:global(.vtex-styleguide-9-x-input) {
+  font-size: 11px;
+  @include mobile {
+    background-color: #e6e5dd;
+    padding: 0 4px;
+  }
+}
+
+:global(.vtex-styleguide-9-x-input)::placeholder {
+  font-size: 11px;
+  color: #949c97;
+  line-height: 28px;
+}
+
+:global(.vtex-store-components-3-x-searchBarIcon) {
+  background: transparent;
+  border: none;
+  padding: 0;
+  width: 20px;
+  color: transparent;
+  font-size: 0;
+  overflow: hidden;
+  position: relative;
+
+  @include mobile {
+    padding: 4px;
+    width: 25px;
+  }
+}
+
+:global(.vtex-store-components-3-x-searchBarIcon--search)::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiB2aWV3Qm94PSIwIDAgNDc3IDQ3NyI+CiAgPHBhdGggZmlsbD0iI2M3NmI2YiIgZD0iTTQ3OC4zMDgsNDIzLjkzOEwzNzQuNjg2LDMyMC4zMThjLTAuNTUxLS41NTEtMS4yLTAuOTM1LTEuNzcyLTEuNDQ4QTE5NS4xMzcsMTk1LjEzNywwLDAsMCw0MDUuMiwyMTEuMUM0MDUuMiwxMDIuOCwzMTcuNCwxNSwyMDkuMSwxNVMxMywxMDIuOCwxMywyMTEuMXM4Ny44LDE5Ni4xLDE5Ni4xLDE5Ni4xYTE5NS4xMzEsMTk1LjEzMSwwLDAsMCwxMDcuNzY2LTMyLjI4OWMwLjUxMywwLjU3NC45LDEuMjIsMS40NDcsMS43N0w0MjEuOTM2LDQ4MC4zMDhBMzkuODYsMzkuODYsMCwwLDAsNDc4LjMwOCw0MjMuOTM4Wk0yMDkuMSwzMzkuMjIxQTEyOC4xMiwxMjguMTIsMCwxLDEsMzM3LjIyMSwyMTEuMSwxMjguMTIsMTI4LjEyLDAsMCwxLDIwOS4xLDMzOS4yMjFaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTMgLTE1KSI+PC9wYXRoPgo8L3N2Zz4=");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+  width: 14px;
+  height: 14px;
+
+  @include mobile {
+    height: 20px;
+    width: 20px;
+  }
+}

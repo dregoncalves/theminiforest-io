@@ -1,0 +1,28 @@
+{
+  // Menu mobile
+  "vtex.menu@2.x:menu#category-menu-mobile": {
+    "title": "Menu Mobile",
+    "props": {
+      "experimentalOptimizeRendering": true,
+      "orientation": "vertical",
+      "blockClass": "header-menu-mobile"
+    },
+    "children": ["menu-item#novidades-drawer"]
+  },
+
+  "menu-item#novidades-drawer": {
+    "props": {
+      "blockClass": ["drawer-menu-item"],
+      "id": "menu-item-novidades",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/novidades",
+        "noFollow": false,
+        "tagTitle": "Novidades",
+        "text": "NOVIDADES"
+      }
+    }
+  }
+}

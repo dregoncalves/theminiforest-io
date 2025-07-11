@@ -1,0 +1,16 @@
+.backdropContainer--search-bar {
+  opacity: 0 !important;
+}
+
+.container--search-bar {
+  height: auto;
+}
+
+.paper--search-bar {
+  margin: 0;
+  width: 100%;
+}
+
+.triggerContainer--search-bar {
+  width: auto;
+}

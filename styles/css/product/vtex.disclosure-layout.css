@@ -1,0 +1,12 @@
+.trigger--description-product {
+  border: none;
+  background: none;
+  width: 100%;
+  cursor: pointer;
+}
+
+.content--description-product-content--visible {
+  padding: 0 6px 1rem 6px;
+  font-size: 12px;
+  line-height: 18px;
+}

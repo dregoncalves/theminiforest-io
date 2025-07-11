@@ -1,0 +1,28 @@
+@media (min-width: 1025px) {
+  .container {
+    height: fit-content !important;
+  }
+  .buttonLink {
+    padding: 0 !important;
+  }
+  .profile {
+    padding: 0;
+  }
+  .vtex-button__label {
+    padding: 0 !important;
+  }
+  .label {
+    text-transform: capitalize;
+    color: #71817f;
+    font-size: 12px;
+    padding: 0;
+  }
+  :global(.vtex-login-2-x-container) :global(.vtex-button) {
+    min-height: fit-content !important;
+  }
+  :global(.vtex-login-2-x-container) :global(.vtex-button) :global(.vtex-button__label) {
+    padding: 0;
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+  }
+}

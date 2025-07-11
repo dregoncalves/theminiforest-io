@@ -1,0 +1,11 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.closeIconContainer {
+  display: none;
+}
+
+.menuIcon {
+  width: 35px;
+  height: 35px;
+}

@@ -1,0 +1,93 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.productNameContainer--quickview {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #7a7475;
+  text-align: left;
+}
+
+.skuSelectorName {
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 11px;
+  line-height: 13px;
+  margin-bottom: 7px;
+}
+
+.skuSelectorNameContainer {
+  margin: 0;
+}
+
+.skuSelectorOptionsList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 0;
+}
+
+.frameAround {
+  display: none;
+}
+
+.skuSelectorItem {
+  margin: 0;
+}
+
+.skuSelectorInternalBox {
+  transition: all 0.1s ease-in-out;
+  border-radius: 0;
+}
+
+.skuSelectorInternalBox:hover {
+  background-color: #e2dbcd;
+}
+
+.skuSelectorItem--selected {
+  background-color: #e3f4e4;
+  border-color: #dae2d5;
+  color: #899589;
+}
+
+.skuSelectorItemTextValue {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #8b8989;
+  font-size: 11px;
+  letter-spacing: 1px;
+  line-height: 38px;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+:global(.vtex-wish-list-1-x-wishlistIconContainer) {
+  :global(.vtex-button) {
+    :global(.vtex-button__label) {
+      padding: 0 0.5rem;
+    }
+  }
+}
+
+.fadeBottom {
+  background-image: linear-gradient(transparent, #fffcf6);
+}
+
+.productImage {
+  margin-bottom: 1.5rem;
+}
+
+.productNameContainer {
+  margin-top: 1.5rem;
+}
+
+@include mobile {
+  .imageElement.imageElement--medidas-image {
+    max-width: auto !important;
+  }
+}

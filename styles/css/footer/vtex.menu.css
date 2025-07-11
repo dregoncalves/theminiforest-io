@@ -1,0 +1,20 @@
+.styledLinkContainer {
+  margin: 0 !important;
+  width: fit-content;
+}
+
+.menuItem {
+  width: fit-content;
+}
+
+.styledLinkContent--footer-link {
+  font-weight: 300;
+  line-height: 25px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s all ease-in-out;
+  font-size: 12px;
+}
+.styledLinkContent--footer-link:hover {
+  text-decoration: underline;
+  color: #c86c6e;
+}

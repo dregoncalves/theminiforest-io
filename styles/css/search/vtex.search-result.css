@@ -1,0 +1,204 @@
+.loadingOverlay {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.filter__container--title {
+  display: none;
+}
+
+.filtersWrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.filterTitle {
+  justify-content: flex-start;
+  font-size: 13px;
+  color: #464646;
+}
+
+.filter__container {
+  border: none;
+  position: relative;
+}
+
+.filter {
+  padding: 1.5rem 0;
+  width: fit-content;
+}
+
+.gallery {
+  padding-left: 0;
+}
+
+.orderByText {
+  text-transform: capitalize;
+}
+
+.filterPopupArrowIcon,
+.orderByButton {
+  padding-right: 0;
+}
+
+.orderByOptionsContainer {
+  z-index: 4;
+}
+
+:global(.vtex-search-result-3-x-filter__container--selectedFilters) {
+  display: none;
+}
+
+.filterTemplateOverflow {
+  position: absolute;
+  max-height: 35rem !important;
+  min-height: 100%;
+  z-index: 5;
+  left: -50%;
+}
+
+.filterContent {
+  background: rgba(255, 252, 246, 0.95);
+  padding: 5px 10px;
+  top: 70px;
+  min-width: 250px;
+  border: 1px solid #e8e8e8;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+@media (min-width: 1025px) {
+  .gallery--grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0px;
+    height: 100%;
+    margin-top: 0.7rem;
+  }
+  .vtex-search-result-3-x-galleryItem:nth-child(1n) {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-row-end: 2;
+    grid-column-end: 2;
+  }
+  .galleryItem:nth-child(2n) {
+    grid-row-start: 1;
+    grid-column-start: 2;
+    grid-row-end: 2;
+    grid-column-end: 3;
+  }
+  .galleryItem:nth-child(3n) {
+    grid-row-start: 1;
+    grid-column-start: 3;
+    grid-row-end: 3;
+    grid-column-end: 5;
+  }
+  .galleryItem:nth-child(3n) :global(.vtex-stack-layout-0-x-stackContainer) {
+    flex-grow: 1;
+  }
+  .galleryItem:nth-child(4n) {
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-row-end: 3;
+    grid-column-end: 2;
+  }
+  .galleryItem:nth-child(5n) {
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-row-end: 3;
+    grid-column-end: 3;
+  }
+  .galleryItem:nth-child(6n) {
+    grid-row-start: 3;
+    grid-column-start: 1;
+    grid-row-end: 4;
+    grid-column-end: 2;
+  }
+  .galleryItem:nth-child(7n) {
+    grid-row-start: 3;
+    grid-column-start: 2;
+    grid-row-end: 4;
+    grid-column-end: 3;
+  }
+  .galleryItem:nth-child(8n) {
+    grid-row-start: 3;
+    grid-column-start: 3;
+    grid-row-end: 4;
+    grid-column-end: 4;
+  }
+  .galleryItem:nth-child(9n) {
+    grid-row-start: 3;
+    grid-column-start: 4;
+    grid-row-end: 4;
+    grid-column-end: 5;
+  }
+  .galleryItem:nth-child(10n) {
+    grid-row-start: 4;
+    grid-column-start: 1;
+    grid-row-end: 6;
+    grid-column-end: 3;
+  }
+  .galleryItem:nth-child(10n) :global(.vtex-stack-layout-0-x-stackContainer) {
+    flex-grow: 1;
+  }
+  .galleryItem:nth-child(11n) {
+    grid-row-start: 4;
+    grid-column-start: 3;
+    grid-row-end: 5;
+    grid-column-end: 4;
+  }
+  .galleryItem:nth-child(12n) {
+    grid-row-start: 4;
+    grid-column-start: 4;
+    grid-row-end: 5;
+    grid-column-end: 5;
+  }
+  .galleryItem:nth-child(13n) {
+    grid-row-start: 5;
+    grid-column-start: 3;
+    grid-row-end: 6;
+    grid-column-end: 4;
+  }
+  .galleryItem:nth-child(14n) {
+    grid-row-start: 5;
+    grid-column-start: 4;
+    grid-row-end: 6;
+    grid-column-end: 5;
+  }
+  .galleryItem:nth-child(15n) {
+    grid-row-start: 6;
+    grid-column-start: 1;
+    grid-row-end: 7;
+    grid-column-end: 2;
+  }
+  .galleryItem:nth-child(16n) {
+    grid-row-start: 6;
+    grid-column-start: 2;
+    grid-row-end: 7;
+    grid-column-end: 3;
+  }
+  .galleryItem:nth-child(17n) {
+    grid-row-start: 6;
+    grid-column-start: 3;
+    grid-row-end: 7;
+    grid-column-end: 4;
+  }
+  .galleryItem:nth-child(18n) {
+    grid-row-start: 6;
+    grid-column-start: 4;
+    grid-row-end: 7;
+    grid-column-end: 5;
+  }
+  .galleryItem:nth-child(19n) {
+    grid-row-start: 6;
+    grid-column-start: 4;
+    grid-row-end: 7;
+    grid-column-end: 5;
+  }
+  .galleryItem {
+    max-width: 100% !important;
+    padding: 0.5rem;
+  }
+}

@@ -1,0 +1,172 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+// Página "Como Comprar" e "Troca e Devoluções"
+.wrapper--como-comprar__titulo,
+.wrapper--trocas-e-devolucoes__heading-primary,
+.wrapper--frete__heading-primary,
+.wrapper--sale__heading-primary,
+.wrapper--historia__heading-primary,
+.wrapper--propriedade-industrial__heading-primary,
+.wrapper--dia-das-maes__heading-primary {
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.headingLevel1--como-comprar__titulo,
+.headingLevel1--trocas-e-devolucoes__heading-primary,
+.headingLevel1--frete__heading-primary,
+.headingLevel1--sale__heading-primary,
+.headingLevel1--historia__heading-primary,
+.headingLevel1--propriedade-industrial__heading-primary,
+.headingLevel1--dia-das-maes__heading-primary {
+  background-color: #fffcf6;
+  display: inline-block;
+  padding: 0 10px;
+  position: relative;
+  vertical-align: middle;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.wrapper--como-comprar__titulo::before,
+.wrapper--trocas-e-devolucoes__heading-primary::before,
+.wrapper--frete__heading-primary::before,
+.wrapper--sale__heading-primary::before,
+.wrapper--historia__heading-primary::before,
+.wrapper--propriedade-industrial__heading-primary::before,
+.wrapper--dia-das-maes__heading-primary::before {
+  background-color: #7a7475;
+  content: "";
+  height: 1px;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+
+.list--como-comprar__passos {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 30px;
+  list-style: decimal;
+  color: indianred;
+
+  .link--como-comprar__passos {
+    color: indianred;
+    text-decoration: none;
+  }
+}
+
+.paragraph--sale__all {
+  color: #71817f;
+}
+
+.wrapper--sale__all {
+  width: 100%;
+  color: #71817f;
+
+  .headingLevel2--sale__all {
+    text-align: center;
+    font-size: 15px;
+  }
+}
+
+.list--sale__list {
+  text-align: left;
+
+  .listItem--sale__list {
+    font-size: 14px;
+    line-height: 20px;
+    margin: 10px 0;
+    padding-left: 10px;
+    display: list-item;
+    color: #71817f;
+    list-style: circle;
+  }
+}
+
+.link--sale__list,
+.link--sale__all {
+  text-decoration: none;
+  color: #71817f;
+}
+
+.container--como-comprar__passos {
+  border-bottom: 1px solid #71817f;
+  padding: 10px 0;
+}
+
+.headingLevel2--como-comprar__passo {
+  color: indianred;
+}
+
+.headingLevel2--trocas-e-devolucoes__all,
+.headingLevel2--frete__all,
+.headingLevel2--dia-das-maes__all {
+  text-align: center;
+  color: indianred;
+}
+
+.list--trocas-e-devolucoes__all,
+.list--frete__list {
+  color: indianred;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 30px;
+  margin: 0 0 0 40px;
+  list-style: circle;
+}
+
+.link--trocas-e-devolucoes__all,
+.link--dia-das-maes__paragraph {
+  color: indianred;
+  font-weight: 600;
+}
+
+.container--frete__box-text {
+  background-color: #ffffff;
+  border: 1px solid indianred;
+  padding: 10px;
+  color: #696969;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.link--frete__box-text {
+  text-decoration: underline;
+  color: indianred;
+  font-weight: 600;
+}
+
+.paragraph--historia__paragraph {
+  margin: 10px 0;
+  color: #71817f;
+}
+
+.wrapper--historia__all {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.headingLevel2--historia__all {
+  color: #71817f;
+  text-align: center;
+  font-size: 15px;
+  width: 80%;
+}
+
+.paragraph--propriedade-industrial__paragraph {
+  font-size: 14px;
+  line-height: 20px;
+  margin: 10px 0;
+  text-align: justify;
+  color: #71817f;
+}

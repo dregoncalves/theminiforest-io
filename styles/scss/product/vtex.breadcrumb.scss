@@ -1,0 +1,12 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.termArrow,
+.term {
+  display: none;
+}

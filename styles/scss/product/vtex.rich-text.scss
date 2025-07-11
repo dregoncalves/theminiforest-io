@@ -1,0 +1,41 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.container--em-breve__button {
+  background-color: $primary-color;
+  letter-spacing: 3px;
+  line-height: 45px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 13px;
+  cursor: pointer;
+  margin: 1.25rem 0;
+}
+
+.wrapper--title-description-product {
+  width: 100%;
+
+  .paragraph--title-description-product {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    line-height: 46px;
+    font-size: 11px;
+    letter-spacing: 1px;
+
+    &::after {
+      content: "+";
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 46px;
+    }
+  }
+}
+
+.paragraph--guia-tamanhos-texto {
+  color: #c66d64;
+  font-size: 11px;
+  letter-spacing: 1px;
+  display: inline-block;
+  vertical-align: sub;
+}

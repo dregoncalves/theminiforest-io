@@ -1,0 +1,110 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.menuContainer--header-category-menu {
+  justify-content: space-between;
+  margin-top: 1.3rem;
+
+  .styledLinkContainer {
+    margin: 0;
+    padding: 0;
+
+    .styledLink--header-menu-item {
+      color: #71817f;
+      display: block;
+      letter-spacing: 5px;
+      line-height: 12px;
+      padding: 11px 10px;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      -webkit-transition: 0.2s;
+      transition: 0.2s;
+      white-space: nowrap;
+      font-size: 13px;
+      font-weight: 400;
+      position: relative;
+
+      &:hover {
+        color: $primary-color;
+        // &::after {
+        //   content: " ";
+        //   display: block;
+        //   width: 0;
+        //   height: 0;
+        //   border-left: 8px solid transparent;
+        //   border-right: 8px solid transparent;
+        //   border-bottom: 8px solid #f1dfd5;
+        //   position: absolute;
+        //   left: 50%;
+        //   top: 72%;
+        //   transform: translateX(-50%) translateY(5px);
+        //   bottom: -5px;
+        // }
+      }
+    }
+  }
+}
+
+.menuItem--menu-produtos {
+  position: static !important;
+}
+
+.menuContainerNav--header-category-menu {
+  position: relative;
+}
+
+.submenuContainer--submenu-produtos {
+  position: static !important;
+}
+
+// Container do submenu
+.submenuWrapper--submenu-produtos--isOpen {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  z-index: 1000;
+  padding: 30px 0 13px 0;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  background-color: #fffcf6;
+  border-top: 10px solid #f1dfd5;
+  height: 350px;
+}
+
+.submenu--submenu-produtos {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.styledLinkContent--menu-item-small {
+  font-size: 12px !important;
+  transition: 0.2s all ease-in-out;
+  flex-wrap: wrap;
+  white-space: normal;
+}
+
+.styledLinkContent--menu-item-small:hover {
+  text-decoration: underline;
+}
+
+// Sub-menu Casa Decor e Higiene
+.submenuWrapper--submenu-casa-e-decor--isOpen,
+.submenuWrapper--submenu-higiene--isOpen {
+  width: 100%;
+  padding: 1.2rem 1rem;
+  border-top: 10px solid #f1dfd5;
+  border-bottom: none;
+}
+
+@include mobile {
+  .menuItem--footer-link {
+    padding: 5px;
+  }
+}
+
+.menuContainer--drawer-menu {
+  flex-direction: column;
+}

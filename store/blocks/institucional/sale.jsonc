@@ -1,0 +1,95 @@
+{
+  "store.custom#sale": {
+    "blocks": ["flex-layout.row#sale-row"],
+    "props": {
+      "blockClass": "sale__content"
+    }
+  },
+
+  "flex-layout.row#sale-row": {
+    "children": ["flex-layout.col#sale-content-col"],
+    "props": {
+      "blockClass": ["sale__content"]
+    }
+  },
+
+  "flex-layout.col#sale-content-col": {
+    "children": [
+      "rich-text#sale-title",
+      "rich-text#sale-intro-text",
+      "rich-text#sale-o-que-espera-title",
+      "rich-text#sale-o-que-espera-list",
+      "rich-text#sale-como-aproveitar-title",
+      "rich-text#sale-como-aproveitar-list",
+      "rich-text#sale-regras-promocao-title",
+      "rich-text#sale-regras-promocao-list",
+      "rich-text#sale-contato"
+    ],
+    "props": {
+      "blockClass": ["sale__all"]
+    }
+  },
+
+  "rich-text#sale-title": {
+    "props": {
+      "text": "# Sale The Mini Forest: a maior festa de descontos para o look das crianças!",
+      "blockClass": ["sale__heading-primary", "sale__heading-striped"]
+    }
+  },
+
+  "rich-text#sale-intro-text": {
+    "props": {
+      "text": "Prepare-se para vestir seus pequenos com estilo e conforto, com **descontos de até 50%** em roupinhas que são pura diversão! A The Mini Forest preparou uma seleção especial de peças para deixar a criançada ainda mais fofa com estampas exclusivas e o melhor: com os valores reduzidos.",
+      "blockClass": ["sale__all"]
+    }
+  },
+
+  "rich-text#sale-o-que-espera-title": {
+    "props": {
+      "text": "## O que te espera:",
+      "blockClass": ["sale__all"]
+    }
+  },
+
+  "rich-text#sale-o-que-espera-list": {
+    "props": {
+      "text": "- **Roupa infantil de qualidade:** Peças confortáveis e estilosas para brincar, passear e se divertir, perfeitas para serem as companheiras de aventuras da criançada.\n- **Estampas lúdicas e exclusivas:** Modelos de camisetas infantis, macacões infantis, vestidos para meninas e muitos pijamas unissex, trazendo os personagens favoritos da nossa florestinha.",
+      "blockClass": ["sale__list"]
+    }
+  },
+
+  "rich-text#sale-como-aproveitar-title": {
+    "props": {
+      "text": "## Como aproveitar:",
+      "blockClass": ["sale__all"]
+    }
+  },
+
+  "rich-text#sale-como-aproveitar-list": {
+    "props": {
+      "text": "- **1. Visite nosso site:** Explore a seleção de roupinhas com desconto e encontre os looks perfeitos. Você tem acesso clicando no link: [https://www.theminiforest.com/sale](https://www.theminiforest.com/sale)\n- **2. Adicione os produtos ao carrinho:** Os descontos serão aplicados automaticamente;\n- **3. Finalize a compra:** Aproveite os preços incríveis e receba as roupinhas no conforto da sua casa.",
+      "blockClass": ["sale__list"]
+    }
+  },
+
+  "rich-text#sale-regras-promocao-title": {
+    "props": {
+      "text": "## Regras da promoção:",
+      "blockClass": ["sale__all"]
+    }
+  },
+
+  "rich-text#sale-regras-promocao-list": {
+    "props": {
+      "text": "- Descontos de até 50% válidos apenas para roupinhas infantis selecionadas.\n- O desconto é aplicado exclusivamente em peças selecionadas e não é cumulativo com nenhuma outra campanha de descontos;\n- Verifique os dados cadastrados, como e-mail e telefone de contato. Muitas vezes é necessário o contato com o cliente e, caso não seja possível, o pedido é cancelado.\n- O carrinho NÃO reserva a peça, portanto a compra só estará garantida após finalizada, com o pagamento aprovado (em caso de pagamentos negados, o pedido será cancelado e as peças disponibilizadas novamente no site);\n- Os boletos não poderão ser adiados para pagamentos posteriores, então após vencido o pedido estará inválido;\n- Nenhum dado da compra poderá ser alterado, portanto verifique se as informações (endereço, forma de pagamento, tipo de frete, tamanho da peça, nome do destinatário, quantidade de peças, sacolas de presente etc.) estão corretas antes de gerar o seu pedido. Caso seja necessária qualquer alteração, será feito o cancelamento da compra e estorno;\n- Em caso de esgotamento de estoque, a campanha será cancelada sem aviso prévio;\n- Em casos de devolução, será estornado o valor pago na peça no momento da compra, mesmo que o valor tenha voltado ao praticado anteriormente;",
+      "blockClass": ["sale__list"]
+    }
+  },
+
+  "rich-text#sale-contato": {
+    "props": {
+      "text": "**Ficou com alguma dúvida sobre a campanha?** Entre em contato conosco, através do e-mail: [suporte@theminiforest.com](mailto:suporte@theminiforest.com)",
+      "blockClass": ["sale__all"]
+    }
+  }
+}

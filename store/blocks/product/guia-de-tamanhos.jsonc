@@ -1,0 +1,67 @@
+{
+  "modal-trigger#guia-tamanhos": {
+    "children": [
+      "flex-layout.col#trigger-guia-tamanhos",
+      "modal-layout#guia-tamanhos"
+    ],
+    "props": {
+      "trigger": "click"
+    }
+  },
+  "flex-layout.col#trigger-guia-tamanhos": {
+    "children": ["image#icone-guia-tamanhos", "rich-text#texto-guia-tamanhos"],
+    "props": {
+      "blockClass": "guia-tamanhos-trigger",
+      "preventVerticalStretch": true,
+      "preventHorizontalStretch": true
+    }
+  },
+  "image#icone-guia-tamanhos": {
+    "props": {
+      "src": "assets/icons/guia-de-tamanhos.svg",
+      "alt": "Guia de tamanhos",
+      "width": 24,
+      "height": 24,
+      "blockClass": "guia-tamanhos-icone"
+    }
+  },
+  "rich-text#texto-guia-tamanhos": {
+    "props": {
+      "text": "GUIA DE TAMANHOS",
+      "blockClass": "guia-tamanhos-texto"
+    }
+  },
+  "modal-layout#guia-tamanhos": {
+    "children": ["modal-header#guia-tamanhos", "modal-content#guia-tamanhos"],
+    "props": {
+      "scroll": "content",
+      "blockClass": "guia-tamanhos-modal"
+    }
+  },
+  "modal-header#guia-tamanhos": {
+    "props": {
+      "showCloseButton": true,
+      "iconCloseSize": 24
+    }
+  },
+  "modal-content#guia-tamanhos": {
+    "props": {
+      "blockClass": "guia-tamanhos"
+    },
+    "children": ["image#medidas", "rich-text#medidas-text"]
+  },
+
+  "image#medidas": {
+    "props": {
+      "src": "assets/images/medidas.png",
+      "blockClass": "medidas-image",
+      "maxWidth": 800
+    }
+  },
+
+  "rich-text#medidas-text": {
+    "props": {
+      "text": "Crianças de mesma idade podem apresentar estaturas diferentes, por isso é necessário escolher o \ntamanho de acordo com as medidas individuais de cada criança e não apenas baseado na idade dela. \n\n**COMO UTILIZAR A TABELA ACIMA** \nTire as medidas da criança com uma fita métrica, principalmente as medidas A e B. Compare estas\n medidas com as medidas das colunas ‘Tamanhos’ para decidir qual o melhor tamanho a escolher. Caso necessário, você pode medir demais partes do corpo (C e D) conforme a imagem. As medidas referem-se às medidas do corpo da criança, em centímetros. \n\n_ABNT - Associação Brasileira de Normas Técnicas._"
+    }
+  }
+}

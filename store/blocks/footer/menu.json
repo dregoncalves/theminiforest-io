@@ -1,0 +1,194 @@
+{
+  "vtex.menu@2.x:menu#footer-informacoes": {
+    "props": {
+      "orientation": "vertical"
+    },
+    "children": [
+      "menu-item#como-comprar",
+      "menu-item#trocas-devolucoes",
+      "menu-item#frete",
+      "menu-item#duvidas",
+      "menu-item#cdc"
+    ]
+  },
+  "menu-item#como-comprar": {
+    "props": {
+      "id": "menu-item-como-comprar",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/institucional/como-comprar",
+        "noFollow": false,
+        "tagTitle": "Como Comprar",
+        "text": "Como Comprar"
+      },
+      "blockClass": "footer-link"
+    }
+  },
+  "menu-item#trocas-devolucoes": {
+    "props": {
+      "id": "menu-item-trocas-devolucoes",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/institucional/trocas-e-devolucoes",
+        "noFollow": false,
+        "tagTitle": "Trocas e Devoluções",
+        "text": "Trocas e Devoluções"
+      },
+      "blockClass": "footer-link"
+    }
+  },
+  "menu-item#frete": {
+    "props": {
+      "id": "menu-item-frete",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/institucional/frete",
+        "noFollow": false,
+        "tagTitle": "Frete",
+        "text": "Frete"
+      },
+      "blockClass": "footer-link"
+    }
+  },
+  "menu-item#duvidas": {
+    "props": {
+      "id": "menu-item-duvidas",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/institucional/duvidas",
+        "noFollow": false,
+        "tagTitle": "Dúvidas",
+        "text": "Dúvidas"
+      },
+      "blockClass": "footer-link"
+    }
+  },
+  "menu-item#cdc": {
+    "props": {
+      "id": "menu-item-cdc",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "https://idec.org.br/consultas/codigo-de-defesa-do-consumidor/capitulo-vi",
+        "noFollow": false,
+        "tagTitle": "CDC",
+        "text": "CDC"
+      },
+      "blockClass": "footer-link"
+    }
+  },
+
+  "vtex.menu@2.x:menu#footer-institucional": {
+    "props": {
+      "orientation": "vertical",
+      "blockClass": ["menu-footer"]
+    },
+    "children": [
+      "menu-item#sale-footer",
+      "menu-item#the-mini-forest",
+      "menu-item#propriedade-industrial",
+      "menu-item#mapa-do-site",
+      "menu-item#blog",
+      "menu-item#dia-das-maes"
+    ]
+  },
+  "menu-item#sale-footer": {
+    "props": {
+      "id": "menu-item-sale",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/institucional/sale",
+        "noFollow": false,
+        "tagTitle": "Sale",
+        "text": "Sale"
+      },
+      "blockClass": "footer-link"
+    }
+  },
+  "menu-item#the-mini-forest": {
+    "props": {
+      "id": "menu-item-the-mini-forest",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/institucional/the-mini-forest",
+        "noFollow": false,
+        "tagTitle": "The Mini Forest",
+        "text": "The Mini Forest"
+      },
+      "blockClass": "footer-link"
+    }
+  },
+  "menu-item#propriedade-industrial": {
+    "props": {
+      "id": "menu-item-propriedade-industrial",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/institucional/propriedade-industrial",
+        "noFollow": false,
+        "tagTitle": "Propriedade Industrial",
+        "text": "Propriedade Industrial"
+      },
+      "blockClass": "footer-link"
+    }
+  },
+  "menu-item#mapa-do-site": {
+    "props": {
+      "id": "menu-item-mapa-do-site",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/mapa-do-site",
+        "noFollow": false,
+        "tagTitle": "Mapa do Site",
+        "text": "Mapa do Site"
+      },
+      "blockClass": "footer-link"
+    }
+  },
+  "menu-item#blog": {
+    "props": {
+      "id": "menu-item-blog",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "https://blog.theminiforest.com/",
+        "noFollow": false,
+        "tagTitle": "Blog",
+        "text": "Blog"
+      },
+      "blockClass": "footer-link"
+    }
+  },
+  "menu-item#dia-das-maes": {
+    "props": {
+      "id": "menu-item-dia-das-maes",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/institucional/dia-das-maes",
+        "noFollow": false,
+        "tagTitle": "Dia das Mães",
+        "text": "Dia das Mães"
+      },
+      "blockClass": "footer-link"
+    }
+  }
+}

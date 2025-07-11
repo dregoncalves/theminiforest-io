@@ -1,0 +1,286 @@
+{
+  "footer": {
+    "blocks": ["footer-layout.desktop", "footer-layout.mobile"]
+  },
+  "footer-layout.desktop": {
+    "children": [
+      "flex-layout.row#newsletter-container",
+      "flex-layout.row#footer-1-desktop",
+      "flex-layout.row#copyright-row"
+    ]
+  },
+
+  "flex-layout.row#newsletter-container": {
+    "props": {
+      "blockClass": "newsletter-container"
+    },
+    "children": ["flex-layout.row#newsletter", "social-networks"]
+  },
+
+  "flex-layout.row#newsletter": {
+    "children": ["rich-text#newsletter-label", "newsletter"],
+    "props": {
+      "fullWidth": false,
+      "colSizing": "auto",
+      "horizontalAlign": "left"
+    }
+  },
+
+  "rich-text#newsletter-label": {
+    "props": {
+      "text": "ASSINE NOSSA \n **NEWSLETTER**",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": "newslatter-label"
+    }
+  },
+
+  "newsletter": {
+    "props": {
+      "hideLabel": true,
+      "blockClass": "newsletter"
+    }
+  },
+
+  "social-networks": {
+    "props": {
+      "socialNetworks": [
+        {
+          "name": "Facebook",
+          "url": "https://www.facebook.com/vtexonline/"
+        },
+        {
+          "name": "Instagram",
+          "url": "https://www.instagram.com/vtextruecloud/"
+        }
+      ]
+    }
+  },
+
+  "flex-layout.row#footer-1-desktop": {
+    "children": [
+      "flex-layout.col#footer-informacoes",
+      "flex-layout.col#footer-institucional",
+      "flex-layout.col#footer-pagamentos",
+      "flex-layout.col#footer-segurança"
+    ],
+    "props": {
+      "blockClass": "menu-row",
+      "paddingTop": 6,
+      "paddingBottom": 3,
+      "preventHorizontalStretch": true,
+      "horizontalAlign": "between"
+    }
+  },
+
+  "flex-layout.col#footer-informacoes": {
+    "props": {
+      "blockClass": ["footer-title__container"]
+    },
+    "children": [
+      "rich-text#informacoes-title",
+      "vtex.menu@2.x:menu#footer-informacoes"
+    ]
+  },
+
+  "rich-text#informacoes-title": {
+    "props": {
+      "text": "INFORMAÇÕES",
+      "blockClass": ["footer-title"]
+    }
+  },
+
+  "flex-layout.col#footer-institucional": {
+    "props": {
+      "blockClass": ["footer-title__container"]
+    },
+    "children": [
+      "rich-text#institucional-title",
+      "vtex.menu@2.x:menu#footer-institucional"
+    ]
+  },
+
+  "rich-text#institucional-title": {
+    "props": {
+      "text": "INSTITUCIONAL",
+      "blockClass": ["footer-title"]
+    }
+  },
+
+  "flex-layout.col#footer-pagamentos": {
+    "props": {
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "rich-text#pagamentos-title",
+      "flex-layout.row#payment-icons__footer"
+    ]
+  },
+
+  "rich-text#pagamentos-title": {
+    "props": {
+      "text": "PAGAMENTO",
+      "blockClass": "footer-title"
+    }
+  },
+
+  "flex-layout.row#payment-icons__footer": {
+    "props": {
+      "blockClass": "footer_pagamentos-icons",
+      "colSizing": "equal",
+      "preventHorizontalStretch": true
+    },
+    "children": ["rich-text#cartao-icon", "rich-text#boleto-icon"]
+  },
+
+  "rich-text#cartao-icon": {
+    "props": {
+      "text": "![Cartao](assets/icons/cartao-icon.svg)",
+      "blockClass": "footer_pagamentos-icon"
+    }
+  },
+
+  "rich-text#boleto-icon": {
+    "props": {
+      "text": "![Boleto](assets/icons/boleto-icon.svg)",
+      "blockClass": "footer_pagamentos-icon"
+    }
+  },
+
+  "flex-layout.col#footer-segurança": {
+    "props": {
+      "preventVerticalStretch": true,
+      "horizontalAlign": "left",
+      "blockClass": "footer-icons"
+    },
+    "children": [
+      "rich-text#footer__seguranca-title",
+      "flex-layout.col#footer-selos"
+    ]
+  },
+
+  "rich-text#footer__seguranca-title": {
+    "props": {
+      "text": "SEGURANÇA",
+      "blockClass": "footer-title"
+    }
+  },
+
+  "flex-layout.col#footer-selos": {
+    "props": {
+      "preventVerticalStretch": true,
+      "horizontalAlign": "right",
+      "blockClass": "footer-icons"
+    },
+    "children": [
+      "rich-text#icons-seguranca",
+      "image#endybrasil-icon",
+      "image#upnext-icon"
+    ]
+  },
+
+  "rich-text#icons-seguranca": {
+    "props": {
+      "text": "![Google icon](assets/icons/google-icon.svg) ![Let's Encrypt icon](assets/icons/lets-encrypt-icon.svg)",
+      "blockClass": "icon-footer"
+    }
+  },
+
+  "image#endybrasil-icon": {
+    "props": {
+      "src": "assets/icons/endybrasil-icon.svg",
+      "blockClass": "icon-footer",
+      "alt": "Endybrasil icon",
+      "link": {
+        "url": "http://www.endybrasil.com/",
+        "newTab": true
+      }
+    }
+  },
+
+  "image#upnext-icon": {
+    "props": {
+      "src": "assets/icons/upnext-icon.svg",
+      "blockClass": "icon-footer",
+      "alt": "Upnext icon",
+      "link": {
+        "url": "https://agencia.upnext.com.br/",
+        "newTab": true
+      }
+    }
+  },
+
+  // Copyright section
+  "flex-layout.row#copyright-row": {
+    "children": ["rich-text#footer"],
+    "props": {
+      "blockClass": "credits"
+    }
+  },
+  "rich-text#footer": {
+    "props": {
+      "text": "The Mini Forest \nwww.theminiforest.com | Rua Guaçuí, 102 - CEP 03178-180 | São Paulo - SP | CNPJ 47.794.270/0001-85 | suporte@theminiforest.com | 11 2308-0041",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": "footer"
+    }
+  },
+
+  // Mobile
+
+  "footer-layout.mobile": {
+    "children": [
+      "flex-layout.row#1-footer-mobile",
+      "flex-layout.row#2-footer-mobile"
+    ]
+  },
+  "flex-layout.row#2-footer-mobile": {
+    "children": ["flex-layout.col#footer-1-mobile"],
+    "props": {
+      "blockClass": "footer-mobile",
+      "paddingTop": 4,
+      "paddingBottom": 4
+    }
+  },
+  "flex-layout.col#footer-1-mobile": {
+    "children": [
+      "flex-layout.row#newsletter__mobile",
+      "social-networks",
+      "flex-layout.col#footer-informacoes",
+      "flex-layout.col#footer-institucional",
+      "rich-text#footer-mobile"
+    ],
+    "props": {
+      "blockClass": "footer-mobile"
+    }
+  },
+  "flex-layout.row#1-footer-mobile": {
+    "props": {
+      "paddingTop": 0,
+      "paddingBottom": 0
+    }
+  },
+  "flex-layout.row#newsletter__mobile": {
+    "children": ["rich-text#newsletter-label__mobile", "newsletter"],
+    "props": {
+      "fullWidth": false,
+      "colSizing": "auto",
+      "horizontalAlign": "left"
+    }
+  },
+
+  "rich-text#newsletter-label__mobile": {
+    "props": {
+      "text": "ASSINE NOSSA NEWSLETTER",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": "newslatter-label"
+    }
+  },
+  "rich-text#footer-mobile": {
+    "props": {
+      "text": "The Mini Forest \n- www.theminiforest.com | Rua Guaçuí, 102 - CEP 03178-180 | São Paulo - SP | CNPJ 47.794.270/0001-85 | suporte@theminiforest.com | 11 2308-0041",
+      "blockClass": "footer"
+    }
+  }
+}

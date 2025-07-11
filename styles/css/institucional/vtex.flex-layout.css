@@ -1,0 +1,11 @@
+.flexCol--como-comprar__col,
+.flexCol--trocas-e-devolucoes__all,
+.flexCol--frete__all,
+.flexCol--sale__all,
+.flexCol--historia__all,
+.flexCol--propriedade-industrial__all,
+.flexCol--dia-das-maes__all {
+  max-width: 1240px;
+  margin: 0 auto;
+  scroll-behavior: smooth;
+}

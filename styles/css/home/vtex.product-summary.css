@@ -1,0 +1,56 @@
+.imageContainer {
+  position: relative;
+}
+
+.image {
+  border-radius: 0 !important;
+}
+
+.hoverImage {
+  display: block !important;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.3s ease;
+  object-fit: cover;
+}
+
+.mainImageHovered {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.imageContainer:hover .hoverImage {
+  opacity: 1;
+}
+
+.imageContainer:hover .mainImageHovered {
+  opacity: 0;
+}
+
+.element {
+  position: relative;
+}
+.element .nameContainer {
+  padding-top: 0.875rem;
+  padding-bottom: 0;
+  height: 3.4375rem;
+}
+.element .nameContainer .nameWrapper .brandName {
+  color: #7a7475;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 13px;
+  overflow: hidden;
+  margin: 14px 0 7px;
+  text-transform: uppercase;
+  white-space: wrap;
+  text-overflow: ellipsis;
+}

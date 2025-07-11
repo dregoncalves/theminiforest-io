@@ -1,0 +1,53 @@
+.accordion-container {
+}
+
+.accordion-header {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-title {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  line-height: 14px;
+  color: #71817f;
+}
+
+.header-subtitle {
+  display: block;
+  font-size: 12px;
+  font-weight: 300;
+  color: #666;
+}
+
+.accordion-icon {
+  color: #c76b6b;
+}
+
+.accordion-content {
+  padding: 0 2.5rem 0;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.accordion-content--is-open {
+  max-height: 100px;
+  opacity: 1;
+  padding: 0 2.5rem 0;
+}
+
+.login-link {
+  color: #71817f;
+  display: block;
+  font-size: 12px;
+  line-height: 32px;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}

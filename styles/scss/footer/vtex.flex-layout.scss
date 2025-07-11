@@ -1,0 +1,45 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.flexColChild--footer-title__container {
+  height: auto !important;
+
+  @include mobile {
+    margin-bottom: 0;
+  }
+}
+
+.flexRow--credits {
+  background-color: white;
+}
+
+.flexRowContent--newsletter-container {
+  border-bottom: 1px solid #d5d7cd;
+
+  @include desktop {
+    padding: 35px 0 25px 0;
+  }
+}
+
+@include mobile {
+  .flexRowContent--footer-mobile {
+    padding-bottom: 0;
+  }
+
+  .flexRowContent--payment-methods {
+    padding-bottom: 0;
+  }
+
+  .flexCol--footer-title__container {
+    align-items: center;
+    border-top: 1px solid #d5d6cc;
+
+    :global(.vtex-menu-2-x-menuContainerNav) {
+      :global(.vtex-menu-2-x-menuContainer) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  }
+}

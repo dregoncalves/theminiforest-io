@@ -1,0 +1,184 @@
+{
+  "store.home": {
+    "blocks": [
+      "list-context.image-list#banner-homepage",
+      "rich-text#shelf-title",
+      "flex-layout.row#shelf",
+      "flex-layout.row#sobre-the-mini-forest"
+    ]
+  },
+
+  "list-context.image-list#banner-homepage": {
+    "children": ["slider-layout#demo-images"],
+    "props": {
+      "width": 1905,
+      "height": 820,
+      "preload": true,
+      "images": [
+        {
+          "image": "https://theminiforest.vtexassets.com/assets/vtex.file-manager-graphql/images/29a44638-b5a4-4c9c-936a-33c79ba6cc46___fb45ec8e778b722b64f236e6ef48c6ae.png",
+          "mobileImage": "https://theminiforest.vtexassets.com/assets/vtex.file-manager-graphql/images/afa10c62-4bdd-484f-a750-34de6b1841a4___171aa59446249e6fcbb739117fc7cddf.png"
+        },
+        {
+          "image": "https://theminiforest.vtexassets.com/assets/vtex.file-manager-graphql/images/29e12035-eb41-4287-ab8e-e935d5554f6d___cdb5e10200f378ad04d8567343f95d62.gif",
+          "mobileImage": "https://theminiforest.vtexassets.com/assets/vtex.file-manager-graphql/images/7120bd86-8275-4b06-80aa-cf9b35fe54b3___6610c6f73941e7fee0739e67209b01b2.gif"
+        },
+        {
+          "image": "https://theminiforest.vtexassets.com/assets/vtex.file-manager-graphql/images/15b439a6-8d36-4d76-8a54-97fb10bed769___3d9f6212aae4fed4ae60a318d5053115.png",
+          "mobileImage": "https://theminiforest.vtexassets.com/assets/vtex.file-manager-graphql/images/5e8bc838-3db8-42f4-ae4b-0c0aca28c238___250d2d765c216ffe60125eb42d6b4461.png"
+        },
+        {
+          "image": "https://theminiforest.vtexassets.com/assets/vtex.file-manager-graphql/images/254b5e21-885e-43b6-9eae-4d942e9d105f___7213068a04310fe9a33f60d3cbdf591a.gif",
+          "mobileImage": "https://theminiforest.vtexassets.com/assets/vtex.file-manager-graphql/images/4e9e878d-080b-4f91-b7a6-fc296963eff3___adcfb67e351dd4f6cb0f0d9d99d409dc.gif"
+        }
+      ]
+    }
+  },
+
+  "slider-layout#demo-images": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "showNavigationArrows": "desktopOnly",
+      "blockClass": "carousel",
+      "autoplay": { "timeout": 4000 },
+      "showPaginationDots": "never"
+    }
+  },
+
+  // Vitrine de produtos da Homepage
+  "rich-text#shelf-title": {
+    "props": {
+      "text": "## Destaques",
+      "blockClass": "shelfTitle",
+      "textPosition": "CENTER"
+    }
+  },
+
+  "flex-layout.row#shelf": {
+    "children": ["list-context.product-list#demo1"]
+  },
+
+  "list-context.product-list#demo1": {
+    "blocks": ["product-summary.shelf#home-shelf"],
+    "children": ["slider-layout#demo-products"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC",
+      "maxItems": 12,
+      "collection": "140",
+      "blockClass": "home-shelf"
+    }
+  },
+
+  "slider-layout#demo-products": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 12,
+        "tablet": 12,
+        "phone": 12
+      },
+      "infinite": false,
+      "fullWidth": false,
+      "blockClass": "home-shelf",
+      "showPaginationDots": "never",
+      "showNavigationArrows": "never"
+    }
+  },
+
+  "product-summary.shelf#home-shelf": {
+    "props": {
+      "blockClass": "home-shelf"
+    },
+    "children": [
+      "add-to-list-btn",
+      "product-summary-image",
+      "product-summary-name",
+      "product-summary-price"
+    ]
+  },
+
+  "add-to-list-btn": {
+    "props": {
+      "blockClass": "wishlist-button"
+    }
+  },
+  "product-summary-image": {
+    "props": {
+      "hoverImage": {
+        "criteria": "index",
+        "index": 1
+      }
+    }
+  },
+
+  // Seção "Sobre a The Mini Forest"
+
+  "flex-layout.row#sobre-the-mini-forest": {
+    "children": ["flex-layout.col#imagem", "flex-layout.col#texto"],
+    "props": {
+      "blockClass": "sobre",
+      "colSizing": "auto"
+    }
+  },
+
+  "flex-layout.col#imagem": {
+    "children": ["image#the-mini-forest"],
+    "props": {
+      "blockClass": "colImagem",
+      "horizontalAlign": "left"
+    }
+  },
+
+  "image#the-mini-forest": {
+    "props": {
+      "src": "https://theminiforest.vtexassets.com/assets/vtex.file-manager-graphql/images/bd2c5c54-9434-421e-90de-3aef3bf093fb___df68883831f8c768f599674b24ffffdf.png",
+      "alt": "Junte-se a nós! A jornada já começou",
+      "maxWidth": "496px",
+      "blockClass": "sobre__banner"
+    }
+  },
+
+  "flex-layout.col#texto": {
+    "children": [
+      "rich-text#sobre-title",
+      "rich-text#sobre-text",
+      "link#sobre-button"
+    ],
+    "props": {
+      "blockClass": "sobre__container",
+      "preventVerticalStretch": true
+    }
+  },
+
+  "rich-text#sobre-title": {
+    "props": {
+      "text": "### SOBRE A THE MINI FOREST",
+      "font": "t-heading-4",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": "sobre__title"
+    }
+  },
+
+  "rich-text#sobre-text": {
+    "props": {
+      "text": "🦊🌲 Nós temos uma história para contar e ela está na forma de lindas roupas que irão alimentar a imaginação das crianças com grandes aventuras, ilustrações exclusivas, modernas e nostálgicas. The Mini Forest convida você a caminhar conosco nesta jornada, para que no futuro você tenha recordações maravilhosas dos seus pequenos. 🌳🐰",
+      "font": "t-body",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": "sobre__text"
+    }
+  },
+
+  "link#sobre-button": {
+    "props": {
+      "href": "/institucional/the-mini-forest",
+      "label": "SAIBA MAIS",
+      "blockClass": "sobre__button"
+    }
+  }
+}

@@ -1,0 +1,60 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+@include desktop {
+  .minicartContainer {
+    position: relative;
+    width: auto !important;
+    height: auto !important;
+    padding: 0;
+
+    :global(.vtex-button) {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      min-height: 20px;
+    }
+  }
+
+  .minicartContainer::before {
+    content: "Minha Sacola";
+    width: fit-content;
+    font-size: 12px;
+    font-weight: 500;
+    display: block;
+    color: $text-green;
+  }
+
+  .minicartContainer .cartIcon {
+    display: none !important;
+  }
+}
+
+@include mobile {
+  .openIconContainer {
+    padding: 0;
+
+    :global(.vtex-button__label) {
+      padding: 0;
+    }
+  }
+
+  .cartIcon {
+    height: 33px;
+    width: 33px;
+    margin-bottom: 5px;
+  }
+
+  .minicartQuantityBadgeDefault {
+    top: 50%;
+    right: 55%;
+    transform: translate(50%, -50%);
+    background: none;
+  }
+}
+
+@include desktop {
+  .minicartQuantityBadge {
+    display: none;
+  }
+}

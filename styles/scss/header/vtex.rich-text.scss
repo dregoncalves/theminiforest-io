@@ -1,0 +1,24 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.paragraph--submenu-titulo {
+  margin: 0;
+  font-size: 12px;
+  line-height: 23px;
+  padding: 5px 0;
+}
+
+.paragraph--meus-favoritos-link {
+  margin: 0;
+  font-weight: 500;
+  line-height: 1;
+  color: #71817f;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+
+  .link--meus-favoritos-link {
+    color: #71817f;
+    text-decoration: none;
+    font-size: 12px;
+  }
+}

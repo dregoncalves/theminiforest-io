@@ -1,0 +1,34 @@
+.sliderLayoutContainer--home-shelf {
+  max-width: 1240px;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.sliderTrack--home-shelf {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.slide--home-shelf {
+  width: 100% !important;
+}
+
+@media screen and (max-width: 1024px) {
+  .sliderTrack--home-shelf {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.caretIcon--carousel {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 0 none;
+  border-radius: 3px;
+  height: 30px;
+  line-height: 30px;
+  margin-top: -15px;
+  position: static;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  width: 20px;
+}

@@ -1,0 +1,26 @@
+{
+  "store.custom#como-comprar": {
+    "path": "/institucional/como-comprar"
+  },
+  "store.custom#trocas-e-devolucoes": {
+    "path": "/institucional/trocas-e-devolucoes"
+  },
+  "store.custom#frete": {
+    "path": "/institucional/frete"
+  },
+  "store.custom#sale": {
+    "path": "/institucional/sale"
+  },
+  "store.custom#historia": {
+    "path": "/institucional/the-mini-forest"
+  },
+  "store.custom#propriedade-industrial": {
+    "path": "/institucional/propriedade-industrial"
+  },
+  "store.custom#dia-das-maes": {
+    "path": "/institucional/dia-das-maes"
+  },
+  "store.custom#estampas": {
+    "path": "/estampas"
+  }
+}

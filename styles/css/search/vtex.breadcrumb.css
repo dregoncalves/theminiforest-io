@@ -1,0 +1,41 @@
+.container {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.homeIcon {
+  display: none;
+}
+
+.homeLink {
+  padding-left: 0;
+}
+
+.homeLink::before {
+  content: "Home";
+  color: #a4a4a4;
+}
+
+.caretIcon,
+.link {
+  font-size: 0.8rem;
+  color: #c7c7c7;
+}
+
+.link:hover {
+  text-decoration: underline;
+  color: none;
+}
+
+.arrow:last-child .link,
+.term {
+  font-size: 0.8rem;
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    display: none;
+  }
+}

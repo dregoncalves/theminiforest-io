@@ -1,0 +1,105 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.paragraph--newslatter-label {
+  display: inline-block;
+  font-size: 16px;
+  height: 36px;
+  letter-spacing: 3px;
+  line-height: 18px;
+  margin: 0 10px 0 0;
+  text-align: justify;
+  text-transform: uppercase;
+  vertical-align: middle;
+  color: $text-green;
+
+  @include mobile {
+    font-size: 13px;
+    height: auto;
+    letter-spacing: 2px;
+    line-height: 18px;
+    margin: 0;
+    padding: 6px 0;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.strong--newslatter-label {
+  display: inline-block;
+  font-size: 23px;
+  height: 36px;
+  letter-spacing: normal;
+  line-height: 18px;
+  margin: 0 10px 0 0;
+  text-align: justify;
+  text-transform: uppercase;
+  vertical-align: middle;
+  font-weight: 400;
+  color: $text-green;
+}
+
+.paragraph--footer-title {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+
+  @include mobile {
+    margin: 19px 0 10px;
+  }
+}
+
+.paragraph--footer {
+  color: #7b7b7b;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: normal;
+  padding: 17px 10px;
+  text-align: center;
+  text-decoration: none;
+
+  @include mobile {
+    padding: 0;
+  }
+
+  .link--footer {
+    text-decoration: none;
+    color: #7b7b7b;
+  }
+}
+
+.image--footer_pagamentos-icon {
+  margin-right: 20px;
+  width: 33px;
+}
+
+.container--icon-footer {
+  justify-content: flex-end;
+}
+
+.list--footer {
+  padding: 0;
+
+  .listItem--footer {
+    text-align: center;
+    list-style: none;
+
+    .link--footer {
+      text-decoration: none;
+      color: #7b7b7b;
+    }
+  }
+}
+
+.container--footer {
+  background-color: #fff;
+  padding: 10px;
+}
+
+.wrapper--footer-icon {
+  .paragraph {
+    margin: 1rem 0 1.5rem 0;
+  }
+}

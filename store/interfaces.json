@@ -1,0 +1,23 @@
+{
+  "search-bar-custom": {
+    "component": "SearchBarCustom"
+  },
+  "cluster-grid": {
+    "component": "ClusterGrid"
+  },
+  "como-comprar-page": {
+    "component": "ComoComprarPage"
+  },
+  "estampas-page": {
+    "component": "EstampasPage"
+  },
+  "search-result-pagination": {
+    "component": "Pagination"
+  },
+  "drawer-custom": {
+    "component": "DrawerComponent"
+  },
+  "product-card-custom": {
+    "component": "ProductCard"
+  }
+}

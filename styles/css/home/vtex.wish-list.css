@@ -1,0 +1,11 @@
+.wishlistIconContainer--wishlist-button,
+.wishlistIconContainer--wishlist-button__grid-shelf {
+  position: absolute;
+  z-index: 3;
+  right: 0 !important;
+}
+
+:global(.vtex-wish-list-1-x-wishlistIconContainer--wishlist-button) {
+  right: 15px;
+  top: 10px;
+}

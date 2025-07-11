@@ -1,0 +1,12 @@
+.wishlistIconContainer--wishlist-button__product {
+  border: 1px solid indianred;
+  width: 50px;
+  max-width: 50px;
+  max-height: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+}
+.wishlistIconContainer--wishlist-button__product .vtex-button .vtex-button__label {
+  padding: 0;
+}

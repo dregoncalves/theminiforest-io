@@ -1,0 +1,39 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+// Seção "Sobre a The Mini Forest"
+.flexRowContent--sobre {
+  max-width: 1240px;
+  margin: 0 auto;
+
+  @include tablet {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+.flexColChild--sobre__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flexCol--sobre__container {
+  margin: 0 124px 0 124px;
+  align-items: center;
+  justify-content: center;
+
+  @include tablet {
+    margin: 10px;
+  }
+}
+
+.flexColChild--colImagem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include mobile {
+    padding: 12px;
+  }
+}

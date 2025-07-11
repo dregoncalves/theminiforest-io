@@ -1,0 +1,71 @@
+.newsletter {
+  display: flex;
+}
+.newsletter .container .form {
+  display: flex;
+  flex-direction: row;
+}
+
+.inputGroup--newsletter {
+  padding: 0;
+}
+
+.newsletter .container {
+  padding: 35px 10px 25px 10px;
+}
+@media (max-width: 640px) {
+  .newsletter .container {
+    padding: 0;
+  }
+}
+
+.footerLayout {
+  background-color: #f0efe9;
+}
+
+:global(.vtex-store-footer-2-x-footerLayout) :global(.vtex-flex-layout-0-x-flexRow) :global(.vtex-store-components-3-x-container) {
+  max-width: 1240px;
+  padding: 0;
+}
+
+:global(.vtex-store-components-3-x-inputGroup) .vtex-buton {
+  background-color: #6c9893;
+}
+
+.inputGroup--newsletter :global(.vtex-styleguide-9-x-hideDecorators) {
+  background-color: #d5d7cd;
+  color: #7a7475;
+  min-width: 310px;
+  border-radius: 0;
+}
+
+.inputGroup--newsletter :global(.vtex-input-prefix__group) {
+  border: none;
+  border-radius: 0;
+}
+
+.inputGroup :global(.vtex-button) {
+  background-color: #6c9893;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  transition: 0.2s all ease-in-out;
+  font-size: 11px;
+}
+@media (max-width: 640px) {
+  .inputGroup :global(.vtex-button) {
+    width: 100%;
+  }
+}
+.inputGroup :global(.vtex-button):hover {
+  background-color: #5c817d;
+}
+
+.form--newsletter {
+  padding: 0;
+}
+
+.imageElement--icon-footer {
+  margin-bottom: 1.5rem;
+  text-align: right;
+}

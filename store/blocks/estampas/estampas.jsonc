@@ -1,0 +1,17 @@
+{
+  "store.custom#estampas": {
+    "blocks": ["flex-layout.row#estampas-content"]
+  },
+
+  "flex-layout.row#estampas-content": {
+    "title": "Grid de Estampas",
+    "props": {
+      "fullWidth": false
+    },
+    "children": ["flex-layout.col#estampas-content"]
+  },
+
+  "flex-layout.col#estampas-content": {
+    "children": ["estampas-page"]
+  }
+}

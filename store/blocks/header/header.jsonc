@@ -1,0 +1,177 @@
+{
+  "header": {
+    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+  },
+  "header.full": {
+    "blocks": ["header-layout.desktop", "header-layout.mobile"]
+  },
+
+  // DESKTOP
+  "header-layout.desktop": {
+    "children": [
+      "flex-layout.row#desktop-header",
+      "flex-layout.row#category-menu"
+    ]
+  },
+  "flex-layout.row#desktop-header": {
+    "props": {
+      "blockClass": "main-header",
+      "horizontalAlign": "between",
+      "verticalAlign": "center",
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.col#left-desktop",
+      "flex-layout.col#center-desktop",
+      "flex-layout.row#right-desktop"
+    ]
+  },
+  "flex-layout.col#left-desktop": {
+    "children": ["search-bar"],
+    "props": {
+      "horizontalAlign": "left",
+      "verticalAlign": "top",
+      "preventVerticalStretch": true,
+      "blockClass": "search-bar"
+    }
+  },
+  "search-bar": {
+    "props": {
+      "displayMode": "clear-button",
+      "placeholder": "Digite Aqui",
+      "containerMode": "container",
+      "maxWidth": 250,
+      "blockClass": "search-bar"
+    }
+  },
+  "flex-layout.col#center-desktop": {
+    "children": ["logo#desktop"],
+    "props": {
+      "horizontalAlign": "center",
+      "verticalAlign": "middle"
+    }
+  },
+  "logo#desktop": {
+    "props": {
+      "title": "Logo",
+      "href": "/",
+      "url": "https://theminiforest.vteximg.com.br/arquivos/TheMiniForest-logo.svg",
+      "height": 96,
+      "width": 130
+    }
+  },
+  "flex-layout.row#right-desktop": {
+    "children": ["login", "rich-text#meus-favoritos", "minicart.v2"],
+    "props": {
+      "horizontalAlign": "right",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "verticalAlign": "center",
+      "blockClass": "right-desktop"
+    }
+  },
+  "login": {
+    "props": {
+      "showIconProfile": true,
+      "iconLabel": "Entrar",
+      "accountOptionLinks": [
+        {
+          "label": "Meus pedidos",
+          "path": "/account#/order"
+        },
+        {
+          "label": "Minha conta",
+          "path": "/account"
+        }
+      ]
+    }
+  },
+  "rich-text#meus-favoritos": {
+    "props": {
+      "text": "[Meus Favoritos](/meus-favoritos)",
+      "blockClass": "meus-favoritos-link"
+    }
+  },
+  "flex-layout.row#category-menu": {
+    "children": ["vtex.menu@2.x:menu#category-menu"],
+    "props": {
+      "blockClass": "category-menu__container",
+      "horizontalAlign": "between"
+    }
+  },
+
+  // MOBILE
+  "header-layout.mobile": {
+    "children": ["flex-layout.row#1-mobile"]
+  },
+  "flex-layout.row#1-mobile": {
+    "children": ["drawer", "logo#mobile", "flex-layout.row#desktop-triggers"],
+    "props": {
+      "blockClass": "main-header-mobile",
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    }
+  },
+  "drawer": {
+    "children": ["drawer-custom"]
+  },
+  "flex-layout.row#desktop-triggers": {
+    "props": {
+      "blockClass": "mobile-triggers",
+      "colSizing": "equal"
+    },
+    "children": [
+      "image#wishlist-link",
+      "modal-trigger#search-mobile",
+      "minicart.v2"
+    ]
+  },
+  "image#wishlist-link": {
+    "props": {
+      "src": "assets/icons/heart-filled.svg",
+      "width": 40,
+      "link": {
+        "props": {
+          "href": "/account"
+        }
+      }
+    }
+  },
+
+  // BLOCOS DO MODAL DE BUSCA - Início da Alteração
+  "modal-trigger#search-mobile": {
+    "props": {
+      "blockClass": "search-bar"
+    },
+    "children": ["icon-search", "modal-layout#search-mobile"]
+  },
+  "icon-search": {
+    "props": {
+      "id": "hpa-search",
+      "size": 25,
+      "blockClass": "search-icon"
+    }
+  },
+  "modal-layout#search-mobile": {
+    "props": {
+      "fullScreen": true,
+      "blockClass": "search-bar",
+      "backdrop": "clickable"
+    },
+    "children": ["search-bar#mobile"]
+  },
+
+  "search-bar#mobile": {
+    "props": {}
+  },
+  "logo#mobile": {
+    "props": {
+      "title": "Logo",
+      "href": "/",
+      "url": "https://theminiforest.vteximg.com.br/arquivos/TheMiniForest-logo.svg",
+      "width": "110",
+      "height": "70"
+    }
+  }
+}

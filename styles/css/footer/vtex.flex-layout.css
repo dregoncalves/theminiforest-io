@@ -1,0 +1,39 @@
+.flexColChild--footer-title__container {
+  height: auto !important;
+}
+@media (max-width: 640px) {
+  .flexColChild--footer-title__container {
+    margin-bottom: 0;
+  }
+}
+
+.flexRow--credits {
+  background-color: white;
+}
+
+.flexRowContent--newsletter-container {
+  border-bottom: 1px solid #d5d7cd;
+}
+@media (min-width: 1025px) {
+  .flexRowContent--newsletter-container {
+    padding: 35px 0 25px 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .flexRowContent--footer-mobile {
+    padding-bottom: 0;
+  }
+  .flexRowContent--payment-methods {
+    padding-bottom: 0;
+  }
+  .flexCol--footer-title__container {
+    align-items: center;
+    border-top: 1px solid #d5d6cc;
+  }
+  .flexCol--footer-title__container :global(.vtex-menu-2-x-menuContainerNav) :global(.vtex-menu-2-x-menuContainer) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

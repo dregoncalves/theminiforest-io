@@ -1,0 +1,79 @@
+{
+  "store.custom#trocas-e-devolucoes": {
+    "blocks": ["flex-layout.row#trocas-e-devolucoes"],
+    "props": {
+      "blockClass": "trocas-e-devolucoes__content"
+    }
+  },
+
+  "flex-layout.row#trocas-e-devolucoes": {
+    "children": ["flex-layout.col#trocas-e-devolucoes__content"],
+    "props": {
+      "blockClass": ["trocas-e-devolucoes__content"]
+    }
+  },
+
+  "flex-layout.col#trocas-e-devolucoes__content": {
+    "children": [
+      "rich-text#title",
+      "rich-text#politica",
+      "rich-text#consideracoes",
+      "rich-text#troca-defeito",
+      "rich-text#prazo-arrependimento",
+      "rich-text#prazo-arrependimento-2",
+      "rich-text#restituicao-valores"
+    ],
+    "props": {
+      "blockClass": ["trocas-e-devolucoes__all"]
+    }
+  },
+
+  "rich-text#title": {
+    "props": {
+      "text": "# Trocas e Devoluções",
+      "blockClass": ["trocas-e-devolucoes__heading-primary", "trocas-e-devolucoes__heading-striped"]
+    }
+  },
+
+  "rich-text#politica": {
+    "props": {
+      "text": "## Política de Trocas e Devoluções\n\nPara a **The Mini Forest** é muito importante que nossos/as clientes estejam felizes e satisfeitos/as. Com o intuito de esclarecer eventuais dúvidas e mantermos nosso relacionamento transparente, disponibilizamos nossa Política de Trocas com base no Código de Defesa do Consumidor e no Guia de Comércio Eletrônico.",
+      "blockClass": ["trocas-e-devolucoes__all"]
+    }
+  },
+
+  "rich-text#consideracoes": {
+    "props": {
+      "text": "## Considerações\n\nSe por algum motivo você não estiver satisfeito/a com sua compra e quer devolver o pedido, a TheMiniForest.com lhe oferece a primeira devolução do PEDIDO grátis. Nas demais solicitações de devolução de um mesmo pedido, a empresa se reserva o direito de cobrar encargos de postagem e de frete. Qualquer envio sem contato prévio e confirmação do Suporte, a entrega será negada pela portaria.\n\nA The Mini Forest garante apenas UMA autorização de postagem por pedido. Portanto, caso o cliente deseje a devolução de mais de um produto, o pedido de trocas (realizado em sua conta) deve ser realizado sequencialmente, com espaço de tempo inferior há 4 horas. Caso haja inclusão com tempo superior, a loja não autorizará a postagem sob a mesma autorização (por questões de declaração de valor no transporte) e NÃO haverá a geração de um novo frete reverso. Desta forma, o novo envio será custeado pelo/a cliente.\n\nTodas as postagens da troca (ou reenvio) feitas por nossa empresa serão através de PAC, sem a opção de SEDEX disponível. Para devolver o produto, o procedimento deve ser iniciado em sua conta no site. O primeiro passo é fazer o login normalmente em nossa loja e entrar na aba de meus Pedidos. Feito isso, basta acessar o pedido que deseja fazer a devolução, clicar sobre “ver descrição completa do pedido” e então clicar no link “Trocar ou Devolver Este Produto” que fica ao lado do produto que deseja devolver.\n\nApós esse passo, aparecerá um pequeno formulário que nos enviará todos os dados que precisamos saber para prosseguirmos com a devolução. No caso de solicitação de troca, será gerado, obrigatoriamente, um vale no valor da devolução e, então, o/a cliente deverá iniciar um novo processo de compra no site, inserindo o código que lhe passaremos após o recebimento da devolução. Não fazemos a reserva de produtos.\n\nLembramos que todo pedido deverá estar dentro do prazo legal de trocas e devoluções de compras virtuais, que é de SETE dias (corridos) do recebimento do produto.\n\nEm solicitações de reembolso/estorno, o processamento da solicitação acontecerá em até 3 dias úteis do recebimento da encomenda. O prazo para que o valor entre para o cliente dependerá das instituições bancárias, que pedem 4 dias úteis para boletos e até 2 faturas (60 dias) para as compras por cartões de crédito.\n\nLembramos que todo pedido de troca ou devolução deverá estar dentro do prazo legal de trocas e devoluções de compras virtuais, que é de SETE dias (corridos) do recebimento do produto.\n\nApós esse processo, basta esperar nossa equipe de Trocas e Devoluções entrar em contato via e-mail, explicando como funcionará a postagem para você devolver as peças, o que acontecerá em um prazo de até três dias úteis.\n\n**Em períodos promocionais e de lançamento, esse prazo de contato poderá ser aumentado para até 5 dias úteis.**\n\nSerão encaminhadas as instruções de como proceder para realizar a devolução e/ou troca pelo vale, que acontecerá exclusivamente por frete reverso (com o prazo de 10 dias corridos para postagem); não incluindo nenhum tipo de coleta do produto (o cliente deverá se encaminhar à uma agência e realizar a postagem do produto). Em caso de perda do prazo de postagem, não haverá outra autorização para a devolução, assim como objetos postados por conta do/a cliente após o prazo serão devolvidos ao remetente.\n\nApós recebermos a devolução, confirmaremos o recebimento da encomenda por e-mail.\n\nA The Mini Forest só realiza trocas por VALES e devoluções dos produtos comprados virtualmente, assim como as lojas físicas/revendas **NÃO efetuam trocas de produtos adquiridos pelo site.**\n\nEm casos de reenvio de compras, toda encomenda será reenviada, obrigatoriamente, ao endereço comprador/a, ou seja, caso haja mudança no endereço, o SUPORTE deverá ser previamente comunicado para que a possibilidade de alteração no endereço de entrega seja verificada.\n\nTODO frete reverso é criado, obrigatoriamente, para o endereço de entrega da compra, não sendo possível a alteração.\n\nPara ter direito à troca, os prazos deverão ser respeitados de acordo com o motivo. Sempre que o produto for encaminhado à The Mini Forest, deverá ser enviado junto com o DANFE (Nota Fiscal do envelope), acompanhar a embalagem original, ou similar que preserve o produto, permanecendo com a etiqueta, acessórios (se incluso) e não apresentar indícios de uso, manipulação, cheiro ou sujeira que altere suas características originais.\n\n**OBS:** As compras poderão ser devolvidas única e exclusivamente dentro do cadastro do/a comprador/a, portanto, produtos recebidos como \"presente\" necessitarão do registro do comprador/a (ao qual emitimos a DANFE - NF-e) dentro de nosso site. Os fretes serão também todos encaminhados ao comprador/a registrado na loja. A troca por terceiros não será permitida.\n\n**Devolução de PRESENTE:**\n\nEsse procedimento será admitido pela loja desde que o pedido seja identificado pela pessoa que quer devolver o produto, ou seja, será necessário que seja informado ao nosso suporte: número do pedido na loja OU número da nota fiscal. Apenas com esses dados em mãos conseguiremos visualizar se a compra ainda está elegível para a devolução/geração de vale.\n\nAssim que for localizada a compra em nosso sistema e verificados os prazos de entrega do produto ao comprador (não ao presenteado).\n\nNesse caso, o frete de devolução é, impreterivelmente, custeado pelo presenteado.\n\nAssim que recebida e processada, se aprovada, o crédito (VALE) ficará disponível vinculado ao CPF do PRESENTEADO.",
+      "blockClass": ["trocas-e-devolucoes__all"]
+    }
+  },
+
+  "rich-text#troca-defeito": {
+    "props": {
+      "text": "## Troca por defeito no produto ou incompatibilidade com a descrição\n\nCaso o produto apresente, no prazo de 90 dias após o recebimento, algum tipo de vício que o torne impróprio para uso, diminua o valor original ou comprometa demais suas características ou, ainda, quando o produto não for igual ao que foi informado sobre ele, o fornecedor deverá solucioná-lo no prazo máximo de 30 dias úteis, mas em uma única oportunidade. Após esse prazo, se o problema não for solucionado, o/a consumidor/a tem direito de escolher entre:\n\n- Troca imediata pelo mesmo produto (se disponível);\n- Cancelamento da compra com a devolução integral do valor pago;\n- Se quiser, pode aceitar ficar com o produto com um desconto no preço.\n\nTodos os produtos enviados pela The Mini Forest passam por testes de embalagem, portanto qualquer manifestação de defeito, quebra ou avaria do produto no transporte deverá ser realizada na data do recebimento da encomenda (em conformidade com o rastreamento do produto). Qualquer manifestação após esse prazo não será aceita por não estar de acordo com a nossa política de trocas e devoluções.\n\nTodos os produtos serão analisados pelo departamento de controle de qualidade da The Mini Forest e o prazo médio de conclusão é de 30 dias após o recebimento do produto, de acordo com o Código de Defesa do Consumidor.\n\nCaso não seja constatado qualquer defeito, o produto será reenviado ao consumidor.",
+      "blockClass": ["trocas-e-devolucoes__all"]
+    }
+  },
+
+  "rich-text#prazo-arrependimento": {
+    "props": {
+      "text": "## Prazo de arrependimento\n\nO/a consumidor/a que compra um produto ou contrata um serviço pela Internet tem direito a se arrepender da compra no prazo máximo de 07 (sete) dias, contados a partir do recebimento do produto (data de entrega informada no rastreamento). Para tanto, deve formalizar o pedido de cancelamento e solicitar a devolução de qualquer quantia eventualmente paga. Neste caso pede-se que, antes de mais nada, o/a consumidor/a faça o registro em nosso site.\n\nCaso sejam encaminhados produtos sem informação prévia, o pedido será devolvido ao remetente sem o reembolso dos valores pagos no envio.",
+      "blockClass": ["trocas-e-devolucoes__all"]
+    }
+  },
+
+  "rich-text#prazo-arrependimento-2": {
+    "props": {
+      "text": "## Prazo de arrependimento\n\nO/a consumidor/a que compra um produto ou contrata um serviço pela Internet tem direito a se arrepender da compra no prazo máximo de 07 (sete) dias, contados a partir do recebimento do produto (data de entrega informada no rastreamento). Para tanto, deve formalizar o pedido de cancelamento e solicitar a devolução de qualquer quantia eventualmente paga. Neste caso pede-se que, antes de mais nada, o/a consumidor/a faça o registro em nosso site.\n\nCaso sejam encaminhados produtos sem informação prévia, o pedido será devolvido ao remetente sem o reembolso dos valores pagos no envio.",
+      "blockClass": ["trocas-e-devolucoes__all"]
+    }
+  },
+
+  "rich-text#restituicao-valores": {
+    "props": {
+      "text": "## Restituição dos Valores\n\nSe por algum motivo o pedido não puder ser entregue, por endereço inexistente ou o não acesso ao local de entrega, ele retornará a nossa Central e o valor correspondente a este pedido será devolvido de acordo com a forma de pagamento escolhida no momento da compra. Porém se o motivo da não entrega for por erro nos dados cadastrados pelo/a cliente, cancelaremos o pedido e o valor pago nos produtos (exceto frete) será reembolsado. Se o/a cliente mantiver o interesse na compra será necessário um novo pagamento do frete para que possamos realizar o reenvio da compra.\n\nRestituições de frete serão aceitas apenas em caso de devolução integral da compra, caracterizando a desistência por completo da compra, seguida de estorno.\n\nPara devoluções de que não se tratam do pedido completo, será restituído apenas o valor pago nos itens recebidos na devolução.\n\nCom a devolução da encomenda, o/a cliente terá duas opções:\n\n- Solicitar a devolução do valor pago nas peças de acordo com a forma de pagamento utilizada na compra; ou\n- Ficar com o crédito (de mesmo valor das peças) em seu cadastro na The Mini Forest para uma compra futura.\n\nFica à critério do/a mesmo/a a escolha que melhor o atenderá.\n\nRestituições por motivo de Arrependimento seguem as mesmas regras acima.\n\nCaso a compra seja feita em cartão de crédito, solicitaremos o estorno junto à operadora do cartão. O prazo para constar o estorno pode variar de acordo com a bandeira e o banco emissor. Para as demais formas de pagamento (boleto bancário), o reembolso ocorrerá em 7 dias úteis, após o recebimento e análise das condições do(s) produto(s) por nossa empresa. A conta informada para o reembolso deverá ser em nome da cliente que realizar o pedido. NÃO REALIZAREMOS REEMBOLSOS EM CONTA DE TERCEIROS. Como a The Mini Forest vende apenas para pessoa física (cadastrada através do CPF) os reembolsos acontecerão exclusivamente em contas de pessoa física, portando, contas empresariais que necessitem de CNPJ não poderão receber valores desta empresa.\n\nO prazo para restituição/estorno do valor pago ou crédito inicia-se somente após o recebimento do produto devolvido no endereço da nota fiscal e checagem de suas condições. Se houver indício de uso ou se o produto não estiver acompanhado da Nota Fiscal, a devolução não será aceita.\n\nCaso não exista retorno aos e-mails informando qual produto o/a cliente tem interesse para troca no prazo de 72 horas, o valor será automaticamente convertido em bônus ou estornado. A troca com envio gratuito não será mais aceita após este prazo.\n\nPara maiores esclarecimentos entre em contato com nossa central de atendimento através do e-mail [suporte@theminiforest.com](mailto:suporte@theminiforest.com) ou pelo telefone: (11) 2308-0041",
+      "blockClass": ["trocas-e-devolucoes__all"]
+    }
+  }
+}
