@@ -67,7 +67,8 @@
     "vtex.css-handles": "1.x",
     "vtex.store-newsletter": "1.x",
     "vtex.overlay-layout": "0.x",
-    "vtex.search-page-context": "0.x"
+    "vtex.search-page-context": "0.x",
+    "vtex.product-context": "0.x"
   },
   "peerDependencies": {
     "vtex.reviews-and-ratings": "3.x",

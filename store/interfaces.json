@@ -19,5 +19,9 @@
   },
   "product-card-custom": {
     "component": "ProductCard"
+  },
+  "buy-button-custom": {
+    "component": "BuyButtonToggle",
+    "composition": "children"
   }
 }

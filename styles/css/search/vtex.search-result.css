@@ -33,7 +33,7 @@
 }
 
 .orderByText {
-  text-transform: capitalize;
+  text-transform: none;
 }
 
 .filterPopupArrowIcon,

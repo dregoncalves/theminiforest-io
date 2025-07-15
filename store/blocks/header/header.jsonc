@@ -61,7 +61,7 @@
     }
   },
   "flex-layout.row#right-desktop": {
-    "children": ["login", "rich-text#meus-favoritos", "minicart.v2"],
+    "children": ["login#header", "rich-text#meus-favoritos", "minicart.v2"],
     "props": {
       "horizontalAlign": "right",
       "preventHorizontalStretch": true,
@@ -70,10 +70,10 @@
       "blockClass": "right-desktop"
     }
   },
-  "login": {
+  "login#header": {
     "props": {
-      "showIconProfile": true,
-      "iconLabel": "Entrar",
+      "showIconProfile": false,
+      "iconLabel": "Minha Conta",
       "accountOptionLinks": [
         {
           "label": "Meus pedidos",
