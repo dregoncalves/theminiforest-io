@@ -1,0 +1,16 @@
+.discountInsideContainer {
+  z-index: 10;
+  left: 0;
+  top: 10px;
+  right: auto;
+  background-color: #c86c6e;
+}
+.discountInsideContainer::after {
+  content: "";
+  position: absolute;
+  right: -7px;
+  top: 0;
+  border-left: 7px solid #c86c6e;
+  border-top: 11px solid transparent;
+  border-bottom: 11px solid transparent;
+}

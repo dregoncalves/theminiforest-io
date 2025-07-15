@@ -22,5 +22,8 @@
   },
   "store.custom#estampas": {
     "path": "/estampas"
+  },
+  "store.custom#faq": {
+    "path": "/institucional/duvidas"
   }
 }

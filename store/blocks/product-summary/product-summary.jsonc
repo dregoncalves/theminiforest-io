@@ -29,7 +29,7 @@
 
   "product-summary-image#shelf": {
     "props": {
-      "showBadge": false,
+      "showBadge": true,
       "hoverImage": {
         "criteria": "index",
         "index": 1

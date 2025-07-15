@@ -123,17 +123,6 @@
     ]
   },
 
-  "rich-text#em-breve": {
-    "props": {
-      "text": "Em Breve",
-      "textPosition": "CENTER",
-      "textAlignment": "CENTER",
-      "font": "t-heading-4",
-      "color": "muted-1",
-      "blockClass": "em-breve__button"
-    }
-  },
-
   "flex-layout.row#product-name": {
     "props": {
       "marginBottom": 3

@@ -1,0 +1,333 @@
+{
+  "store.custom#faq-completa": {
+    "blocks": ["flex-layout.row#faq-page-container"]
+  },
+
+  "flex-layout.row#faq-page-container": {
+    "children": ["flex-layout.col#faq-content-main-col"]
+  },
+
+  "flex-layout.col#faq-content-main-col": {
+    "props": {
+      "blockClass": "faq-content-col",
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "rich-text#faq-main-title",
+      // Seção 1
+      "rich-text#faq-section-title-1",
+      "disclosure-layout-group#faq-group-1",
+      // Seção 2
+      "rich-text#faq-section-title-2",
+      "disclosure-layout-group#faq-group-2",
+      // Seção 3
+      "rich-text#faq-section-title-3",
+      "disclosure-layout-group#faq-group-3",
+      // Seção 4
+      "rich-text#faq-section-title-4",
+      "disclosure-layout-group#faq-group-4",
+      // Seção 5
+      "rich-text#faq-section-title-5",
+      "disclosure-layout-group#faq-group-5"
+    ]
+  },
+
+  // --- TÍTULO PRINCIPAL ---
+  "rich-text#faq-main-title": {
+    "props": {
+      "text": "## Perguntas Frequentes",
+      "blockClass": "faq-main-title"
+    }
+  },
+
+  // --- SEÇÃO 1: Endereço da Loja/ Horário de Funcionamento ---
+  "rich-text#faq-section-titlew": {
+    "props": {
+      "text": "### Endereço da Loja/ Horário de Funcionamento",
+      "blockClass": "faq-section-title"
+    }
+  },
+  "disclosure-layout-group#faq-group-1": {
+    "children": [
+      "disclosure-layout#faq-item-1-1",
+      "disclosure-layout#faq-item-1-2"
+    ]
+  },
+
+  "disclosure-layout#faq-item-1-1": {
+    "props": { "blockClass": "faq-item" },
+    "children": [
+      "disclosure-trigger#faq-item-1-1",
+      "disclosure-content#faq-item-1-1"
+    ]
+  },
+  "disclosure-trigger#faq-item-1-1": {
+    "children": ["rich-text#question-1-1"],
+    "props": { "blockClass": "faq-question" }
+  },
+  "disclosure-content#faq-item-1-1": {
+    "children": ["rich-text#answer-1-1"]
+  },
+  "rich-text#question-1-1": {
+    "props": { "text": "#### Onde fica a The Mini Forest?" }
+  },
+  "rich-text#answer-1-1": {
+    "props": {
+      "text": "A The Mini Forest é uma loja virtual que não realiza atendimento físico. O nosso escritório está localizado na Rua Guaçuí, 102 - Água Rasa - São Paulo - SP - 03178-180 e é destinado para o atendimento virtual e a recepção dos pedidos devolvidos.",
+      "blockClass": "faq-answer"
+    }
+  },
+
+  "disclosure-layout#faq-item-1-2": {
+    "props": { "blockClass": "faq-item" },
+    "children": [
+      "disclosure-trigger#faq-item-1-2",
+      "disclosure-content#faq-item-1-2"
+    ]
+  },
+  "disclosure-trigger#faq-item-1-2": {
+    "children": ["rich-text#question-1-2"],
+    "props": { "blockClass": "faq-question" }
+  },
+  "disclosure-content#faq-item-1-2": {
+    "children": ["rich-text#answer-1-2"]
+  },
+  "rich-text#question-1-2": {
+    "props": { "text": "#### Qual o horário de funcionamento da loja online?" }
+  },
+  "rich-text#answer-1-2": {
+    "props": {
+      "text": "A The Mini Forest funciona os 7 dias da semana durante às 24 horas do dia!\n\nCaso surja alguma dúvida e você precise entrar em contato, o atendimento do Suporte acontece de segunda a quinta-feira das 8:00 às 18:00Hs e de sexta-feira das 8:00 às 17:00Hs.",
+      "blockClass": "faq-answer"
+    }
+  },
+
+  // --- SEÇÃO 2: Formas de Pagamento ---
+  "rich-text#faq-section-title-2": {
+    "props": {
+      "text": "### Formas de Pagamento",
+      "blockClass": "faq-section-title"
+    }
+  },
+  "disclosure-layout-group#faq-group-2": {
+    "children": [
+      "disclosure-layout#faq-item-2-1",
+      "disclosure-layout#faq-item-2-2",
+      "disclosure-layout#faq-item-2-3"
+    ]
+  },
+
+  "disclosure-layout#faq-item-2-1": {
+    "props": { "blockClass": "faq-item" },
+    "children": [
+      "disclosure-trigger#faq-item-2-1",
+      "disclosure-content#faq-item-2-1"
+    ]
+  },
+  "disclosure-trigger#faq-item-2-1": {
+    "children": ["rich-text#question-2-1"],
+    "props": { "blockClass": "faq-question" }
+  },
+  "disclosure-content#faq-item-2-1": { "children": ["rich-text#answer-2-1"] },
+  "rich-text#question-2-1": {
+    "props": { "text": "#### Posso pagar com cartão de crédito?" }
+  },
+  "rich-text#answer-2-1": {
+    "props": {
+      "text": "Sim, esse pagamento tem duas etapas de aprovação, onde a primeira é liberação de valor pela administradora do cartão usado, e a segunda, é captura do valor pela administradora da loja (Wirecard ou pagar.me).\n\nApós a liberação de valor pela operadora do cartão do cliente, caso exista qualquer dado divergente ou que precise ser confirmado no cadastro (endereço de cobrança, nome do titular etc.) o responsável pela análise de risco contratado não aprovará o pedido caso exista algum critério de segurança não atendido (ou até mesmo um contato telefônico não seja possível, visando a segurança do titular do cartão usado na compra).\n\nA loja não tem como intervir nesses casos, pois contratamos esse serviço exatamente para proteger quaisquer informações pessoais e de pagamentos de um cliente. O prazo de confirmação ou negativa do pagamento é de até 48 horas após a realização da compra.\n\nQuando você realizar o pagamento através do crédito, a informação de compra aparecerá em sua fatura como Wirecard- The Mini Forest OU Pg * Theminiforest.\n\nOferecemos a facilidade do parcelamento em até 6x sem juros, apenas para as compras no cartão de crédito, com parcelas mínimas de R$ 30,00. Lembrando que essa opção será sujeita à análise de riscos contratada pela loja.",
+      "blockClass": "faq-answer"
+    }
+  },
+
+  "disclosure-layout#faq-item-2-2": {
+    "props": { "blockClass": "faq-item" },
+    "children": [
+      "disclosure-trigger#faq-item-2-2",
+      "disclosure-content#faq-item-2-2"
+    ]
+  },
+  "disclosure-trigger#faq-item-2-2": {
+    "children": ["rich-text#question-2-2"],
+    "props": { "blockClass": "faq-question" }
+  },
+  "disclosure-content#faq-item-2-2": { "children": ["rich-text#answer-2-2"] },
+  "rich-text#question-2-2": {
+    "props": {
+      "text": "#### Não utilizo cartões em compras online. Posso pagar via boleto?"
+    }
+  },
+  "rich-text#answer-2-2": {
+    "props": {
+      "text": "Sim, após finalizar o pedido abrirá uma nova tela em que aparecerá o boleto que pode ser impresso para o pagamento. Sempre que o vencimento for nos finais de semana e feriados, os boletos poderão ser pagos no próximo dia útil. O prazo para o pagamento dos boletos são 3 dias, contando a **data da compra + 2 dias corridos**. Caso o vencimento aconteça em feriado MUNICIPAL será necessário que o cliente informe a loja através de um e-mail ao Suporte, caso contrário, a compra poderá ser cancelada.",
+      "blockClass": "faq-answer"
+    }
+  },
+
+  "disclosure-layout#faq-item-2-3": {
+    "props": { "blockClass": "faq-item" },
+    "children": [
+      "disclosure-trigger#faq-item-2-3",
+      "disclosure-content#faq-item-2-3"
+    ]
+  },
+  "disclosure-trigger#faq-item-2-3": {
+    "children": ["rich-text#question-2-3"],
+    "props": { "blockClass": "faq-question" }
+  },
+  "disclosure-content#faq-item-2-3": { "children": ["rich-text#answer-2-3"] },
+  "rich-text#question-2-3": {
+    "props": { "text": "#### O que é o Wirecard/ Pagarm.me?" }
+  },
+  "rich-text#answer-2-3": {
+    "props": {
+      "text": "Ao finalizar o pedido na The Mini Forest, você deverá realizar o pagamento através do Wirecard ou ainda da Pagar.me. Ambos são plataformas 100% seguras, que possibilitam a realização de um pedido das seguintes formas: cartão de crédito (necessária aprovação) ou boleto bancário.",
+      "blockClass": "faq-answer"
+    }
+  },
+
+  // --- SEÇÃO 3: Formas de Entrega ---
+  "rich-text#faq-section-title-3": {
+    "props": {
+      "text": "### Formas de Entrega",
+      "blockClass": "faq-section-title"
+    }
+  },
+  "disclosure-layout-group#faq-group-3": {
+    "children": [
+      "disclosure-layout#faq-item-3-1",
+      "disclosure-layout#faq-item-3-2",
+      "disclosure-layout#faq-item-3-3"
+    ]
+  },
+
+  "disclosure-layout#faq-item-3-1": {
+    "props": { "blockClass": "faq-item" },
+    "children": [
+      "disclosure-trigger#faq-item-3-1",
+      "disclosure-content#faq-item-3-1"
+    ]
+  },
+  "disclosure-trigger#faq-item-3-1": {
+    "children": ["rich-text#question-3-1"],
+    "props": { "blockClass": "faq-question" }
+  },
+  "disclosure-content#faq-item-3-1": { "children": ["rich-text#answer-3-1"] },
+  "rich-text#question-3-1": {
+    "props": {
+      "text": "#### Posso comprar ou retirar pessoalmente um produto?"
+    }
+  },
+  "rich-text#answer-3-1": {
+    "props": {
+      "text": "Os produtos devem ser comprados em nossa loja online, já que em nosso escritório não dispomos de métodos de cobrança e provadores para efetuar vendas presenciais. Desta forma, os produtos sempre serão enviados aos seus respectivos destinatários, não sendo possível a retirada do produto ou 'entrega em mãos'.",
+      "blockClass": "faq-answer"
+    }
+  },
+
+  "disclosure-layout#faq-item-3-2": {
+    "props": { "blockClass": "faq-item" },
+    "children": [
+      "disclosure-trigger#faq-item-3-2",
+      "disclosure-content#faq-item-3-2"
+    ]
+  },
+  "disclosure-trigger#faq-item-3-2": {
+    "children": ["rich-text#question-3-2"],
+    "props": { "blockClass": "faq-question" }
+  },
+  "disclosure-content#faq-item-3-2": { "children": ["rich-text#answer-3-2"] },
+  "rich-text#question-3-2": {
+    "props": { "text": "#### Quais os métodos e os prazos de entrega?" }
+  },
+  "rich-text#answer-3-2": {
+    "props": {
+      "text": "A The Mini Forest, para atender e entregar em todo o Brasil, utiliza os serviços dos Correios. De acordo com a região e a faixa de CEP, alguns serviços não são disponibilizados. Os prazos de entrega são calculados a partir do primeiro dia útil seguinte ao da postagem e variam de acordo com a localidade de destino da encomenda. Os valores dependem do serviço escolhido.\n\n**Prazos:**\n- SEDEX - 1 a 8 dias úteis\n- PAC - 4 a 20 dias úteis",
+      "blockClass": "faq-answer"
+    }
+  },
+
+  "disclosure-layout#faq-item-3-3": {
+    "props": { "blockClass": "faq-item" },
+    "children": [
+      "disclosure-trigger#faq-item-3-3",
+      "disclosure-content#faq-item-3-3"
+    ]
+  },
+  "disclosure-trigger#faq-item-3-3": {
+    "children": ["rich-text#question-3-3"],
+    "props": { "blockClass": "faq-question" }
+  },
+  "disclosure-content#faq-item-3-3": { "children": ["rich-text#answer-3-3"] },
+  "rich-text#question-3-3": {
+    "props": { "text": "#### Pedido Roubado. E agora?" }
+  },
+  "rich-text#answer-3-3": {
+    "props": {
+      "text": "Caso o seu pedido apareça como roubado no rastreamento, pedimos que informe imediatamente a loja através do nosso suporte, através do e-mail: suporte@theminiforest.com .\n\nApós o registro de protocolo de reclamação, aguardaremos os dias solicitados pelo transportador (em geral, 5 dias úteis) para a comprovação da impossibilidade de entrega. Sendo registrado em protocolo que o objeto não será mais entregue, temos duas possibilidades:\n- Envio de uma nova peça, conforme disponibilidade (obedecendo o mesmo tipo de frete da compra inicial); ou\n- Ressarcimento dos valores pagos.\n\nFique tranquilo! Todas as encomendas são declaradas e asseguradas antes da postagem. Qualquer extravio de mercadoria será ressarcido, obedecendo os prazos pré-estabelecidos.",
+      "blockClass": "faq-answer"
+    }
+  },
+
+  // --- SEÇÃO 4: Promoções ---
+  "rich-text#faq-section-title-4": {
+    "props": { "text": "### Promoções", "blockClass": "faq-section-title" }
+  },
+  "disclosure-layout-group#faq-group-4": {
+    "children": ["disclosure-layout#faq-item-4-1"]
+  },
+
+  "disclosure-layout#faq-item-4-1": {
+    "props": { "blockClass": "faq-item" },
+    "children": [
+      "disclosure-trigger#faq-item-4-1",
+      "disclosure-content#faq-item-4-1"
+    ]
+  },
+  "disclosure-trigger#faq-item-4-1": {
+    "children": ["rich-text#question-4-1"],
+    "props": { "blockClass": "faq-question" }
+  },
+  "disclosure-content#faq-item-4-1": { "children": ["rich-text#answer-4-1"] },
+  "rich-text#question-4-1": {
+    "props": { "text": "#### Duração de Promoções" }
+  },
+  "rich-text#answer-4-1": {
+    "props": {
+      "text": "Todo produto oferecido em preço promocional em nosso site tem data **limite** da promoção, ou seja, impreterivelmente, caso a campanha de desconto esteja com a data vencida, mesmo que poucos minutos após o término dos descontos, o produto voltará a ser comercializado EXCLUSIVAMENTE pelo valor TOTAL, ou seja, anterior ao abatimento de quaisquer descontos, mesmo que ainda existam peças em estoque.",
+      "blockClass": "faq-answer"
+    }
+  },
+
+  // --- SEÇÃO 5: Troca de Produtos ---
+  "rich-text#faq-section-title-5": {
+    "props": {
+      "text": "### Troca de Produtos",
+      "blockClass": "faq-section-title"
+    }
+  },
+  "disclosure-layout-group#faq-group-5": {
+    "children": ["disclosure-layout#faq-item-5-1"]
+  },
+
+  "disclosure-layout#faq-item-5-1": {
+    "props": { "blockClass": "faq-item" },
+    "children": [
+      "disclosure-trigger#faq-item-5-1",
+      "disclosure-content#faq-item-5-1"
+    ]
+  },
+  "disclosure-trigger#faq-item-5-1": {
+    "children": ["rich-text#question-5-1"],
+    "props": { "blockClass": "faq-question" }
+  },
+  "disclosure-content#faq-item-5-1": { "children": ["rich-text#answer-5-1"] },
+  "rich-text#question-5-1": {
+    "props": { "text": "#### Posso efetuar troca?" }
+  },
+  "rich-text#answer-5-1": {
+    "props": {
+      "text": "Ao adquirir um produto na The Mini Forest todos os clientes, se necessário, podem efetuar a devolução, seja por defeito, incompatibilidade de cor e/ou tamanho. Não realizamos trocas diretas por outros produtos. Para maiores informações, acesse o link: [CLIQUE AQUI](/institucional/trocasedevolucoes)",
+      "blockClass": "faq-answer"
+    }
+  }
+}
