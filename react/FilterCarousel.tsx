@@ -18,6 +18,7 @@ const CSS_HANDLES = [
   "carouselWrapper--size",
   "carouselLink",
   "carouselLink--size",
+  "carouselLink--selected",
   "carouselImage",
   "carouselTitle",
 ] as const;
@@ -27,12 +28,14 @@ interface CarouselItem {
   name: string;
   link: string;
   image?: string;
+  slug?: string;
 }
 
-const Carousel: FC<{ items: CarouselItem[]; type: "category" | "size" }> = ({
-  items,
-  type,
-}) => {
+const Carousel: FC<{
+  items: CarouselItem[];
+  type: "category" | "size";
+  activeSlug?: string;
+}> = ({ items, type, activeSlug }) => {
   const handles = useCssHandles(CSS_HANDLES);
 
   if (!items || items.length === 0) {
@@ -54,30 +57,38 @@ const Carousel: FC<{ items: CarouselItem[]; type: "category" | "size" }> = ({
         showPaginationDots="never"
         infinite={false}
       >
-        {items.map((item) => (
-          <Link
-            to={item.link}
-            key={item.id}
-            className={`${handles.carouselLink} ${styles.carouselLink} ${
-              isSizeFilter
-                ? `${handles["carouselLink--size"]} ${styles["carouselLink--size"]}`
-                : ""
-            } no-underline c-on-base`}
-          >
-            {item.image && (
-              <img
-                src={item.image}
-                alt={item.name}
-                className={`${handles.carouselImage} ${styles.carouselImage}`}
-              />
-            )}
-            <span
-              className={`${handles.carouselTitle} ${styles.carouselTitle}`}
+        {items.map((item) => {
+          const isSelected = activeSlug && item.slug === activeSlug;
+
+          return (
+            <Link
+              to={item.link}
+              key={item.id}
+              className={`${handles.carouselLink} ${styles.carouselLink} ${
+                isSizeFilter
+                  ? `${handles["carouselLink--size"]} ${styles["carouselLink--size"]}`
+                  : ""
+              } ${
+                isSelected
+                  ? `${handles["carouselLink--selected"]} ${styles["carouselLink--selected"]}`
+                  : ""
+              } no-underline c-on-base`}
             >
-              {item.name}
-            </span>
-          </Link>
-        ))}
+              {item.image && (
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className={`${handles.carouselImage} ${styles.carouselImage}`}
+                />
+              )}
+              <span
+                className={`${handles.carouselTitle} ${styles.carouselTitle}`}
+              >
+                {item.name}
+              </span>
+            </Link>
+          );
+        })}
       </SliderLayout>
     </div>
   );
@@ -87,9 +98,14 @@ const FilterCarouselContainer: FC = () => {
   const { route } = useRuntime();
   const handles = useCssHandles(CSS_HANDLES);
 
-  const isDepartmentPage = route.params.department && !route.params.category;
-  const isCategoryPage = !!route.params.category;
-  const isSearchPage = isDepartmentPage || isCategoryPage;
+  const pathSegments = route.canonicalPath?.replace(/^\//, "").split("/") ?? [];
+  const pageLevel = pathSegments.length; // 1 para departamento, 2 para categoria, etc.
+
+  // O slug ativo é sempre o último segmento do caminho
+  const activeFilterSlug = pathSegments[pageLevel - 1];
+
+  const isDepartmentPage = pageLevel === 1;
+  const isCategoryOrFilterPage = pageLevel >= 2;
 
   let categoryOrSubCategoryItems: CarouselItem[] = [];
   if (isDepartmentPage) {
@@ -99,11 +115,13 @@ const FilterCarouselContainer: FC = () => {
         id: key,
         link: value.link,
         image: value.image,
+        slug: value.link.split("/")[2]?.split("?")[0],
       })
     );
-  } else if (isCategoryPage) {
-    const slug = route.params.category as string;
-    const subCategoryMap = subCategoryData[slug];
+  } else if (isCategoryOrFilterPage) {
+    // A categoria pai é o primeiro segmento para subcategorias (ex: 'pijamas' em /roupinhas/pijamas)
+    const parentCategorySlug = pathSegments[1];
+    const subCategoryMap = subCategoryData[parentCategorySlug];
     if (subCategoryMap) {
       categoryOrSubCategoryItems = Object.entries(subCategoryMap).map(
         ([key, value]) => ({
@@ -111,17 +129,19 @@ const FilterCarouselContainer: FC = () => {
           id: key,
           link: `/${value.link}`,
           image: value.image,
+          slug: value.link.split("/").pop(), // Pega o último segmento do link como slug
         })
       );
     }
   }
 
   let sizeItems: CarouselItem[] = [];
-  if (isSearchPage) {
+  if (isDepartmentPage || isCategoryOrFilterPage) {
     sizeItems = sizeData.map((size) => ({
       id: size.name,
       name: size.name,
       link: size.link,
+      slug: size.slug,
     }));
   }
 
@@ -131,8 +151,12 @@ const FilterCarouselContainer: FC = () => {
 
   return (
     <div className={`${handles.container} ${styles.container}`}>
-      <Carousel items={categoryOrSubCategoryItems} type="category" />
-      <Carousel items={sizeItems} type="size" />
+      <Carousel
+        items={categoryOrSubCategoryItems}
+        type="category"
+        activeSlug={activeFilterSlug}
+      />
+      <Carousel items={sizeItems} type="size" activeSlug={activeFilterSlug} />
     </div>
   );
 };

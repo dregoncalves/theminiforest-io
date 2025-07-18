@@ -67,7 +67,7 @@
       "rich-text#category-title",
       "rich-text#category-description",
       "custom-filter-carousel",
-      // "flex-layout.row#filters-horizontal-bar",
+      "flex-layout.row#filters-horizontal-bar",
       "flex-layout.row#navigationBar",
       // "flex-layout.row#fetchprevious",
       "flex-layout.row#products",
@@ -151,7 +151,12 @@
         "priceRange": true,
         "specificationFilters": {
           "hideAll": false,
-          "hiddenFilters": [{ "name": "Estampas" }, { "name": "Mini Coleções" }]
+          "hiddenFilters": [
+            { "name": "Estampas" },
+            { "name": "Mini Coleções" },
+            { "name": "Cor" },
+            { "name": "Tipo de Peça" }
+          ]
         }
       }
     }

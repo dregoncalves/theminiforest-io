@@ -73,3 +73,21 @@
 :global(.vtex-slider-layout-0-x-sliderRightArrow) {
   right: 0;
 }
+
+/* Aplica-se a qualquer link de filtro que esteja selecionado */
+.carouselLink--selected {
+  opacity: 1;
+  box-shadow: 0 0 0 2px #f71963; /* Borda de destaque na cor principal */
+}
+
+/* Estilo específico para o filtro de tamanho quando selecionado */
+.carouselLink--size.carouselLink--selected {
+  background-color: #f71963;
+  border-color: #f71963;
+}
+
+/* Muda a cor do texto do filtro de tamanho quando selecionado */
+.carouselLink--size.carouselLink--selected .carouselTitle {
+  color: #ffffff;
+  font-weight: 700;
+}

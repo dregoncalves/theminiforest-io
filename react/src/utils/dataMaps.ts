@@ -1,3 +1,4 @@
+// dataMaps.ts
 export const mainCategoryData: Record<string, { image: string; link: string }> =
   {
     Pijamas: {
@@ -122,13 +123,37 @@ export const subCategoryData: Record<string, SubCategoryMap> = {
   },
 };
 
-export const sizeData = [
-  { name: "RN", link: "?filter.Tamanho=RN" },
-  { name: "P", link: "?filter.Tamanho=P" },
-  { name: "M", link: "?filter.Tamanho=M" },
-  { name: "G", link: "?filter.Tamanho=G" },
-  { name: "GG", link: "?filter.Tamanho=GG" },
-  { name: "1", link: "?filter.Tamanho=1" },
-  { name: "2", link: "?filter.Tamanho=2" },
-  { name: "3", link: "?filter.Tamanho=3" },
+// --- Geração Dinâmica dos Filtros de Tamanho ---
+const sizeNames = [
+  "RN",
+  "1-3 meses",
+  "3-6 meses",
+  "6-9 meses",
+  "9-12 meses",
+  "12-18 meses",
+  "18-24 meses",
+  "2-3 anos",
+  "3-4 anos",
+  "4-5 anos",
+  "5-6 anos",
+  "6-7 anos",
+  "7-8 anos",
+  "8-9 anos",
+  "9-10 anos",
 ];
+
+// Partes fixas da URL
+const basePath = "/roupinhas";
+const queryString = "?map=c,specificationFilter_91&O=OrderByReleaseDateDESC";
+
+// map() pra criar o array final
+export const sizeData = sizeNames.map((name) => {
+  // remove o espaço do nome do filtro
+  const slug = name.replace(/\s+/g, "");
+
+  return {
+    name: name,
+    slug: slug,
+    link: `${basePath}/${slug}${queryString}`,
+  };
+});
