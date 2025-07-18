@@ -14,3 +14,7 @@
   border-top: 11px solid transparent;
   border-bottom: 11px solid transparent;
 }
+
+.discountContainer {
+  height: 100%;
+}

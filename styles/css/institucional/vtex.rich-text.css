@@ -30,6 +30,19 @@
   text-transform: uppercase;
 }
 
+.headingLevel1--faq-main-title {
+  padding: 0;
+  background-color: #fffcf6;
+  display: inline-block;
+  position: relative;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  position: relative;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
 .wrapper--como-comprar__titulo::before,
 .wrapper--trocas-e-devolucoes__heading-primary::before,
 .wrapper--frete__heading-primary::before,
@@ -162,4 +175,27 @@
   margin: 10px 0;
   text-align: justify;
   color: #71817f;
+}
+
+.wrapper--faq-question .headingLevel4 {
+  color: #89817e;
+  cursor: pointer;
+  font-size: 12px;
+  text-align: left;
+  font-weight: 600;
+  margin: 0;
+}
+
+.paragraph--faq-answer {
+  border: 1px solid #afadad;
+  line-height: 22px;
+  margin: 10px 0;
+  overflow: hidden;
+  padding: 15px;
+  text-align: left;
+  font-size: 12px;
+}
+
+:global(.vtex-disclosure-layout-1-x-trigger--faq-question--visible) .container--faq-question .wrapper--faq-question .headingLevel4 {
+  color: #fff;
 }

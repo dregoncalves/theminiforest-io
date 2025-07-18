@@ -5,6 +5,7 @@
       "context": {
         "orderByField": "OrderByReleaseDateDESC",
         "skusFilter": "FIRST_AVAILABLE",
+        "maxItemsPerPage": 18,
         "simulationBehavior": "skip"
       }
     }
@@ -15,7 +16,7 @@
       "context": {
         "orderByField": "OrderByReleaseDateDESC",
         "hideUnavailableItems": true,
-        "maxItemsPerPage": 10,
+        "maxItemsPerPage": 18,
         "skusFilter": "ALL",
         "simulationBehavior": "skip"
       }
@@ -38,6 +39,7 @@
       "context": {
         "orderByField": "OrderByReleaseDateDESC",
         "skusFilter": "ALL",
+        "maxItemsPerPage": 18,
         "simulationBehavior": "skip"
       }
     }
@@ -48,6 +50,7 @@
       "context": {
         "orderByField": "OrderByReleaseDateDESC",
         "skusFilter": "ALL",
+        "maxItemsPerPage": 18,
         "simulationBehavior": "skip"
       }
     }
@@ -61,6 +64,8 @@
   },
   "search-result-layout.desktop": {
     "children": [
+      "rich-text#category-title",
+      "rich-text#category-description",
       "flex-layout.row#filters-horizontal-bar",
       "flex-layout.row#navigationBar",
       // "flex-layout.row#fetchprevious",
@@ -88,6 +93,22 @@
       }
     }
   },
+  "rich-text#category-title": {
+    "props": {
+      "text": "### TÍTULO",
+      "blockClass": "category-title"
+    },
+    "title": "Título de Categoria"
+  },
+
+  "rich-text#category-description": {
+    "props": {
+      "text": "Descrição",
+      "blockClass": "category-description"
+    },
+    "title": "Descrição de Categoria"
+  },
+
   "flex-layout.row#navigationBar": {
     "children": [
       "breadcrumb.search",

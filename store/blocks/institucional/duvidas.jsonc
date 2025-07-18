@@ -1,5 +1,5 @@
 {
-  "store.custom#faq-completa": {
+  "store.custom#faq": {
     "blocks": ["flex-layout.row#faq-page-container"]
   },
 
@@ -14,34 +14,27 @@
     },
     "children": [
       "rich-text#faq-main-title",
-      // Seção 1
       "rich-text#faq-section-title-1",
       "disclosure-layout-group#faq-group-1",
-      // Seção 2
       "rich-text#faq-section-title-2",
       "disclosure-layout-group#faq-group-2",
-      // Seção 3
       "rich-text#faq-section-title-3",
       "disclosure-layout-group#faq-group-3",
-      // Seção 4
       "rich-text#faq-section-title-4",
       "disclosure-layout-group#faq-group-4",
-      // Seção 5
       "rich-text#faq-section-title-5",
       "disclosure-layout-group#faq-group-5"
     ]
   },
 
-  // --- TÍTULO PRINCIPAL ---
   "rich-text#faq-main-title": {
     "props": {
-      "text": "## Perguntas Frequentes",
+      "text": "# Perguntas Frequentes",
       "blockClass": "faq-main-title"
     }
   },
 
-  // --- SEÇÃO 1: Endereço da Loja/ Horário de Funcionamento ---
-  "rich-text#faq-section-titlew": {
+  "rich-text#faq-section-title-1": {
     "props": {
       "text": "### Endereço da Loja/ Horário de Funcionamento",
       "blockClass": "faq-section-title"
@@ -62,14 +55,18 @@
     ]
   },
   "disclosure-trigger#faq-item-1-1": {
-    "children": ["rich-text#question-1-1"],
-    "props": { "blockClass": "faq-question" }
+    "props": { "blockClass": "faq-question" },
+    "children": ["rich-text#question-1-1"]
   },
   "disclosure-content#faq-item-1-1": {
+    "props": { "blockClass": "faq-content-wrapper" },
     "children": ["rich-text#answer-1-1"]
   },
   "rich-text#question-1-1": {
-    "props": { "text": "#### Onde fica a The Mini Forest?" }
+    "props": {
+      "text": "#### Onde fica a The Mini Forest?",
+      "blockClass": "faq-question"
+    }
   },
   "rich-text#answer-1-1": {
     "props": {
@@ -86,14 +83,18 @@
     ]
   },
   "disclosure-trigger#faq-item-1-2": {
-    "children": ["rich-text#question-1-2"],
-    "props": { "blockClass": "faq-question" }
+    "props": { "blockClass": "faq-question" },
+    "children": ["rich-text#question-1-2"]
   },
   "disclosure-content#faq-item-1-2": {
+    "props": { "blockClass": "faq-content-wrapper" },
     "children": ["rich-text#answer-1-2"]
   },
   "rich-text#question-1-2": {
-    "props": { "text": "#### Qual o horário de funcionamento da loja online?" }
+    "props": {
+      "text": "#### Qual o horário de funcionamento da loja online?",
+      "blockClass": "faq-question"
+    }
   },
   "rich-text#answer-1-2": {
     "props": {
@@ -102,7 +103,6 @@
     }
   },
 
-  // --- SEÇÃO 2: Formas de Pagamento ---
   "rich-text#faq-section-title-2": {
     "props": {
       "text": "### Formas de Pagamento",
@@ -125,12 +125,18 @@
     ]
   },
   "disclosure-trigger#faq-item-2-1": {
-    "children": ["rich-text#question-2-1"],
-    "props": { "blockClass": "faq-question" }
+    "props": { "blockClass": "faq-question" },
+    "children": ["rich-text#question-2-1"]
   },
-  "disclosure-content#faq-item-2-1": { "children": ["rich-text#answer-2-1"] },
+  "disclosure-content#faq-item-2-1": {
+    "props": { "blockClass": "faq-content-wrapper" },
+    "children": ["rich-text#answer-2-1"]
+  },
   "rich-text#question-2-1": {
-    "props": { "text": "#### Posso pagar com cartão de crédito?" }
+    "props": {
+      "text": "#### Posso pagar com cartão de crédito?",
+      "blockClass": "faq-question"
+    }
   },
   "rich-text#answer-2-1": {
     "props": {
@@ -147,13 +153,17 @@
     ]
   },
   "disclosure-trigger#faq-item-2-2": {
-    "children": ["rich-text#question-2-2"],
-    "props": { "blockClass": "faq-question" }
+    "props": { "blockClass": "faq-question" },
+    "children": ["rich-text#question-2-2"]
   },
-  "disclosure-content#faq-item-2-2": { "children": ["rich-text#answer-2-2"] },
+  "disclosure-content#faq-item-2-2": {
+    "props": { "blockClass": "faq-content-wrapper" },
+    "children": ["rich-text#answer-2-2"]
+  },
   "rich-text#question-2-2": {
     "props": {
-      "text": "#### Não utilizo cartões em compras online. Posso pagar via boleto?"
+      "text": "#### Não utilizo cartões em compras online. Posso pagar via boleto?",
+      "blockClass": "faq-question"
     }
   },
   "rich-text#answer-2-2": {
@@ -171,12 +181,18 @@
     ]
   },
   "disclosure-trigger#faq-item-2-3": {
-    "children": ["rich-text#question-2-3"],
-    "props": { "blockClass": "faq-question" }
+    "props": { "blockClass": "faq-question" },
+    "children": ["rich-text#question-2-3"]
   },
-  "disclosure-content#faq-item-2-3": { "children": ["rich-text#answer-2-3"] },
+  "disclosure-content#faq-item-2-3": {
+    "props": { "blockClass": "faq-content-wrapper" },
+    "children": ["rich-text#answer-2-3"]
+  },
   "rich-text#question-2-3": {
-    "props": { "text": "#### O que é o Wirecard/ Pagarm.me?" }
+    "props": {
+      "text": "#### O que é o Wirecard/ Pagarm.me?",
+      "blockClass": "faq-question"
+    }
   },
   "rich-text#answer-2-3": {
     "props": {
@@ -185,7 +201,6 @@
     }
   },
 
-  // --- SEÇÃO 3: Formas de Entrega ---
   "rich-text#faq-section-title-3": {
     "props": {
       "text": "### Formas de Entrega",
@@ -208,13 +223,17 @@
     ]
   },
   "disclosure-trigger#faq-item-3-1": {
-    "children": ["rich-text#question-3-1"],
-    "props": { "blockClass": "faq-question" }
+    "props": { "blockClass": "faq-question" },
+    "children": ["rich-text#question-3-1"]
   },
-  "disclosure-content#faq-item-3-1": { "children": ["rich-text#answer-3-1"] },
+  "disclosure-content#faq-item-3-1": {
+    "props": { "blockClass": "faq-content-wrapper" },
+    "children": ["rich-text#answer-3-1"]
+  },
   "rich-text#question-3-1": {
     "props": {
-      "text": "#### Posso comprar ou retirar pessoalmente um produto?"
+      "text": "#### Posso comprar ou retirar pessoalmente um produto?",
+      "blockClass": "faq-question"
     }
   },
   "rich-text#answer-3-1": {
@@ -232,12 +251,18 @@
     ]
   },
   "disclosure-trigger#faq-item-3-2": {
-    "children": ["rich-text#question-3-2"],
-    "props": { "blockClass": "faq-question" }
+    "props": { "blockClass": "faq-question" },
+    "children": ["rich-text#question-3-2"]
   },
-  "disclosure-content#faq-item-3-2": { "children": ["rich-text#answer-3-2"] },
+  "disclosure-content#faq-item-3-2": {
+    "props": { "blockClass": "faq-content-wrapper" },
+    "children": ["rich-text#answer-3-2"]
+  },
   "rich-text#question-3-2": {
-    "props": { "text": "#### Quais os métodos e os prazos de entrega?" }
+    "props": {
+      "text": "#### Quais os métodos e os prazos de entrega?",
+      "blockClass": "faq-question"
+    }
   },
   "rich-text#answer-3-2": {
     "props": {
@@ -254,12 +279,18 @@
     ]
   },
   "disclosure-trigger#faq-item-3-3": {
-    "children": ["rich-text#question-3-3"],
-    "props": { "blockClass": "faq-question" }
+    "props": { "blockClass": "faq-question" },
+    "children": ["rich-text#question-3-3"]
   },
-  "disclosure-content#faq-item-3-3": { "children": ["rich-text#answer-3-3"] },
+  "disclosure-content#faq-item-3-3": {
+    "props": { "blockClass": "faq-content-wrapper" },
+    "children": ["rich-text#answer-3-3"]
+  },
   "rich-text#question-3-3": {
-    "props": { "text": "#### Pedido Roubado. E agora?" }
+    "props": {
+      "text": "#### Pedido Roubado. E agora?",
+      "blockClass": "faq-question"
+    }
   },
   "rich-text#answer-3-3": {
     "props": {
@@ -268,7 +299,6 @@
     }
   },
 
-  // --- SEÇÃO 4: Promoções ---
   "rich-text#faq-section-title-4": {
     "props": { "text": "### Promoções", "blockClass": "faq-section-title" }
   },
@@ -284,12 +314,18 @@
     ]
   },
   "disclosure-trigger#faq-item-4-1": {
-    "children": ["rich-text#question-4-1"],
-    "props": { "blockClass": "faq-question" }
+    "props": { "blockClass": "faq-question" },
+    "children": ["rich-text#question-4-1"]
   },
-  "disclosure-content#faq-item-4-1": { "children": ["rich-text#answer-4-1"] },
+  "disclosure-content#faq-item-4-1": {
+    "props": { "blockClass": "faq-content-wrapper" },
+    "children": ["rich-text#answer-4-1"]
+  },
   "rich-text#question-4-1": {
-    "props": { "text": "#### Duração de Promoções" }
+    "props": {
+      "text": "#### Duração de Promoções",
+      "blockClass": "faq-question"
+    }
   },
   "rich-text#answer-4-1": {
     "props": {
@@ -298,7 +334,6 @@
     }
   },
 
-  // --- SEÇÃO 5: Troca de Produtos ---
   "rich-text#faq-section-title-5": {
     "props": {
       "text": "### Troca de Produtos",
@@ -317,12 +352,18 @@
     ]
   },
   "disclosure-trigger#faq-item-5-1": {
-    "children": ["rich-text#question-5-1"],
-    "props": { "blockClass": "faq-question" }
+    "props": { "blockClass": "faq-question" },
+    "children": ["rich-text#question-5-1"]
   },
-  "disclosure-content#faq-item-5-1": { "children": ["rich-text#answer-5-1"] },
+  "disclosure-content#faq-item-5-1": {
+    "props": { "blockClass": "faq-content-wrapper" },
+    "children": ["rich-text#answer-5-1"]
+  },
   "rich-text#question-5-1": {
-    "props": { "text": "#### Posso efetuar troca?" }
+    "props": {
+      "text": "#### Posso efetuar troca?",
+      "blockClass": "faq-question"
+    }
   },
   "rich-text#answer-5-1": {
     "props": {

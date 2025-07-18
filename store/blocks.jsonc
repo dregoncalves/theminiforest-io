@@ -67,10 +67,6 @@
     }
   },
 
-  "store.custom#faq": {
-    "blocks": ["rich-text#faq"]
-  },
-
   "rich-text#faq": {
     "props": {
       "text": "**Perguntas Frequentes**",

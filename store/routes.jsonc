@@ -25,5 +25,8 @@
   },
   "store.custom#faq": {
     "path": "/institucional/duvidas"
+  },
+  "store.custom#sitemap": {
+    "path": "/institucional/sitemap"
   }
 }

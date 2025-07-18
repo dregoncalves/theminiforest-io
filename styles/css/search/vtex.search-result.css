@@ -52,7 +52,6 @@
 .filterTemplateOverflow {
   position: absolute;
   max-height: 35rem !important;
-  min-height: 100%;
   z-index: 5;
   left: -50%;
 }
