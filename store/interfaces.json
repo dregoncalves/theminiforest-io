@@ -23,5 +23,8 @@
   "buy-button-custom": {
     "component": "BuyButtonToggle",
     "composition": "children"
+  },
+  "custom-filter-carousel": {
+    "component": "FilterCarousel"
   }
 }
