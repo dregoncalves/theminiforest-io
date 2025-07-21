@@ -61,7 +61,11 @@
     }
   },
   "flex-layout.row#right-desktop": {
-    "children": ["login#header", "rich-text#meus-favoritos", "minicart.v2"],
+    "children": [
+      "login#header",
+      "rich-text#meus-favoritos",
+      "minicart.v2#header"
+    ],
     "props": {
       "horizontalAlign": "right",
       "preventHorizontalStretch": true,
@@ -124,7 +128,7 @@
     "children": [
       "image#wishlist-link",
       "modal-trigger#search-mobile",
-      "minicart.v2"
+      "minicart.v2#header"
     ]
   },
   "image#wishlist-link": {

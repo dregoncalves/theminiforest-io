@@ -26,5 +26,8 @@
   },
   "custom-filter-carousel": {
     "component": "FilterCarousel"
+  },
+  "sitemap-custom": {
+    "component": "Sitemap"
   }
 }

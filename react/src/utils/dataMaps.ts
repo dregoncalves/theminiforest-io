@@ -1,40 +1,43 @@
-// dataMaps.ts
-export const mainCategoryData: Record<string, { image: string; link: string }> =
+// react/components/FilterCarousel/src/utils/dataMaps.ts
+
+// --- CATEGORIAS PRINCIPAIS (TIPO DE PEÇA) ---
+export const mainCategoryData: Record<string, { image: string; slug: string }> =
   {
     Pijamas: {
       image: "https://theminiforest.vteximg.com.br/arquivos/pijamas.png",
-      link: "/roupinhas/pijamas?O=OrderByReleaseDateDESC",
+      slug: "pijamas",
     },
     Bodies: {
       image: "https://theminiforest.vteximg.com.br/arquivos/bodies.png",
-      link: "/roupinhas/bodies?O=OrderByReleaseDateDESC",
+      slug: "bodies",
     },
     "Calças e Shorts": {
       image: "https://theminiforest.vteximg.com.br/arquivos/calcas.png",
-      link: "/roupinhas/calcas-e-shorts?O=OrderByReleaseDateDESC",
+      slug: "calcas-e-shorts",
     },
     Macacões: {
       image: "https://theminiforest.vteximg.com.br/arquivos/macacoes.png",
-      link: "/roupinhas/macacoes?O=OrderByReleaseDateDESC",
+      slug: "macacoes",
     },
     "Vestidos e Saias": {
       image: "https://theminiforest.vteximg.com.br/arquivos/vestidos.png",
-      link: "/roupinhas/vestidos-e-saias?O=OrderByReleaseDateDESC",
+      slug: "vestidos-e-saias",
     },
     "Blusas e Camisetas": {
       image: "https://theminiforest.vteximg.com.br/arquivos/camisetas.png",
-      link: "/roupinhas/blusas-e-camisetas?O=OrderByReleaseDateDESC",
+      slug: "blusas-e-camisetas",
     },
     Conjuntos: {
       image:
         "https://theminiforest.vteximg.com.br/arquivos/faltaimagemSlider.png",
-      link: "/roupinhas/conjuntos?O=OrderByReleaseDateDESC",
+      slug: "conjuntos",
     },
   };
 
+// --- SUBCATEGORIAS (COR) ---
 type SubCategoryInfo = {
-  link: string;
   image: string;
+  slug: string;
 };
 
 export type SubCategoryMap = {
@@ -45,85 +48,85 @@ export type SubCategoryMap = {
 export const subCategoryData: Record<string, SubCategoryMap> = {
   pijamas: {
     "Estampado Colorido": {
-      link: "roupinhas/pijamas/pijamas-estampados",
       image:
         "https://theminiforest.vteximg.com.br/arquivos/pijamas-estampados.png",
+      slug: "pijamas-estampados",
     },
     Liso: {
-      link: "roupinhas/pijamas/pijamas-lisos",
       image: "https://theminiforest.vteximg.com.br/arquivos/pijamas-lisos.png",
+      slug: "pijamas-lisos",
     },
   },
   bodies: {
     "Estampado Colorido": {
-      link: "roupinhas/bodies/bodies-estampados",
       image:
         "https://theminiforest.vteximg.com.br/arquivos/bodies-estampados.png",
+      slug: "bodies-estampados",
     },
     Liso: {
-      link: "roupinhas/bodies/bodies-lisos",
       image: "https://theminiforest.vteximg.com.br/arquivos/bodies-lisos.png",
+      slug: "bodies-lisos",
     },
   },
   "calcas-e-shorts": {
     "Estampado Colorido": {
-      link: "roupinhas/calcas-e-shorts/calcas-e-shorts-estampados",
       image:
         "https://theminiforest.vteximg.com.br/arquivos/calcas-estampadas.png",
+      slug: "calcas-e-shorts-estampados",
     },
     Liso: {
-      link: "roupinhas/calcas-e-shorts/calcas-e-shorts-lisos",
       image: "https://theminiforest.vteximg.com.br/arquivos/calcas-lisas.png",
+      slug: "calcas-e-shorts-lisos",
     },
   },
   macacoes: {
     "Estampado Colorido": {
-      link: "roupinhas/macacoes/macacoes-estampados",
       image:
         "https://theminiforest.vteximg.com.br/arquivos/macacoes-estampados.png",
+      slug: "macacoes-estampados",
     },
     Liso: {
-      link: "roupinhas/macacoes/macacoes-lisos",
       image: "https://theminiforest.vteximg.com.br/arquivos/macacoes-lisos.png",
+      slug: "macacoes-lisos",
     },
   },
   "vestidos-e-saias": {
     "Estampado Colorido": {
-      link: "roupinhas/vestidos-e-saias/vestidos-e-saias-estampados",
       image:
         "https://theminiforest.vteximg.com.br/arquivos/vestidos-stampados.png",
+      slug: "vestidos-e-saias-estampados",
     },
     Liso: {
-      link: "roupinhas/vestidos-e-saias/vestidos-e-saias-lisos",
       image: "https://theminiforest.vteximg.com.br/arquivos/vestidos-lisos.png",
+      slug: "vestidos-e-saias-lisos",
     },
   },
   "blusas-e-camisetas": {
     "Estampado Colorido": {
-      link: "roupinhas/blusas-e-camisetas/blusas-e-camisetas-estampados",
       image:
         "https://theminiforest.vteximg.com.br/arquivos/camisetas-estampadas.png",
+      slug: "blusas-e-camisetas-estampados",
     },
     Liso: {
-      link: "roupinhas/blusas-e-camisetas/blusas-e-camisetas-lisos",
       image: "https://theminiforest.vteximg.com.br/arquivos/blusas-lisos.png",
+      slug: "blusas-e-camisetas-lisos",
     },
   },
   conjuntos: {
     "Estampado Colorido": {
-      link: "roupinhas/conjuntos/conjuntos-estampados",
       image:
         "https://theminiforest.vteximg.com.br/arquivos/faltaimagemSlider.png",
+      slug: "conjuntos-estampados",
     },
     Liso: {
-      link: "roupinhas/conjuntos/conjuntos-lisos",
       image:
         "https://theminiforest.vteximg.com.br/arquivos/faltaimagemSlider.png",
+      slug: "conjuntos-lisos",
     },
   },
 };
 
-// --- Geração Dinâmica dos Filtros de Tamanho ---
+// --- FILTROS DE TAMANHO ---
 const sizeNames = [
   "RN",
   "1-3 meses",
@@ -142,18 +145,8 @@ const sizeNames = [
   "9-10 anos",
 ];
 
-// Partes fixas da URL
-const basePath = "/roupinhas";
-const queryString = "?map=c,specificationFilter_91&O=OrderByReleaseDateDESC";
-
-// map() pra criar o array final
-export const sizeData = sizeNames.map((name) => {
-  // remove o espaço do nome do filtro
-  const slug = name.replace(/\s+/g, "");
-
-  return {
-    name: name,
-    slug: slug,
-    link: `${basePath}/${slug}${queryString}`,
-  };
-});
+export const sizeData = sizeNames.map((name) => ({
+  name: name,
+  // Gera um slug amigável para URL, ex: "1-3-meses"
+  slug: name.replace(/\s+/g, "").toLowerCase(),
+}));

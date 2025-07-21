@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @media (min-width: 1025px) {
   .minicartContainer {
     position: relative;
@@ -46,4 +47,13 @@
   .minicartQuantityBadge {
     display: none;
   }
+}
+.minicartEmptyStateContainer :global(.vtex-rich-text-0-x-paragraph) {
+  font-size: 0;
+  padding: 1rem;
+}
+
+.minicartEmptyStateContainer :global(.vtex-rich-text-0-x-paragraph)::after {
+  content: "Seu carrinho está vazio.";
+  font-size: 1rem;
 }

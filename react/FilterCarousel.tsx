@@ -1,8 +1,8 @@
-import React from "react";
+// react/components/FilterCarousel/FilterCarousel.tsx
+import React, { useMemo } from "react";
 import type { FC } from "react";
-import { useRuntime } from "vtex.render-runtime";
+import { useRuntime, Link } from "vtex.render-runtime";
 import { SliderLayout } from "vtex.slider-layout";
-import { Link } from "vtex.render-runtime";
 import { useCssHandles } from "vtex.css-handles";
 import {
   mainCategoryData,
@@ -28,7 +28,7 @@ interface CarouselItem {
   name: string;
   link: string;
   image?: string;
-  slug?: string;
+  slug: string;
 }
 
 const Carousel: FC<{
@@ -38,9 +38,7 @@ const Carousel: FC<{
 }> = ({ items, type, activeSlug }) => {
   const handles = useCssHandles(CSS_HANDLES);
 
-  if (!items || items.length === 0) {
-    return null;
-  }
+  if (!items || items.length === 0) return null;
 
   const isSizeFilter = type === "size";
   const wrapperClass = isSizeFilter
@@ -59,21 +57,22 @@ const Carousel: FC<{
       >
         {items.map((item) => {
           const isSelected = activeSlug && item.slug === activeSlug;
+          const linkClasses = [
+            handles.carouselLink,
+            styles.carouselLink,
+            isSizeFilter
+              ? `${handles["carouselLink--size"]} ${styles["carouselLink--size"]}`
+              : "",
+            isSelected
+              ? `${handles["carouselLink--selected"]} ${styles["carouselLink--selected"]}`
+              : "",
+            "no-underline c-on-base",
+          ]
+            .filter(Boolean)
+            .join(" ");
 
           return (
-            <Link
-              to={item.link}
-              key={item.id}
-              className={`${handles.carouselLink} ${styles.carouselLink} ${
-                isSizeFilter
-                  ? `${handles["carouselLink--size"]} ${styles["carouselLink--size"]}`
-                  : ""
-              } ${
-                isSelected
-                  ? `${handles["carouselLink--selected"]} ${styles["carouselLink--selected"]}`
-                  : ""
-              } no-underline c-on-base`}
-            >
+            <Link to={item.link} key={item.id} className={linkClasses}>
               {item.image && (
                 <img
                   src={item.image}
@@ -98,52 +97,95 @@ const FilterCarouselContainer: FC = () => {
   const { route } = useRuntime();
   const handles = useCssHandles(CSS_HANDLES);
 
-  const pathSegments = route.canonicalPath?.replace(/^\//, "").split("/") ?? [];
-  const pageLevel = pathSegments.length; // 1 para departamento, 2 para categoria, etc.
+  if (!route) {
+    return null;
+  }
 
-  // O slug ativo é sempre o último segmento do caminho
-  const activeFilterSlug = pathSegments[pageLevel - 1];
+  const pathSegments = useMemo(
+    () => route.path?.replace(/^\/|\/$/g, "").split("/") ?? [],
+    [route.path]
+  );
+  const mapSegments = useMemo(
+    () => route.query?.map?.split(",") ?? [],
+    [route.query]
+  );
 
-  const isDepartmentPage = pageLevel === 1;
-  const isCategoryOrFilterPage = pageLevel >= 2;
+  const activeFilterSlug =
+    pathSegments.length > 0 ? pathSegments[pathSegments.length - 1] : "";
+
+  const buildFilterUrl = (newSlug: string, newFacetKey: string) => {
+    const currentQuery = route.query ?? {};
+    const currentPath = route.path ?? "";
+
+    const basePath = currentPath.endsWith("/")
+      ? currentPath.slice(0, -1)
+      : currentPath;
+    const newPath =
+      basePath === "" || basePath === `/${pathSegments[0]}`
+        ? `/${pathSegments[0]}/${newSlug}`
+        : `${basePath}/${newSlug}`;
+
+    // --- CORREÇÃO AQUI ---
+    // Determina o 'map' base correto. Se estiver na página de departamento,
+    // o map para um filtro de especificação deve começar com 'category-1'.
+    let baseMap = currentQuery.map;
+    if (!baseMap || baseMap === "c") {
+      baseMap = "category-1";
+    }
+    // --- FIM DA CORREÇÃO ---
+
+    const newMap = `${baseMap},${newFacetKey}`;
+    const initialMap = `initialMap=${currentQuery.initialMap || "c"}`;
+    const initialQuery = `initialQuery=${
+      currentQuery.initialQuery || pathSegments[0]
+    }`;
+
+    return `${newPath}?${initialMap}&${initialQuery}&map=${newMap}`;
+  };
+
+  const isDepartmentPage = mapSegments.length <= 1;
+  const isCategoryPage = mapSegments.includes("tipo-de-peca");
 
   let categoryOrSubCategoryItems: CarouselItem[] = [];
-  if (isDepartmentPage) {
-    categoryOrSubCategoryItems = Object.entries(mainCategoryData).map(
-      ([key, value]) => ({
-        name: key,
-        id: key,
-        link: value.link,
-        image: value.image,
-        slug: value.link.split("/")[2]?.split("?")[0],
-      })
-    );
-  } else if (isCategoryOrFilterPage) {
-    // A categoria pai é o primeiro segmento para subcategorias (ex: 'pijamas' em /roupinhas/pijamas)
-    const parentCategorySlug = pathSegments[1];
-    const subCategoryMap = subCategoryData[parentCategorySlug];
-    if (subCategoryMap) {
-      categoryOrSubCategoryItems = Object.entries(subCategoryMap).map(
-        ([key, value]) => ({
-          name: key,
-          id: key,
-          link: `/${value.link}`,
-          image: value.image,
-          slug: value.link.split("/").pop(), // Pega o último segmento do link como slug
+
+  if (pathSegments.length > 0) {
+    if (isDepartmentPage && !isCategoryPage) {
+      categoryOrSubCategoryItems = Object.entries(mainCategoryData).map(
+        ([name, data]) => ({
+          name,
+          id: name,
+          slug: data.slug,
+          image: data.image,
+          link: `/${pathSegments[0]}/${data.slug}?map=c,tipo-de-peca`,
         })
       );
+    } else if (isCategoryPage) {
+      const categoryTypeIndex = mapSegments.findIndex(
+        (mapSeg: string) => mapSeg === "tipo-de-peca"
+      );
+      const parentCategorySlug =
+        categoryTypeIndex !== -1 ? pathSegments[categoryTypeIndex] : undefined;
+
+      if (parentCategorySlug && subCategoryData[parentCategorySlug]) {
+        categoryOrSubCategoryItems = Object.entries(
+          subCategoryData[parentCategorySlug]
+        ).map(([name, data]) => ({
+          name,
+          id: name,
+          slug: data.slug,
+          image: data.image,
+          link: buildFilterUrl(data.slug, "cor"),
+        }));
+      }
     }
   }
 
-  let sizeItems: CarouselItem[] = [];
-  if (isDepartmentPage || isCategoryOrFilterPage) {
-    sizeItems = sizeData.map((size) => ({
-      id: size.name,
-      name: size.name,
-      link: size.link,
-      slug: size.slug,
-    }));
-  }
+  const sizeItems: CarouselItem[] = sizeData.map((size) => ({
+    id: size.name,
+    name: size.name,
+    slug: size.slug,
+    link: buildFilterUrl(size.slug, "tamanho"),
+  }));
 
   if (categoryOrSubCategoryItems.length === 0 && sizeItems.length === 0) {
     return null;

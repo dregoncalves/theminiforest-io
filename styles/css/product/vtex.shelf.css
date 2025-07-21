@@ -1,0 +1,14 @@
+.title--related-products {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.arrowRight--related-products {
+  right: -25px;
+}
+
+.arrowLeft--related-products {
+  left: -25px;
+}

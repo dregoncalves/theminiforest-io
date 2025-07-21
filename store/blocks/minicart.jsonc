@@ -6,7 +6,7 @@
     }
   },
 
-  "minicart.v2": {
+  "minicart.v2#header": {
     "props": {
       "customPixelEventId": "add-to-cart-button",
       "quantityDisplay": "always",

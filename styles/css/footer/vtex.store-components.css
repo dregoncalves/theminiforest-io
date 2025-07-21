@@ -9,6 +9,12 @@
 .inputGroup--newsletter {
   padding: 0;
 }
+@media (max-width: 640px) {
+  .inputGroup--newsletter {
+    padding: 1rem;
+    width: 100%;
+  }
+}
 
 .newsletter .container {
   padding: 35px 10px 25px 10px;
@@ -28,6 +34,11 @@
   padding: 0;
 }
 
+.container--newsletter {
+  width: 100%;
+  padding: 1rem;
+}
+
 :global(.vtex-store-components-3-x-inputGroup) .vtex-buton {
   background-color: #6c9893;
 }
@@ -37,6 +48,7 @@
   color: #7a7475;
   min-width: 310px;
   border-radius: 0;
+  padding: 1rem;
 }
 
 .inputGroup--newsletter :global(.vtex-input-prefix__group) {

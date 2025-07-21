@@ -4,22 +4,25 @@
       "condition-layout.product#availability",
       // "flex-layout.row#specifications-title",
       // // "product-specification-group#table",
-      "shelf.relatedProducts#produtos-relacionados"
+      "shelf.relatedProducts"
       // "product-reviews",
       // // "product-questions-and-answers"
     ]
   },
 
-  "shelf.relatedProducts#produtos-relacionados": {
+  "shelf.relatedProducts": {
     "blocks": ["product-summary.shelf"],
 
     "props": {
-      "hideOutOfStockItems": true,
+      "hideOutOfStockItems": false,
       "recommendation": "viewAndBought",
       "productList": {
-        "titleText": "teste",
-        "maxItems": 10
-      }
+        "titleText": "Quem Comprou, também comprou",
+        "arrows": true,
+        "paginationDotsVisibility": "hidden",
+        "gap": "ph3"
+      },
+      "blockClass": "related-products"
     }
   },
 
