@@ -18,7 +18,6 @@ interface ScrapedSize {
   element: HTMLInputElement | null;
 }
 
-// --- DADOS FIXOS (sem alteração) ---
 const DADOS_CATEGORIAS: CarouselData = {
   Pijamas: {
     imagem: "https://theminiforest.vteximg.com.br/arquivos/pijamas.png",
@@ -120,7 +119,7 @@ const FilterCarousel = () => {
     return () => observer.disconnect();
   }, []);
 
-  const renderNavCarousel = (data: CarouselData, title: string) => (
+  const renderNavCarousel = (data: CarouselData) => (
     <div className="mv5">
       <SliderLayout
         itemsPerPage={{ desktop: 7, tablet: 4, phone: 3 }}
@@ -179,15 +178,11 @@ const FilterCarousel = () => {
 
     if (foundCategorySlug) {
       const subcategoryData = DADOS_SUBCATEGORIAS[foundCategorySlug];
-      const title =
-        Object.keys(DADOS_CATEGORIAS).find((key) =>
-          DADOS_CATEGORIAS[key].link.includes(foundCategorySlug)
-        ) || "Opções";
-      return renderNavCarousel(subcategoryData, title);
+      return renderNavCarousel(subcategoryData);
     }
 
     if (pathParts.length === 1 && pathParts[0] === "roupinhas") {
-      return renderNavCarousel(DADOS_CATEGORIAS, "Categorias");
+      return renderNavCarousel(DADOS_CATEGORIAS);
     }
 
     return null;
