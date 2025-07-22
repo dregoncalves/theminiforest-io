@@ -64,15 +64,16 @@
   },
   "search-result-layout.desktop": {
     "children": [
-      "rich-text#category-title",
-      "rich-text#category-description",
+      // "rich-text#category-title",
+      "rich-text#description",
       "custom-filter-carousel",
       "flex-layout.row#filters-horizontal-bar",
       "flex-layout.row#navigationBar",
       // "flex-layout.row#fetchprevious",
       "flex-layout.row#products",
       // "flex-layout.row#fetchmore"
-      "search-result-pagination"
+      "search-result-pagination",
+      "rich-text#description-2"
     ],
     "props": {
       "preventRouteChange": false,
@@ -88,26 +89,27 @@
             { "name": "Mini Coleções" },
             { "name": "Marca" },
             { "name": "Categoria" },
-            { "name": "Subcategoria" }
+            { "name": "Subcategoria" },
+            { "name": "Departamento" }
           ]
         }
       }
     }
   },
-  "rich-text#category-title": {
+  "rich-text#description": {
     "props": {
-      "text": "### TÍTULO",
-      "blockClass": "category-title"
-    },
-    "title": "Título de Categoria"
-  },
-
-  "rich-text#category-description": {
-    "props": {
-      "text": "Descrição",
+      "text": " ",
       "blockClass": "category-description"
     },
     "title": "Descrição de Categoria"
+  },
+
+  "rich-text#description-2": {
+    "props": {
+      "text": " ",
+      "blockClass": "category-description"
+    },
+    "title": "Descrição de Categoria 2"
   },
 
   "flex-layout.row#navigationBar": {
@@ -153,7 +155,9 @@
             { "name": "Estampas" },
             { "name": "Mini Coleções" },
             { "name": "Cor" },
-            { "name": "Tipo de Peça" }
+            { "name": "Tipo de Peça" },
+            { "name": "Subcategoria" },
+            { "name": "Departamento" }
           ]
         }
       }
@@ -265,9 +269,6 @@
       "GridSummary": "product-summary.shelf"
     }
   },
-  "gallery-layout-switcher": {
-    "children": ["gallery-layout-option#grid"]
-  },
   "gallery-layout-option#grid": {
     "props": {
       "name": "grid"
@@ -277,9 +278,7 @@
   "responsive-layout.desktop#textOptionGrid": {
     "children": ["rich-text#option-grid"]
   },
-  "responsive-layout.desktop#textOptionList": {
-    "children": ["rich-text#option-list"]
-  },
+
   "rich-text#option-grid": {
     "props": {
       "text": "Grid",

@@ -92,7 +92,7 @@
   },
   "rich-text#meus-favoritos": {
     "props": {
-      "text": "[Meus Favoritos](/meus-favoritos)",
+      "text": "[Meus Favoritos](/account#/wishlist)",
       "blockClass": "meus-favoritos-link"
     }
   },

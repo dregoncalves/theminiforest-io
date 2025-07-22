@@ -1,30 +1,17 @@
 // react/BuyButtonToggle.tsx
-import React, { Fragment } from "react";
+import React from "react";
 import type { StorefrontFunctionComponent } from "vtex.render-runtime";
-import { useProduct } from "vtex.product-context";
 
 interface BuyButtonToggleProps {
+  showSoonButton: boolean;
   children: React.ReactNode;
 }
 
 const BuyButtonToggle: StorefrontFunctionComponent<BuyButtonToggleProps> = ({
+  showSoonButton,
   children,
 }: BuyButtonToggleProps) => {
-  const productContextValue = useProduct();
-  const product = productContextValue?.product;
-
-  const SOON_COLLECTION_ID = "172";
-
-  // Verifica se o produto pertence à coleção "Em Breve".
-  // A propriedade 'productClusters' (ou 'productGroup', 'productCollections')
-  // pode conter os IDs das coleções/grupos do produto.
-  // Nem sempre 'productClusters' estará completo via useProduct,
-  // dependendo de como o contexto do produto é populado.
-  const isProductInSoonCollection = product?.productClusters?.some(
-    (cluster: any) => String(cluster.id) === SOON_COLLECTION_ID
-  );
-
-  if (isProductInSoonCollection) {
+  if (showSoonButton) {
     return (
       <button
         style={{
@@ -46,14 +33,21 @@ const BuyButtonToggle: StorefrontFunctionComponent<BuyButtonToggleProps> = ({
     );
   }
 
-  return <Fragment>{children}</Fragment>;
+  return <>{children}</>;
 };
 
 BuyButtonToggle.schema = {
-  title: 'Botão de Compra Alternável por Coleção "Em Breve"',
-  description: 'Exibe "Em Breve" se o produto pertencer à coleção específica.',
+  title: "Botão de Compra Alternável",
+  description: 'Alterna entre botão de compra e "Em breve".',
   type: "object",
-  properties: {},
+  properties: {
+    showSoonButton: {
+      title: "Em Breve",
+      type: "boolean",
+      default: false,
+      is: "toggle",
+    },
+  },
 };
 
 export default BuyButtonToggle;

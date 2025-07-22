@@ -1,2 +1,14 @@
-.paragraph--category-title {
+.headingLevel1--category-description,
+.headingLevel2--category-description {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 300;
+  font-size: 1.25rem;
+  color: #7a7475;
+}
+
+.paragraph--category-description {
+  margin: 0;
+  font-size: 13px;
+  color: #707c7c;
 }

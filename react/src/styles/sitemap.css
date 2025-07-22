@@ -1,15 +1,16 @@
-/* react/components/sitemap.css */
-.container {
+.sitemap__container {
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.title {
-    margin-bottom: 2rem;
+.sitemap__title {
+  margin-bottom: 2rem;
+  font-size: 2.5rem; /* Example: adjust as needed */
+  color: #333; /* Example: adjust as needed */
 }
 
-.mapaDoSite {
+.sitemap__list {
   display: grid;
   gap: 30px;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -19,36 +20,31 @@
   margin: 0;
 }
 
-.mapaDoSite ul {
-    list-style-type: none;
-    margin: 0;
-    padding-left: 15px;
+.sitemap__ul {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 15px;
 }
 
-.mapaDoSite a {
+.sitemap__link {
   text-decoration: none;
   color: #333;
-}
-
-.mapaDoSite a:hover {
-    text-decoration: underline;
-}
-
-.mapaDoSite li a {
   font-size: 1rem;
+  transition: text-decoration 0.2s ease-in-out; /* Smooth transition for hover */
 }
 
-.mapaDoSite .subtitulo {
+.sitemap__link:hover {
+  text-decoration: underline;
+}
+
+.sitemap__subtitulo {
   font-size: 0.9rem;
   font-weight: bold;
   margin-top: 10px;
   display: inline-block;
 }
 
-.roupinhas {
-  grid-row: 1 / span 4;
-}
-
+/* Media Queries */
 @media (max-width: 1024px) {
   .roupinhas {
     grid-row: 1 / span 6;

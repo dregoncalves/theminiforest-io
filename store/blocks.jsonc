@@ -67,15 +67,6 @@
     }
   },
 
-  "rich-text#faq": {
-    "props": {
-      "text": "**Perguntas Frequentes**",
-      "textPosition": "CENTER",
-      "textAlignment": "CENTER",
-      "font": "t-heading-1"
-    }
-  },
-
   "store.custom#contact-us": {
     "blocks": ["rich-text#contact-us"]
   },

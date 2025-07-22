@@ -147,6 +147,5 @@ const sizeNames = [
 
 export const sizeData = sizeNames.map((name) => ({
   name: name,
-  // Gera um slug amigável para URL, ex: "1-3-meses"
   slug: name.replace(/\s+/g, "").toLowerCase(),
 }));
