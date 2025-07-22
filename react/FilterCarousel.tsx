@@ -176,15 +176,29 @@ const FilterCarousel = () => {
       knownCategorySlugs.includes(part)
     );
 
+    console.log("[Nav Debug] Partes da URL:", pathParts);
+    console.log(
+      "[Nav Debug] Slug de Categoria encontrado na URL:",
+      foundCategorySlug || "Nenhum"
+    );
+
     if (foundCategorySlug) {
+      console.log(
+        "[Nav Debug] Decisão: Renderizar carrossel de SUBCATEGORIAS para",
+        foundCategorySlug
+      );
       const subcategoryData = DADOS_SUBCATEGORIAS[foundCategorySlug];
       return renderNavCarousel(subcategoryData);
     }
 
-    if (pathParts.length === 1 && pathParts[0] === "roupinhas") {
+    if (pathParts[0] === "roupinhas") {
+      console.log(
+        "[Nav Debug] Decisão: Renderizar carrossel de CATEGORIAS PRINCIPAIS."
+      );
       return renderNavCarousel(DADOS_CATEGORIAS);
     }
 
+    console.log("[Nav Debug] Decisão: Não renderizar carrossel de navegação.");
     return null;
   };
 

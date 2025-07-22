@@ -1,4 +1,3 @@
-// react/BuyButtonToggle.tsx
 import React from "react";
 import type { StorefrontFunctionComponent } from "vtex.render-runtime";
 
