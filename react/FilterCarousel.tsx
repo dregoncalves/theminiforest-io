@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { SliderLayout } from "vtex.slider-layout";
-import { useCssHandles } from "vtex.css-handles";
+import styles from "./src/styles/filter-carousel.css";
 
-// --- Tipos para os dados ---
 interface CarouselDataItem {
   imagem: string;
   link: string;
@@ -19,9 +18,7 @@ interface ScrapedSize {
   element: HTMLInputElement | null;
 }
 
-// ===================================================================
-//  ÁREA DE CONFIGURAÇÃO MANUAL
-// ===================================================================
+// --- DADOS FIXOS (sem alteração) ---
 const DADOS_CATEGORIAS: CarouselData = {
   Pijamas: {
     imagem: "https://theminiforest.vteximg.com.br/arquivos/pijamas.png",
@@ -78,22 +75,9 @@ const DADOS_SUBCATEGORIAS: SubcategoryData = {
     },
   },
 };
-// ===================================================================
-
-const CSS_HANDLES = [
-  "container",
-  "navItem",
-  "navImage",
-  "navName",
-  "sizeItem",
-  "sizeItemSelected",
-  "sizeTitle",
-];
 
 const FilterCarousel = () => {
-  const handles = useCssHandles(CSS_HANDLES);
   const [sizeData, setSizeData] = useState<ScrapedSize[]>([]);
-  // Não precisamos mais do pageContext, a lógica agora lê a URL diretamente na renderização
 
   useEffect(() => {
     const observer = new MutationObserver((_mutations, obs) => {
@@ -136,36 +120,37 @@ const FilterCarousel = () => {
     return () => observer.disconnect();
   }, []);
 
-  const renderNavCarousel = (data: CarouselData) => (
-    <SliderLayout
-      itemsPerPage={{ desktop: 7, tablet: 4, phone: 3 }}
-      showNavigationArrows="desktopOnly"
-      showPaginationDots="never"
-    >
-      {Object.keys(data).map((name) => {
-        const { imagem, link } = data[name];
-        return (
-          <a key={name} href={link} className={`${handles.navItem} link`}>
-            <img className={`${handles.navImage}`} src={imagem} alt={name} />
-            <span className={`${handles.navName}`}>{name}</span>
-          </a>
-        );
-      })}
-    </SliderLayout>
+  const renderNavCarousel = (data: CarouselData, title: string) => (
+    <div className="mv5">
+      <SliderLayout
+        itemsPerPage={{ desktop: 7, tablet: 4, phone: 3 }}
+        showNavigationArrows="desktopOnly"
+        showPaginationDots="never"
+      >
+        {Object.keys(data).map((name) => {
+          const { imagem, link } = data[name];
+          return (
+            <a key={name} href={link} className={`${styles.navItem} link`}>
+              <img className={styles.navImage} src={imagem} alt={name} />
+              <span className={styles.navName}>{name}</span>
+            </a>
+          );
+        })}
+      </SliderLayout>
+    </div>
   );
 
   const renderSizeCarousel = () =>
     sizeData.length > 0 && (
       <div className="mv5">
-        <h5 className={`${handles.sizeTitle} t-heading-5 mb3`}>Tamanhos</h5>
         <SliderLayout
           itemsPerPage={{ desktop: 10, tablet: 5, phone: 4 }}
-          showNavigationArrows="desktopOnly"
+          showNavigationArrows="always"
           showPaginationDots="never"
         >
           {sizeData.map((size) => {
-            const itemClasses = `${handles.sizeItem} ${
-              size.selected ? handles.sizeItemSelected : ""
+            const itemClasses = `${styles.sizeItem} ${
+              size.selected ? styles.sizeItemSelected : ""
             }`;
             return (
               <div
@@ -188,27 +173,28 @@ const FilterCarousel = () => {
 
     const pathParts = window.location.pathname.split("/").filter(Boolean);
     const knownCategorySlugs = Object.keys(DADOS_SUBCATEGORIAS);
-
     const foundCategorySlug = pathParts.find((part) =>
       knownCategorySlugs.includes(part)
     );
 
     if (foundCategorySlug) {
       const subcategoryData = DADOS_SUBCATEGORIAS[foundCategorySlug];
-      return renderNavCarousel(subcategoryData);
+      const title =
+        Object.keys(DADOS_CATEGORIAS).find((key) =>
+          DADOS_CATEGORIAS[key].link.includes(foundCategorySlug)
+        ) || "Opções";
+      return renderNavCarousel(subcategoryData, title);
     }
 
-    // 3. Se não encontrou, mas estamos em uma página de departamento (ex: '/roupinhas')
     if (pathParts.length === 1 && pathParts[0] === "roupinhas") {
-      return renderNavCarousel(DADOS_CATEGORIAS);
+      return renderNavCarousel(DADOS_CATEGORIAS, "Categorias");
     }
 
-    // 4. Em qualquer outro caso, não renderiza o carrossel de navegação
     return null;
   };
 
   return (
-    <div className={`${handles.container} mv5`}>
+    <div className={styles.container}>
       {renderConditionalNavCarousel()}
       {renderSizeCarousel()}
     </div>

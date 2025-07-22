@@ -1,96 +1,63 @@
-/* react/components/FilterCarousel/src/styles/filter-carousel.css */
-
+/* Container principal do nosso componente */
 .container {
   padding: 1rem 0;
 }
 
-.carouselWrapper {
-  padding: 1rem 0;
+.carouselTitle {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
-/* --- Estilo do Carrossel de Categorias --- */
-
-.carouselLink {
+/* --- Estilos para o Carrossel de Navegação (Categorias/Cores) --- */
+.navItem {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem; /* Espaço entre imagem e texto */
-  transition: opacity 0.2s ease;
-  text-decoration: none; /* Adicionado para garantir que não tenha sublinhado */
+  text-decoration: none;
+  color: #3f3f40;
+  gap: 0.5rem; /* Espaço entre a imagem e o nome */
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
 }
 
-.carouselLink:hover {
-  opacity: 0.7;
+.navItem:hover {
+  background-color: #f5f5f5;
 }
 
-.carouselImage {
+.navImage {
   width: 50px;
   height: 50px;
   object-fit: contain;
 }
 
-.carouselTitle {
-  font-size: 13px;
-  color: #58595b;
-  text-align: center;
-}
-
-/* --- Estilo do Carrossel de Tamanhos --- */
-
-.carouselLink--size {
-  border: 1px solid #cacbcc;
-  border-radius: 4px;
-  background-color: #f2f2f2;
-  height: 40px;
-  padding: 0 1rem;
+/* --- Estilos para o Carrossel de Tamanho --- */
+.sizeItem {
+  display: flex;
   justify-content: center;
-  transition: background-color 0.2s ease, border-color 0.2s ease;
-  width: auto;
-  min-width: 80px;
+  align-items: center;
+  border: 1px solid #e3e4e6;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+  background-color: #f7f7f7;
+  color: #585959;
+  transition: all 0.2s ease;
+  height: 40px;
+  margin: 0 5px;
+  white-space: nowrap;
 }
 
-.carouselLink--size:hover {
-  background-color: #e3e4e6;
-  border-color: #a7a9ac;
+.sizeItem:hover {
+  border-color: #8f8f8f;
 }
 
-/* Sobrescreve a cor do título para o filtro de tamanho */
-.carouselLink--size .carouselTitle {
-  color: #58595b;
+.sizeItemSelected {
+  border-color: #a7a8a9;
+  background-color: #e0e1e1;
+  color: #000;
   font-weight: 500;
-}
-
-/* --- Setas de Navegação --- */
-
-:global(.vtex-slider-layout-0-x-sliderLeftArrow),
-:global(.vtex-slider-layout-0-x-sliderRightArrow) {
-  color: #727273;
-  background: transparent;
-}
-
-:global(.vtex-slider-layout-0-x-sliderLeftArrow) {
-  left: 0;
-}
-
-:global(.vtex-slider-layout-0-x-sliderRightArrow) {
-  right: 0;
-}
-
-/* Aplica-se a qualquer link de filtro que esteja selecionado */
-.carouselLink--selected {
-  opacity: 1;
-  box-shadow: 0 0 0 2px #f71963; /* Borda de destaque na cor principal */
-}
-
-/* Estilo específico para o filtro de tamanho quando selecionado */
-.carouselLink--size.carouselLink--selected {
-  background-color: #f71963;
-  border-color: #f71963;
-}
-
-/* Muda a cor do texto do filtro de tamanho quando selecionado */
-.carouselLink--size.carouselLink--selected .carouselTitle {
-  color: #ffffff;
-  font-weight: 700;
 }
