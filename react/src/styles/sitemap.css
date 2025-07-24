@@ -1,58 +1,76 @@
-.sitemap__container {
-  padding: 20px;
+/* Container principal e título */
+.container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 2rem 1rem;
 }
 
-.sitemap__title {
+.title {
+  font-size: 2rem;
   margin-bottom: 2rem;
-  font-size: 2.5rem; /* Example: adjust as needed */
-  color: #333; /* Example: adjust as needed */
+  text-align: center;
 }
 
-.sitemap__list {
+/* Layout principal em grid para as colunas */
+.sitemapList {
   display: grid;
-  gap: 30px;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-template-rows: masonry;
+  /* Cria colunas responsivas que se ajustam ao espaço disponível */
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 2rem 1.5rem;
+  list-style: none;
   padding: 0;
-  list-style-type: none;
   margin: 0;
 }
 
-.sitemap__ul {
-  list-style-type: none;
-  margin: 0;
-  padding-left: 15px;
+/* Estilo para cada bloco de categoria principal */
+.sitemapItem {
+  /* Evita que um item de lista quebre entre colunas */
+  break-inside: avoid;
 }
 
-.sitemap__link {
+/* Estilo padrão para todos os links */
+.sitemapList a {
+  color: #3f3f40;
   text-decoration: none;
-  color: #333;
-  font-size: 1rem;
-  transition: text-decoration 0.2s ease-in-out; /* Smooth transition for hover */
+  display: block;
+  font-size: 0.9rem;
+  padding: 4px 0;
 }
 
-.sitemap__link:hover {
+.sitemapList a:hover {
   text-decoration: underline;
 }
 
-.sitemap__subtitulo {
-  font-size: 0.9rem;
+/* Títulos das categorias principais (ex: Roupinhas, Acessórios) */
+.sitemapItem > a {
   font-weight: bold;
-  margin-top: 10px;
-  display: inline-block;
+  font-size: 1.1rem;
+  color: #000;
+  margin-bottom: 0.5rem;
 }
 
-/* Media Queries */
-@media (max-width: 1024px) {
-  .roupinhas {
-    grid-row: 1 / span 6;
+/* Títulos de sub-categorias (ex: Por idade, Por tipo de peça) */
+.subCategoryTitle {
+  font-weight: bold;
+  color: #505050;
+  margin-top: 0.75rem;
+  font-size: 1rem !important; /* Força a sobreposição se necessário */
+}
+
+/* Listas aninhadas */
+.sitemapList ul {
+  list-style: none;
+  padding-left: 1rem; /* Indentação para sub-itens */
+}
+
+/* Media query para telas menores */
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.5rem;
   }
-}
 
-@media (max-width: 800px) {
-  .roupinhas {
-    grid-row: 1 / span 8;
+  .sitemapList {
+    /* Em telas menores, usamos menos colunas */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
 }

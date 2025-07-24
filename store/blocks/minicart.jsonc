@@ -10,7 +10,7 @@
     "props": {
       "customPixelEventId": "add-to-cart-button",
       "quantityDisplay": "always",
-      "variation": "popup"
+      "variation": "drawer"
     },
     "children": ["minicart-base-content"]
   },

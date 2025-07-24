@@ -24,6 +24,10 @@
     display: none !important;
   }
 }
+.openIconContainer {
+  padding: 0;
+}
+
 @media (max-width: 640px) {
   .openIconContainer {
     padding: 0;

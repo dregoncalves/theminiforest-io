@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { SliderLayout } from "vtex.slider-layout";
+import { useRuntime } from "vtex.render-runtime";
 import styles from "./src/styles/filter-carousel.css";
 
 interface CarouselDataItem {
@@ -76,6 +77,7 @@ const DADOS_SUBCATEGORIAS: SubcategoryData = {
 };
 
 const FilterCarousel = () => {
+  const { route } = useRuntime();
   const [sizeData, setSizeData] = useState<ScrapedSize[]>([]);
 
   useEffect(() => {
@@ -166,39 +168,21 @@ const FilterCarousel = () => {
     );
 
   const renderConditionalNavCarousel = () => {
-    if (typeof window === "undefined") {
-      return null;
-    }
-
-    const pathParts = window.location.pathname.split("/").filter(Boolean);
+    const pathParts = route.path.split("/").filter(Boolean);
     const knownCategorySlugs = Object.keys(DADOS_SUBCATEGORIAS);
-    const foundCategorySlug = pathParts.find((part) =>
+    const foundCategorySlug = pathParts.find((part: string) => // <-- CORREÇÃO APLICADA AQUI
       knownCategorySlugs.includes(part)
     );
 
-    console.log("[Nav Debug] Partes da URL:", pathParts);
-    console.log(
-      "[Nav Debug] Slug de Categoria encontrado na URL:",
-      foundCategorySlug || "Nenhum"
-    );
-
     if (foundCategorySlug) {
-      console.log(
-        "[Nav Debug] Decisão: Renderizar carrossel de SUBCATEGORIAS para",
-        foundCategorySlug
-      );
       const subcategoryData = DADOS_SUBCATEGORIAS[foundCategorySlug];
       return renderNavCarousel(subcategoryData);
     }
 
     if (pathParts[0] === "roupinhas") {
-      console.log(
-        "[Nav Debug] Decisão: Renderizar carrossel de CATEGORIAS PRINCIPAIS."
-      );
       return renderNavCarousel(DADOS_CATEGORIAS);
     }
 
-    console.log("[Nav Debug] Decisão: Não renderizar carrossel de navegação.");
     return null;
   };
 

@@ -30,6 +30,10 @@
   }
 }
 
+.openIconContainer {
+  padding: 0;
+}
+
 @include mobile {
   .openIconContainer {
     padding: 0;

@@ -66,7 +66,7 @@
     "children": [
       // "rich-text#category-title",
       "rich-text#description",
-      // "custom-filter-carousel",
+      "custom-filter-carousel",
       "flex-layout.row#filters-horizontal-bar",
       "flex-layout.row#navigationBar",
       // "flex-layout.row#fetchprevious",
@@ -175,7 +175,7 @@
   "search-result-layout.mobile": {
     "children": [
       "flex-layout.row#searchinfomobile",
-      // "custom-filter-carousel",
+      "custom-filter-carousel",
       "search-result-pagination",
       "flex-layout.row#contentmobile",
       "search-result-pagination"
