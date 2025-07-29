@@ -1,0 +1,266 @@
+{
+  "store.custom#result-custom": {
+    "blocks": ["search-result-layout.customQuery#custom"]
+  },
+
+  "search-result-layout.customQuery#custom": {
+    "blocks": [
+      "search-result-layout.desktop#custom",
+      "search-result-layout.mobile#custom",
+      "search-not-found-layout"
+    ],
+    "title": "Resultado de Busca",
+    "props": {
+      "querySchema": {
+        "queryField": "",
+        "mapField": "productClusterIds",
+        "skusFilter": "FIRST_AVAILABLE",
+        "simulationBehavior": "default",
+        "orderByField": "OrderByReleaseDateDESC",
+        "maxItemsPerPage": 18
+      }
+    }
+  },
+  "search-result-layout.desktop#custom": {
+    "children": [
+      "rich-text#description",
+      "flex-layout.row#filters-horizontal-bar",
+      "flex-layout.row#navigationBar",
+      "flex-layout.row#products",
+      "search-result-pagination",
+      "rich-text#description-2"
+    ],
+    "props": {
+      "preventRouteChange": false,
+      "defaultGalleryLayout": "grid",
+      "hiddenFacets": {
+        "brands": true,
+        "categories": true,
+        "priceRange": true,
+        "specificationFilters": {
+          "hideAll": false,
+          "hiddenFilters": [
+            { "name": "Estampas" },
+            { "name": "Mini Coleções" },
+            { "name": "Marca" },
+            { "name": "Categoria" },
+            { "name": "Subcategoria" },
+            { "name": "Departamento" }
+          ]
+        }
+      }
+    }
+  },
+
+  "rich-text#description": {
+    "props": {
+      "text": " ",
+      "blockClass": "category-description"
+    },
+    "title": "Descrição de Categoria - Topo"
+  },
+
+  "rich-text#description-2": {
+    "props": {
+      "text": " ",
+      "blockClass": "category-description"
+    },
+    "title": "Descrição de Categoria - Rodapé"
+  },
+
+  "flex-layout.row#navigationBar": {
+    "children": [
+      "breadcrumb.search",
+      "search-result-pagination",
+      "order-by.v2"
+    ],
+    "props": {
+      "horizontalAlign": "left",
+      "verticalAlign": "middle",
+      "colGap": 4,
+      "fullWidth": true,
+      "blockClass": "navigationBar"
+    }
+  },
+  "flex-layout.row#filters-horizontal-bar": {
+    "children": ["filter-navigator.v3#horizontal"],
+    "props": {
+      "fullWidth": true,
+      "horizontalAlign": "center",
+      "colGap": 5,
+      "blockClass": "filters-horizontal-container"
+    }
+  },
+  "filter-navigator.v3#horizontal": {
+    "props": {
+      "layout": "desktop",
+      "openFiltersMode": "one",
+      "initiallyCollapsed": true,
+      "truncateFilters": false,
+      "closeOnOutsideClick": true,
+      "appliedFiltersOverview": "hide",
+      "showClearByFilter": false,
+      "showClearAllFiltersOnDesktop": false,
+      "hiddenFacets": {
+        "brands": true,
+        "categories": true,
+        "priceRange": true,
+        "specificationFilters": {
+          "hideAll": false,
+          "hiddenFilters": [
+            { "name": "Estampas" },
+            { "name": "Mini Coleções" },
+            { "name": "Cor" },
+            { "name": "Tipo de Peça" },
+            { "name": "Subcategoria" },
+            { "name": "Departamento" }
+          ]
+        }
+      }
+    }
+  },
+  "flex-layout.row#products": {
+    "children": ["search-content"],
+    "props": {
+      "fullWidth": true
+    }
+  },
+  "search-content": {
+    "blocks": ["gallery", "not-found"]
+  },
+  "search-result-layout.mobile#custom": {
+    "children": [
+      "flex-layout.row#searchinfomobile",
+      "custom-filter-carousel",
+      "search-result-pagination",
+      "flex-layout.row#contentmobile",
+      "search-result-pagination"
+    ],
+    "props": {
+      "mobileLayout": {
+        "mode1": "small",
+        "mode2": "normal"
+      },
+      "defaultGalleryLayout": "grid",
+      "hiddenFacets": {
+        "brands": true,
+        "categories": true,
+        "priceRange": true,
+        "specificationFilters": {
+          "hideAll": false,
+          "hiddenFilters": [
+            { "name": "Estampas" },
+            { "name": "Mini Coleções" },
+            { "name": "Marca" },
+            { "name": "Categoria" },
+            { "name": "Subcategoria" }
+          ]
+        }
+      }
+    }
+  },
+  "flex-layout.row#contentmobile": {
+    "children": ["search-content"],
+    "props": {
+      "preserveLayoutOnMobile": true
+    }
+  },
+  "flex-layout.row#searchinfomobile": {
+    "children": [
+      "flex-layout.col#searchbread",
+      "flex-layout.col#filterMobile",
+      "flex-layout.col#orderByMobile"
+    ],
+    "props": {
+      "preserveLayoutOnMobile": true,
+      "colSizing": "auto",
+      "colJustify": "right"
+    }
+  },
+  "flex-layout.col#orderByMobile": {
+    "children": ["order-by.v2"],
+    "props": {
+      "blockClass": "orderByMobileCol"
+    }
+  },
+
+  "flex-layout.col#filterMobile": {
+    "children": ["filter-navigator.v3"],
+    "props": {
+      "blockClass": "filterMobileCol"
+    }
+  },
+  "search-not-found-layout": {
+    "children": ["flex-layout.row#notfound"]
+  },
+  "flex-layout.row#notfound": {
+    "children": ["not-found"],
+    "props": {
+      "fullWidth": true
+    }
+  },
+
+  "breadcrumb": {
+    "props": {
+      "showOnMobile": true
+    }
+  },
+
+  "gallery": {
+    "props": {
+      "layouts": [
+        {
+          "name": "grid",
+          "component": "GridSummary",
+          "itemsPerRow": {
+            "desktop": 4,
+            "tablet": 3,
+            "phone": 2
+          }
+        },
+        {
+          "name": "list",
+          "component": "ListSummary",
+          "itemsPerRow": 1
+        }
+      ],
+      "ListSummary": "product-summary.shelf#listLayout",
+      "GridSummary": "product-summary.shelf"
+    }
+  },
+
+  "gallery-layout-option#grid": {
+    "props": {
+      "name": "grid"
+    },
+    "children": ["icon-grid", "responsive-layout.desktop#textOptionGrid"]
+  },
+
+  "responsive-layout.desktop#textOptionGrid": {
+    "children": ["rich-text#option-grid"]
+  },
+
+  "rich-text#option-grid": {
+    "props": {
+      "text": "Grid",
+      "textColor": "c-auto",
+      "blockClass": "layout-option"
+    }
+  },
+
+  "flex-layout.col#searchbread": {
+    "children": ["breadcrumb.search"],
+    "props": {
+      "preventVerticalStretch": true,
+      "fullWidth": true,
+      "blockClass": "search-breadcrumb",
+      "width": "grow"
+    }
+  },
+
+  "breadcrumb.search": {
+    "props": {
+      "showOnMobile": true
+    }
+  }
+}

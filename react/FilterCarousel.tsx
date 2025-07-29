@@ -170,7 +170,7 @@ const FilterCarousel = () => {
   const renderConditionalNavCarousel = () => {
     const pathParts = route.path.split("/").filter(Boolean);
     const knownCategorySlugs = Object.keys(DADOS_SUBCATEGORIAS);
-    const foundCategorySlug = pathParts.find((part: string) => // <-- CORREÇÃO APLICADA AQUI
+    const foundCategorySlug = pathParts.find((part: string) =>
       knownCategorySlugs.includes(part)
     );
 

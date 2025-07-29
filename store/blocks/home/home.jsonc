@@ -109,8 +109,8 @@
   "product-summary-image": {
     "props": {
       "hoverImage": {
-        "criteria": "index",
-        "index": 1
+        "criteria": "label",
+        "label": "auxiliar"
       }
     }
   },

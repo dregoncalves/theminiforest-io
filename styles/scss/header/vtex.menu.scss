@@ -5,6 +5,18 @@
   justify-content: space-between;
   margin-top: 1.3rem;
 
+  .styledLinkContent--submenu-titulo {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 23px;
+    padding: 5px 0;
+    color: #71817f;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   .styledLinkContainer {
     margin: 0;
     padding: 0;

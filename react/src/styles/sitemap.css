@@ -9,6 +9,7 @@
   font-size: 2rem;
   margin-bottom: 2rem;
   text-align: center;
+  color: #71817f;
 }
 
 /* Layout principal em grid para as colunas */
@@ -30,7 +31,7 @@
 
 /* Estilo padrão para todos os links */
 .sitemapList a {
-  color: #3f3f40;
+  color: #71817f;
   text-decoration: none;
   display: block;
   font-size: 0.9rem;
@@ -45,14 +46,14 @@
 .sitemapItem > a {
   font-weight: bold;
   font-size: 1.1rem;
-  color: #000;
+  color: #71817f;
   margin-bottom: 0.5rem;
 }
 
 /* Títulos de sub-categorias (ex: Por idade, Por tipo de peça) */
 .subCategoryTitle {
   font-weight: bold;
-  color: #505050;
+  color: #71817f;
   margin-top: 0.75rem;
   font-size: 1rem !important; /* Força a sobreposição se necessário */
 }

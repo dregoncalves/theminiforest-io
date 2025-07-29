@@ -13,10 +13,6 @@
       "menu-item#sale-category-menu"
     ]
   },
-
-  // ===============================
-  // ITEM “NOVIDADES” (sem submenu)
-  // ===============================
   "menu-item#novidades": {
     "props": {
       "blockClass": ["header-menu-item"],
@@ -32,10 +28,6 @@
       }
     }
   },
-
-  // ============================================
-  // ITEM “PRODUTOS” COM MEGA‐SUBMENU AO HOVER
-  // ============================================
   "menu-item#produtos": {
     "props": {
       "blockClass": ["header-menu-item", "menu-produtos"],
@@ -52,9 +44,6 @@
     },
     "blocks": ["vtex.menu@2.x:submenu#produtos"]
   },
-
-  // Submenu do item "PRODUTOS"
-  // Submenu do item "PRODUTOS" com colunas
   "vtex.menu@2.x:submenu#produtos": {
     "props": {
       "blockClass": "submenu-produtos"
@@ -76,7 +65,6 @@
       "flex-layout.col#coluna-primeiros-meses"
     ]
   },
-  // Coluna: POR IDADE
   "flex-layout.col#coluna-por-idade": {
     "props": {
       "blockClass": "coluna-por-idade",
@@ -84,12 +72,9 @@
       "width": "20%"
     },
     "children": [
-      "flex-layout.row#por-idade-titulo",
+      "menu-item#titulo-por-idade",
       "flex-layout.row#por-idade-itens"
     ]
-  },
-  "flex-layout.row#por-idade-titulo": {
-    "children": ["rich-text#titulo-por-idade"]
   },
   "flex-layout.row#por-idade-itens": {
     "props": {
@@ -113,14 +98,12 @@
       "menu-item#por-idade-9-10"
     ]
   },
-
-  // Coluna: POR TIPO DE PEÇA
   "flex-layout.col#coluna-por-tipo": {
     "props": {
       "preventVerticalStretch": true
     },
     "children": [
-      "rich-text#titulo-por-tipo",
+      "menu-item#titulo-por-tipo",
       "menu-item#peca-blusas",
       "menu-item#peca-bodies",
       "menu-item#peca-calcas",
@@ -130,13 +113,12 @@
       "menu-item#peca-praia"
     ]
   },
-  // Coluna: LISOS
   "flex-layout.col#coluna-lisos": {
     "props": {
       "preventVerticalStretch": true
     },
     "children": [
-      "rich-text#titulo-lisos",
+      "menu-item#titulo-lisos",
       "menu-item#lisos-blusas",
       "menu-item#lisos-bodies",
       "menu-item#lisos-calcas",
@@ -144,13 +126,12 @@
       "menu-item#lisos-vestidos"
     ]
   },
-  // Coluna: ACESSÓRIOS
   "flex-layout.col#coluna-acessorios": {
     "props": {
       "preventVerticalStretch": true
     },
     "children": [
-      "rich-text#titulo-acessorios",
+      "menu-item#titulo-acessorios",
       "menu-item#acessorios-babadores",
       "menu-item#acessorios-bolsas",
       "menu-item#acessorios-calcinha",
@@ -161,103 +142,135 @@
       "menu-item#acessorios-jogos"
     ]
   },
-  // Coluna: PARA AS MAMÃES
   "flex-layout.col#coluna-mamaes": {
     "props": {
       "preventVerticalStretch": true
     },
-    "children": [
-      "rich-text#titulo-mamaes",
-      "menu-item#maes-acessorios",
-      "menu-item#maes-roupas"
-    ]
+    "children": ["menu-item#titulo-mamaes", "menu-item#maes-acessorios", "menu-item#maes-roupas"]
   },
-  // Coluna: PARA PRESENTE
   "flex-layout.col#coluna-presente": {
     "props": {
       "preventVerticalStretch": true
     },
-    "children": [
-      "rich-text#titulo-presente",
-      "menu-item#presente-cartoes",
-      "menu-item#presente-sacolinhas",
-      "menu-item#presente-kits"
-    ]
+    "children": ["menu-item#titulo-presente", "menu-item#presente-cartoes", "menu-item#presente-sacolinhas", "menu-item#presente-kits"]
   },
-  // Coluna: PRIMEIROS MESES
   "flex-layout.col#coluna-primeiros-meses": {
     "props": {
       "blockClass": "coluna-primeiros-meses",
       "preventVerticalStretch": true
     },
-    "children": [
-      "rich-text#titulo-primeiros-meses",
-      "menu-item#primeiros-meses"
-    ]
+    "children": ["menu-item#titulo-primeiros-meses"]
   },
-  "rich-text#titulo-por-idade": {
+  "menu-item#titulo-por-idade": {
     "props": {
-      "text": "POR IDADE",
-      "tag": "h4",
-      "textPosition": "left",
-      "blockClass": "submenu-titulo"
+      "blockClass": "submenu-titulo",
+      "id": "menu-item-por-idade-titulo",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/roupinhas",
+        "noFollow": false,
+        "tagTitle": "Por Idade",
+        "text": "POR IDADE"
+      }
     }
   },
-  "rich-text#titulo-por-tipo": {
+  "menu-item#titulo-por-tipo": {
     "props": {
-      "text": "POR TIPO DE PEÇA",
-      "tag": "h4",
-      "textPosition": "left",
-      "blockClass": "submenu-titulo"
+      "blockClass": "submenu-titulo",
+      "id": "menu-item-por-tipo-titulo",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/roupinhas",
+        "noFollow": false,
+        "tagTitle": "Por Tipo de Peça",
+        "text": "POR TIPO DE PEÇA"
+      }
     }
   },
-  "rich-text#titulo-lisos": {
+  "menu-item#titulo-lisos": {
     "props": {
-      "text": "LISOS",
-      "tag": "h4",
-      "textPosition": "left",
-      "blockClass": "submenu-titulo"
+      "blockClass": "submenu-titulo",
+      "id": "menu-item-lisos-titulo",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/roupinhas/liso?initialMap=c&initialQuery=roupinhas&map=category-1,cor",
+        "noFollow": false,
+        "tagTitle": "Lisos",
+        "text": "LISOS"
+      }
     }
   },
-  "rich-text#titulo-acessorios": {
+  "menu-item#titulo-acessorios": {
     "props": {
-      "text": "ACESSÓRIOS",
-      "tag": "h4",
-      "textPosition": "left",
-      "blockClass": "submenu-titulo"
+      "blockClass": "submenu-titulo",
+      "id": "menu-item-acessorios-titulo",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/acessorios",
+        "noFollow": false,
+        "tagTitle": "Acessórios",
+        "text": "ACESSÓRIOS"
+      }
     }
   },
-  "rich-text#titulo-mamaes": {
+  "menu-item#titulo-mamaes": {
     "props": {
-      "text": "PARA AS MAMÃES",
-      "tag": "h4",
-      "textPosition": "left",
-      "blockClass": "submenu-titulo"
+      "blockClass": "submenu-titulo",
+      "id": "menu-item-mamaes-titulo",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/para-mamaes",
+        "noFollow": false,
+        "tagTitle": "Para as Mamães",
+        "text": "PARA AS MAMÃES"
+      }
     }
   },
-  "rich-text#titulo-presente": {
+  "menu-item#titulo-presente": {
     "props": {
-      "text": "PARA PRESENTE",
-      "tag": "h4",
-      "textPosition": "left",
-      "blockClass": "submenu-titulo"
+      "blockClass": "submenu-titulo",
+      "id": "menu-item-presente-titulo",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/para-presentes",
+        "noFollow": false,
+        "tagTitle": "Para Presente",
+        "text": "PARA PRESENTE"
+      }
     }
   },
-  "rich-text#titulo-primeiros-meses": {
+  "menu-item#titulo-primeiros-meses": {
     "props": {
-      "text": "PRIMEIROS MESES",
-      "tag": "h4",
-      "textPosition": "left",
-      "blockClass": "submenu-titulo"
+      "blockClass": "submenu-titulo",
+      "id": "menu-item-primeiros-meses-titulo",
+      "type": "custom",
+      "highlight": false,
+      "itemProps": {
+        "type": "internal",
+        "href": "/primeiros-meses",
+        "noFollow": false,
+        "tagTitle": "Primeiros Meses",
+        "text": "PRIMEIROS MESES"
+      }
     }
   },
-
-  // POR IDADE
   "menu-item#por-idade-rn": {
     "props": {
       "blockClass": ["menu-item-small"],
       "itemProps": {
-        "href": "/produtos/rn",
+        "href": "/roupinhas/rn?initialMap=c&initialQuery=roupinhas&map=category-1,tamanho",
         "text": "RN"
       }
     }
@@ -266,7 +279,7 @@
     "props": {
       "blockClass": ["menu-item-small"],
       "itemProps": {
-        "href": "/produtos/1-3-meses",
+        "href": "/roupinhas/1-3meses?initialMap=c&initialQuery=roupinhas&map=category-1,tamanho",
         "text": "1 - 3 meses"
       }
     }
@@ -275,7 +288,7 @@
     "props": {
       "blockClass": ["menu-item-small"],
       "itemProps": {
-        "href": "/produtos/3-6-meses",
+        "href": "/roupinhas/3-6meses?initialMap=c&initialQuery=roupinhas&map=category-1,tamanho",
         "text": "3 - 6 meses"
       }
     }
@@ -284,7 +297,7 @@
     "props": {
       "blockClass": ["menu-item-small"],
       "itemProps": {
-        "href": "/produtos/6-9-meses",
+        "href": "/roupinhas/6-9meses?initialMap=c&initialQuery=roupinhas&map=category-1,tamanho",
         "text": "6 - 9 meses"
       }
     }
@@ -293,7 +306,7 @@
     "props": {
       "blockClass": ["menu-item-small"],
       "itemProps": {
-        "href": "/produtos/9-12-meses",
+        "href": "/roupinhas/9-12meses?initialMap=c&initialQuery=roupinhas&map=category-1,tamanho",
         "text": "9 - 12 meses"
       }
     }
@@ -302,7 +315,7 @@
     "props": {
       "blockClass": ["menu-item-small"],
       "itemProps": {
-        "href": "/produtos/12-18-meses",
+        "href": "/roupinhas/12-18meses?initialMap=c&initialQuery=roupinhas&map=category-1,tamanho",
         "text": "12 - 18 meses"
       }
     }
@@ -311,7 +324,7 @@
     "props": {
       "blockClass": ["menu-item-small"],
       "itemProps": {
-        "href": "/produtos/18-24-meses",
+        "href": "/roupinhas/18-24meses?initialMap=c&initialQuery=roupinhas&map=category-1,tamanho",
         "text": "18 - 24 meses"
       }
     }
@@ -320,7 +333,7 @@
     "props": {
       "blockClass": ["menu-item-small"],
       "itemProps": {
-        "href": "/produtos/2-3-anos",
+        "href": "/roupinhas/2-3anos?initialMap=c&initialQuery=roupinhas&map=category-1,tamanho",
         "text": "2 - 3 anos"
       }
     }
@@ -329,7 +342,7 @@
     "props": {
       "blockClass": ["menu-item-small"],
       "itemProps": {
-        "href": "/produtos/3-4-anos",
+        "href": "/roupinhas/3-4anos?initialMap=c&initialQuery=roupinhas&map=category-1,tamanho",
         "text": "3 - 4 anos"
       }
     }
@@ -338,7 +351,7 @@
     "props": {
       "blockClass": ["menu-item-small"],
       "itemProps": {
-        "href": "/produtos/4-5-anos",
+        "href": "/roupinhas/4-5anos?initialMap=c&initialQuery=roupinhas&map=category-1,tamanho",
         "text": "4 - 5 anos"
       }
     }
@@ -347,7 +360,7 @@
     "props": {
       "blockClass": ["menu-item-small"],
       "itemProps": {
-        "href": "/produtos/5-6-anos",
+        "href": "/roupinhas/5-6anos?initialMap=c&initialQuery=roupinhas&map=category-1,tamanho",
         "text": "5 - 6 anos"
       }
     }
@@ -356,7 +369,7 @@
     "props": {
       "blockClass": ["menu-item-small"],
       "itemProps": {
-        "href": "/produtos/6-7-anos",
+        "href": "/roupinhas/6-7anos?initialMap=c&initialQuery=roupinhas&map=category-1,tamanho",
         "text": "6 - 7 anos"
       }
     }
@@ -365,7 +378,7 @@
     "props": {
       "blockClass": ["menu-item-small"],
       "itemProps": {
-        "href": "/produtos/7-8-anos",
+        "href": "/roupinhas/7-8anos?initialMap=c&initialQuery=roupinhas&map=category-1,tamanho",
         "text": "7 - 8 anos"
       }
     }
@@ -374,7 +387,7 @@
     "props": {
       "blockClass": ["menu-item-small"],
       "itemProps": {
-        "href": "/produtos/8-9-anos",
+        "href": "/roupinhas/8-9anos?initialMap=c&initialQuery=roupinhas&map=category-1,tamanho",
         "text": "8 - 9 anos"
       }
     }
@@ -383,18 +396,16 @@
     "props": {
       "blockClass": ["menu-item-small"],
       "itemProps": {
-        "href": "/produtos/9-10-anos",
+        "href": "/roupinhas/9-10anos?initialMap=c&initialQuery=roupinhas&map=category-1,tamanho",
         "text": "9 - 10 anos"
       }
     }
   },
-
-  // POR TIPO DE PEÇA
   "menu-item#peca-blusas": {
     "props": {
       "blockClass": ["menu-item-small"],
       "itemProps": {
-        "href": "/produtos/blusas-e-camisetas",
+        "href": "/roupinhas/blusas-e-camisetas?initialMap=c&initialQuery=roupinhas&map=category-1,tipo-de-peca",
         "text": "Blusas e Camisetas"
       }
     }
@@ -403,7 +414,7 @@
     "props": {
       "blockClass": ["menu-item-small"],
       "itemProps": {
-        "href": "/produtos/bodies",
+        "href": "/roupinhas/bodies?initialMap=c&initialQuery=roupinhas&map=category-1,tipo-de-peca",
         "text": "Bodies"
       }
     }
@@ -412,7 +423,7 @@
     "props": {
       "blockClass": ["menu-item-small"],
       "itemProps": {
-        "href": "/produtos/calcas-e-shorts",
+        "href": "/roupinhas/calcas-e-shorts?initialMap=c&initialQuery=roupinhas&map=category-1,tipo-de-peca",
         "text": "Calças e Shorts"
       }
     }
@@ -421,7 +432,7 @@
     "props": {
       "blockClass": ["menu-item-small"],
       "itemProps": {
-        "href": "/produtos/macacoes",
+        "href": "/roupinhas/macacoes?initialMap=c&initialQuery=roupinhas&map=category-1,tipo-de-peca",
         "text": "Macacões"
       }
     }
@@ -430,7 +441,7 @@
     "props": {
       "blockClass": ["menu-item-small"],
       "itemProps": {
-        "href": "/produtos/pijamas",
+        "href": "/roupinhas/pijamas?initialMap=c&initialQuery=roupinhas&map=category-1,tipo-de-peca",
         "text": "Pijamas"
       }
     }
@@ -439,7 +450,7 @@
     "props": {
       "blockClass": ["menu-item-small"],
       "itemProps": {
-        "href": "/produtos/vestidos-e-saias",
+        "href": "/roupinhas/vestidos-e-saias?initialMap=c&initialQuery=roupinhas&map=category-1,tipo-de-peca",
         "text": "Vestidos e Saias"
       }
     }
@@ -448,18 +459,16 @@
     "props": {
       "blockClass": ["menu-item-small"],
       "itemProps": {
-        "href": "/produtos/praia",
+        "href": "/roupinhas/praia?initialMap=c&initialQuery=roupinhas&map=category-1,tipo-de-peca",
         "text": "Praia"
       }
     }
   },
-
-  // LISOS
   "menu-item#lisos-blusas": {
     "props": {
       "blockClass": ["menu-item-small"],
       "itemProps": {
-        "href": "/produtos/lisos/blusas-e-camisetas",
+        "href": "/roupinhas/blusas-e-camisetas/liso?initialMap=c&initialQuery=roupinhas&map=category-1,tipo-de-peca,cor",
         "text": "Blusas e Camisetas"
       }
     }
@@ -468,7 +477,7 @@
     "props": {
       "blockClass": ["menu-item-small"],
       "itemProps": {
-        "href": "/produtos/lisos/bodies",
+        "href": "/roupinhas/bodies/liso?initialMap=c&initialQuery=roupinhas&map=category-1,tipo-de-peca,cor",
         "text": "Bodies"
       }
     }
@@ -477,7 +486,7 @@
     "props": {
       "blockClass": ["menu-item-small"],
       "itemProps": {
-        "href": "/produtos/lisos/calcas-e-shorts",
+        "href": "/roupinhas/calcas-e-shorts/liso?initialMap=c&initialQuery=roupinhas&map=category-1,tipo-de-peca,cor",
         "text": "Calças e Shorts"
       }
     }
@@ -486,7 +495,7 @@
     "props": {
       "blockClass": ["menu-item-small"],
       "itemProps": {
-        "href": "/produtos/lisos/macacoes",
+        "href": "/roupinhas/macacoes/liso?initialMap=c&initialQuery=roupinhas&map=category-1,tipo-de-peca,cor",
         "text": "Macacões"
       }
     }
@@ -495,18 +504,16 @@
     "props": {
       "blockClass": ["menu-item-small"],
       "itemProps": {
-        "href": "/produtos/lisos/vestidos-e-saias",
+        "href": "/roupinhas/vestidos-e-saias/liso?initialMap=c&initialQuery=roupinhas&map=category-1,tipo-de-peca,cor",
         "text": "Vestidos e Saias"
       }
     }
   },
-
-  // ACESSÓRIOS
   "menu-item#acessorios-babadores": {
     "props": {
       "blockClass": ["menu-item-small"],
       "itemProps": {
-        "href": "/produtos/acessorios/babadores",
+        "href": "/acessorios/babadores",
         "text": "Babadores"
       }
     }
@@ -515,7 +522,7 @@
     "props": {
       "blockClass": ["menu-item-small"],
       "itemProps": {
-        "href": "/produtos/acessorios/bolsas",
+        "href": "/acessorios/bolsas",
         "text": "Bolsas"
       }
     }
@@ -524,7 +531,7 @@
     "props": {
       "blockClass": ["menu-item-small"],
       "itemProps": {
-        "href": "/produtos/acessorios/calcinhas",
+        "href": "/acessorios/calcinhas",
         "text": "Calcinhas"
       }
     }
@@ -533,7 +540,7 @@
     "props": {
       "blockClass": ["menu-item-small"],
       "itemProps": {
-        "href": "/produtos/acessorios/mantas",
+        "href": "/acessorios/mantas",
         "text": "Mantas"
       }
     }
@@ -542,7 +549,7 @@
     "props": {
       "blockClass": ["menu-item-small"],
       "itemProps": {
-        "href": "/produtos/acessorios/meias",
+        "href": "/acessorios/meias",
         "text": "Meias"
       }
     }
@@ -551,7 +558,7 @@
     "props": {
       "blockClass": ["menu-item-small"],
       "itemProps": {
-        "href": "/produtos/acessorios/paninhos-de-boca",
+        "href": "/acessorios/paninhos-de-boca",
         "text": "Paninhos de Boca"
       }
     }
@@ -560,7 +567,7 @@
     "props": {
       "blockClass": ["menu-item-small"],
       "itemProps": {
-        "href": "/produtos/acessorios/tattoo",
+        "href": "/acessorios/tattoo",
         "text": "Tattoo"
       }
     }
@@ -569,18 +576,16 @@
     "props": {
       "blockClass": ["menu-item-small"],
       "itemProps": {
-        "href": "/produtos/acessorios/jogos",
+        "href": "/acessorios/jogos",
         "text": "Jogos"
       }
     }
   },
-
-  // PARA AS MAMÃES
   "menu-item#maes-acessorios": {
     "props": {
       "blockClass": ["menu-item-small"],
       "itemProps": {
-        "href": "/produtos/para-as-mamaes/acessorios",
+        "href": "/para-mamaes/acessorios",
         "text": "Acessórios"
       }
     }
@@ -589,18 +594,16 @@
     "props": {
       "blockClass": ["menu-item-small"],
       "itemProps": {
-        "href": "/produtos/para-as-mamaes/roupas",
+        "href": "/para-mamaes/roupas",
         "text": "Roupas"
       }
     }
   },
-
-  // PARA PRESENTE
   "menu-item#presente-cartoes": {
     "props": {
       "blockClass": ["menu-item-small"],
       "itemProps": {
-        "href": "/produtos/presente/cartoes",
+        "href": "/para-presentes/cartoes",
         "text": "Cartões"
       }
     }
@@ -609,7 +612,7 @@
     "props": {
       "blockClass": ["menu-item-small"],
       "itemProps": {
-        "href": "/produtos/presente/sacolinhas",
+        "href": "/para-presentes/sacolinhas",
         "text": "Sacolinhas"
       }
     }
@@ -618,26 +621,12 @@
     "props": {
       "blockClass": ["menu-item-small"],
       "itemProps": {
-        "href": "/produtos/presente/kits",
+        "href": "/para-presentes/kit",
         "text": "Kits"
       }
     }
   },
 
-  // PRIMEIROS MESES
-  "menu-item#primeiros-meses": {
-    "props": {
-      "blockClass": ["menu-item-small"],
-      "itemProps": {
-        "href": "/produtos/primeiros-meses",
-        "text": "Primeiros Meses"
-      }
-    }
-  },
-
-  // ============================================
-  // ITEM “CASA E DECOR” (sem submenu, conforme exemplo)
-  // ============================================
   "menu-item#casa-e-decor": {
     "props": {
       "blockClass": ["header-menu-item"],
@@ -667,13 +656,12 @@
     },
     "children": [
       "menu-item#casa-alimentacao",
-      "menu-item#casa-edredons",
+      "menu-item#casa-cama",
       "menu-item#casa-painel",
       "menu-item#casa-quadros",
       "menu-item#casa-tapetes"
     ]
   },
-
   "menu-item#casa-alimentacao": {
     "props": {
       "blockClass": ["menu-item-small"],
@@ -683,12 +671,12 @@
       }
     }
   },
-  "menu-item#casa-edredons": {
+  "menu-item#casa-cama": {
     "props": {
       "blockClass": ["menu-item-small"],
       "itemProps": {
-        "href": "/casa-e-decor/edredons-e-mantas",
-        "text": "Edredons e Mantas"
+        "href": "/casa-e-decor/cama",
+        "text": "Cama"
       }
     }
   },
@@ -719,10 +707,6 @@
       }
     }
   },
-
-  // ============================================
-  // ITEM “HIGIENE” (sem submenu, conforme exemplo)
-  // ============================================
   "menu-item#higiene": {
     "props": {
       "blockClass": ["header-menu-item"],
@@ -759,7 +743,6 @@
       "menu-item#higiene-shampoo"
     ]
   },
-
   "menu-item#higiene-cremes": {
     "props": {
       "blockClass": ["menu-item-small"],
@@ -805,10 +788,6 @@
       }
     }
   },
-
-  // ============================================
-  // ITEM “ESTAMPAS” (sem submenu, conforme exemplo)
-  // ============================================
   "menu-item#estampas": {
     "props": {
       "blockClass": ["header-menu-item"],
@@ -824,10 +803,6 @@
       }
     }
   },
-
-  // ============================================
-  // ITEM “SALE” (sem submenu, conforme exemplo)
-  // ============================================
   "menu-item#sale-category-menu": {
     "props": {
       "blockClass": ["header-menu-item"],

@@ -31,8 +31,8 @@
     "props": {
       "showBadge": true,
       "hoverImage": {
-        "criteria": "index",
-        "index": 1
+        "criteria": "label",
+        "label": "auxiliar"
       },
       "displayMode": "inline"
     }

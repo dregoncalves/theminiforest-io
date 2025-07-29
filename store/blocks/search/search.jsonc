@@ -96,12 +96,13 @@
       }
     }
   },
+  
   "rich-text#description": {
     "props": {
       "text": " ",
       "blockClass": "category-description"
     },
-    "title": "Descrição de Categoria"
+    "title": "Descrição de Categoria - Topo"
   },
 
   "rich-text#description-2": {
@@ -109,7 +110,7 @@
       "text": " ",
       "blockClass": "category-description"
     },
-    "title": "Descrição de Categoria 2"
+    "title": "Descrição de Categoria - Rodapé"
   },
 
   "flex-layout.row#navigationBar": {
@@ -243,11 +244,13 @@
       "fullWidth": true
     }
   },
+  
   "breadcrumb": {
     "props": {
       "showOnMobile": true
     }
   },
+
   "gallery": {
     "props": {
       "layouts": [
@@ -270,12 +273,14 @@
       "GridSummary": "product-summary.shelf"
     }
   },
+
   "gallery-layout-option#grid": {
     "props": {
       "name": "grid"
     },
     "children": ["icon-grid", "responsive-layout.desktop#textOptionGrid"]
   },
+
   "responsive-layout.desktop#textOptionGrid": {
     "children": ["rich-text#option-grid"]
   },
@@ -287,13 +292,7 @@
       "blockClass": "layout-option"
     }
   },
-  "rich-text#option-list": {
-    "props": {
-      "text": "List",
-      "textColor": "c-auto",
-      "blockClass": "layout-option"
-    }
-  },
+
   "flex-layout.col#searchbread": {
     "children": ["breadcrumb.search"],
     "props": {
@@ -303,6 +302,7 @@
       "width": "grow"
     }
   },
+
   "breadcrumb.search": {
     "props": {
       "showOnMobile": true

@@ -28,5 +28,10 @@
   },
   "store.custom#sitemap": {
     "path": "/institucional/sitemap"
+  },
+  "store.custom#result-custom": {
+    "path": "/:term/s",
+    "canonical": "/:term",
+    "contentType": "search"
   }
 }
