@@ -61,3 +61,18 @@
   content: "Seu carrinho está vazio.";
   font-size: 1rem;
 }
+
+.minicartCheckoutButton :global(.vtex-button) {
+  color: #fff;
+  border-color: #c76b6b;
+  background-color: #c76b6b;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 44px;
+  letter-spacing: 1px;
+  padding: 0 1.25rem;
+  transition: 0.2s all ease-in-out;
+}
+.minicartCheckoutButton :global(.vtex-button):hover {
+  opacity: 0.9;
+}
