@@ -1,0 +1,61 @@
+
+
+/* ======= Account ======= */
+
+.vtex-pageHeader__container {
+    padding: .75rem;
+}
+
+.vtex-pageHeader__title {
+    border-bottom: 1px solid #d5dbd7;
+    line-height: 2;
+}
+
+.vtex-my-orders-app-3-x-orderCard {
+    margin-top: 0;
+}
+
+.vtex-my-orders-app-3-x-orderBody {
+    display: flex;
+    flex-direction: column;
+}
+
+.vtex-my-orders-app-3-x-orderBody > div {
+    width: 100%;
+}
+
+.vtex-my-orders-app-3-x-detailsBtn {
+    max-width: 360px;
+    margin: 0 auto;
+    background-color: #6d9994;
+    color: white;
+    font-size: 13px;
+    transition: 0.3s all ease-in-out;
+}
+
+.vtex-my-orders-app-3-x-detailsBtn:hover {
+    background-color: #acbeb9;
+}
+
+.vtex-my-orders-app-3-x-reorderBtn > svg {
+    fill: #6c9893;
+}
+
+.vtex-my-orders-app-3-x-font {
+    color: #6c9893;
+}
+
+.vtex-my-orders-app-3-x-orderHeader, .vtex-my-orders-app-3-x-collapsedOrder {
+    background-color: #f0efe9;
+}
+
+.vtex-my-orders-app-3-x-orderProductName {
+    color: #6c9893;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.vtex-my-orders-app-3-x-orderProductName:hover {
+    color: #5c817d;
+}
+

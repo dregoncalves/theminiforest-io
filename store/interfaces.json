@@ -29,5 +29,8 @@
   },
   "sitemap-custom": {
     "component": "Sitemap"
+  },
+  "upnext-components": {
+    "component": "GlobalCss"
   }
 }

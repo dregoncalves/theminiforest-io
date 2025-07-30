@@ -9,6 +9,7 @@
   // DESKTOP
   "header-layout.desktop": {
     "children": [
+      "upnext-components",
       "flex-layout.row#desktop-header",
       "flex-layout.row#category-menu"
     ]
@@ -106,7 +107,7 @@
 
   // MOBILE
   "header-layout.mobile": {
-    "children": ["flex-layout.row#1-mobile"]
+    "children": ["upnext-components", "flex-layout.row#1-mobile"]
   },
   "flex-layout.row#1-mobile": {
     "children": ["drawer", "logo#mobile", "flex-layout.row#desktop-triggers"],
