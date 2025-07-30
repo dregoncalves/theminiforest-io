@@ -2,7 +2,6 @@
   width: fit-content !important;
 }
 
-/* Remove borda do grupo de input da search bar */
 :global(.vtex-store-components-3-x-searchBarContainer) :global(.vtex-input-prefix__group) {
   border: none;
   border-bottom: 1px solid #d4d7cd;

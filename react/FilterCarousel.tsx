@@ -81,9 +81,6 @@ const FilterCarousel = () => {
   const [sizeData, setSizeData] = useState<ScrapedSize[]>([]);
 
   useEffect(() => {
-    console.log("FilterCarousel: useEffect acionado.");
-
-    // Changed obs to _obs
     const scrapeAndSetSizeData = (_obs: MutationObserver) => {
       const targetTitleSpan = Array.from(
         document.querySelectorAll(
@@ -93,10 +90,10 @@ const FilterCarousel = () => {
 
       if (targetTitleSpan) {
         const nativeSizeFilterContainer =
-          targetTitleSpan.closest('[class*="filter__container--"]') || // Desktop
+          targetTitleSpan.closest('[class*="filter__container--"]') ||
           targetTitleSpan.closest(
             '.vtex-search-result-3-x-accordionFilterContainer--tamanho'
-          ); // Mobile
+          );
 
         if (nativeSizeFilterContainer) {
           const scrapedSizes: ScrapedSize[] = [];
@@ -122,30 +119,21 @@ const FilterCarousel = () => {
           });
 
           if (scrapedSizes.length > 0) {
-            console.log("FilterCarousel: Dados de tamanho raspados:", scrapedSizes.map(s => s.name + (s.selected ? ' (selecionado)' : '')));
             setSizeData(scrapedSizes);
-          } else {
-            console.log("FilterCarousel: Nenhum dado de tamanho raspado ainda.");
           }
-        } else {
-          console.log("FilterCarousel: Contêiner de filtro de tamanho nativo não encontrado.");
         }
-      } else {
-        console.log("FilterCarousel: Span de título 'Tamanho' não encontrado. Pode ser que o filtro ainda não carregou ou as classes mudaram.");
       }
     };
 
     const observer = new MutationObserver((_mutations, obs) => {
-      scrapeAndSetSizeData(obs); // Still pass obs from the observer
+      scrapeAndSetSizeData(obs);
     });
 
     observer.observe(document.body, { childList: true, subtree: true });
 
-    // Run once on initial mount to capture data if already in DOM
     scrapeAndSetSizeData(observer);
 
     return () => {
-      console.log("FilterCarousel: Limpeza do useEffect, observer desconectado.");
       observer.disconnect();
     };
   }, []);
@@ -171,7 +159,6 @@ const FilterCarousel = () => {
   );
 
   const renderSizeCarousel = () => {
-    console.log("FilterCarousel: renderSizeCarousel chamado. sizeData.length:", sizeData.length);
     return sizeData.length > 0 && (
       <div className="mv5">
         <SliderLayout
@@ -188,7 +175,6 @@ const FilterCarousel = () => {
                 key={size.name}
                 className={itemClasses}
                 onClick={() => {
-                  console.log(`FilterCarousel: Clicado no tamanho: ${size.name}`);
                   size.element?.click();
                 }}
               >
@@ -216,30 +202,19 @@ const FilterCarousel = () => {
     const pathParts = cleanPath.split("/").filter(Boolean);
     const knownCategorySlugs = Object.keys(DADOS_SUBCATEGORIAS);
 
-    console.log("FilterCarousel: renderConditionalNavCarousel chamado.");
-    console.log("FilterCarousel: Rota original (route.path):", route.path);
-    console.log("FilterCarousel: Rota limpa para análise (cleanPath):", cleanPath);
-    console.log("FilterCarousel: Partes da rota limpa:", pathParts);
-    console.log("FilterCarousel: Slugs de subcategorias conhecidas:", knownCategorySlugs);
-
     const foundCategorySlug = pathParts.find((part: string) =>
       knownCategorySlugs.includes(part)
     );
 
-    console.log("FilterCarousel: foundCategorySlug (subcategoria):", foundCategorySlug);
-
     if (foundCategorySlug) {
       const subcategoryData = DADOS_SUBCATEGORIAS[foundCategorySlug];
-      console.log("FilterCarousel: Renderizando carrossel de SUBCATEGORIA para:", foundCategorySlug);
       return renderNavCarousel(subcategoryData);
     }
 
     if (pathParts[0] === "roupinhas") {
-      console.log("FilterCarousel: Renderizando carrossel de CATEGORIAS (rota principal 'roupinhas').");
       return renderNavCarousel(DADOS_CATEGORIAS);
     }
 
-    console.log("FilterCarousel: Nenhuma condição para carrossel de navegação atendida. Retornando null.");
     return null;
   };
 

@@ -2,6 +2,11 @@
 
 /* ======= Account ======= */
 
+.vtex-account {
+    max-width: 1260px;
+    margin: 0 auto;
+}
+
 .vtex-pageHeader__container {
     padding: .75rem;
 }
@@ -9,6 +14,9 @@
 .vtex-pageHeader__title {
     border-bottom: 1px solid #d5dbd7;
     line-height: 2;
+    font-size: 1.125rem;
+    color: #89898b;
+    text-transform: uppercase;
 }
 
 .vtex-my-orders-app-3-x-orderCard {
@@ -58,4 +66,81 @@
 .vtex-my-orders-app-3-x-orderProductName:hover {
     color: #5c817d;
 }
+/* Página de pedido */
 
+.vtex-render__container-id-my-orders {
+    color: #71817f;
+}
+
+.vtex-render__container-id-my-orders .link {
+    color: #6c9893;
+    font-weight: bold;
+    line-height: 2;
+}
+
+.vtex-my-orders-app-3-x-orderDetails .link > svg, .vtex-my-orders-app-3-x-orderDetails .link > span {
+    fill: #6c9893;
+    color: #6c9893;
+    line-height: 2;
+}
+
+.myo-progress-bar {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.myo-progress-bar__circle, .myo-progress-bar__ma-inner-circle {
+    background-color: #6c9893;
+    color: #6c9893;
+}
+
+.myo-progress-bar__line {
+    border-color: #6c9893;
+}
+
+.vtex-account__page-body article, .vtex-account__page-body h3 {
+    color: #71817f;
+}
+
+.myo-margin-right {
+   color: #71817f;
+}
+
+.vtex-my-orders-app-3-x-productName {
+    color: #71817f;
+    text-decoration: none;
+    transition: 0.2s all ease;
+}
+
+.vtex-my-orders-app-3-x-productName:hover {
+    opacity: 0.9;
+}
+
+/* ======= Troca e Devolução ======= */
+
+.upnext-upexchangereturn-io-1-x-card .upnext-upexchangereturn-io-1-x-card-header {
+    background-color: #f0efe9;
+    color: #727273;
+}
+
+.upnext-upexchangereturn-io-1-x-id .upnext-upexchangereturn-io-1-x-status {
+    background-color: #8bc34a;
+    color: white;
+}
+
+.upnext-upexchangereturn-io-1-x-card .upnext-upexchangereturn-io-1-x-card-header[aria-checked="true"] {
+    background-color: #f0efe9;
+}
+
+.upnext-upexchangereturn-io-1-x-item .upnext-upexchangereturn-io-1-x-product-details a {
+    color: #6c9893;
+    font-weight: bold;
+}
+
+.upnext-upexchangereturn-io-1-x-form-btn, .upnext-upexchangereturn-io-1-x-form-btn-invalid, .upnext-upexchangereturn-io-1-x-form-btn-invalid-warn {
+    color: white !important;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: bold;
+    max-width: fit-content;
+}
